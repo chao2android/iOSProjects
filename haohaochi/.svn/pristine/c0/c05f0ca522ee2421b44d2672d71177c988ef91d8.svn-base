@@ -1,0 +1,225 @@
+//
+//  PersonalViewController.m
+//  TestVideoJoiner
+//
+//  Created by MC on 14-12-2.
+//  Copyright (c) 2014年 Hepburn Alex. All rights reserved.
+//
+
+#import "PersonalViewController.h"
+#import "VideoListModel.h"
+#import "VideoListTableViewCell.h"
+#import "CareViewController.h"
+#import "MapLineViewController.h"
+#import "VideoDetialViewController.h"
+
+@interface PersonalViewController ()
+{
+    UILabel *_titleLabel;
+    UILabel *_beCareLabel;
+    UILabel *_careLabel;
+    UIImageView *_headView;
+    UITableView *_mTableView;
+    NSMutableArray *_dataArray;
+}
+
+@end
+
+@implementation PersonalViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+}
+- (void)viewWillDisappear:(BOOL)animated{
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.mTopImage = [UIImage imageNamed:@"Image-2"];
+    [self RefreshNavColor];
+    
+    UIImageView *topView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KscreenWidth, 50)];
+    topView.image = [UIImage imageNamed:@"Image-3"];
+    topView.userInteractionEnabled = YES;
+    [self.view addSubview:topView];
+    
+    UIButton *settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    settingBtn.frame = CGRectMake(10, 25, 50, 40);
+    [settingBtn setTitle:@"设置" forState:UIControlStateNormal];
+    [settingBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    settingBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [settingBtn addTarget:self action:@selector(SettingClick) forControlEvents:UIControlEventTouchUpInside];
+    //[topView addSubview:settingBtn];
+    
+    UIButton *mBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    mBtn.backgroundColor = [UIColor redColor];
+    mBtn.frame = CGRectMake(0, 65, 62, 45);
+    [mBtn addTarget:self action:@selector(CareClick) forControlEvents:UIControlEventTouchUpInside];
+    //[topView addSubview:mBtn];
+    
+    mBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    mBtn.backgroundColor = [UIColor grayColor];
+    mBtn.frame = CGRectMake(62, 65, 62, 45);
+    [mBtn addTarget:self action:@selector(CareClick) forControlEvents:UIControlEventTouchUpInside];
+    //[topView addSubview:mBtn];
+    
+    _titleLabel = [[UILabel alloc]init];
+    _titleLabel.center = CGPointMake(KscreenWidth*0.5, 44);
+    _titleLabel.bounds = CGRectMake(0, 0, 150, 50);
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.font = [UIFont systemFontOfSize:20];
+    _titleLabel.backgroundColor = [UIColor clearColor];
+    _titleLabel.text = @"那年今日";
+    //[topView addSubview:_titleLabel];
+    
+    
+    
+    _beCareLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 70, 62, 20)];
+    _beCareLabel.textAlignment = NSTextAlignmentCenter;
+    _beCareLabel.textColor = [UIColor blackColor];
+    _beCareLabel.font = [UIFont systemFontOfSize:20];
+    _beCareLabel.backgroundColor = [UIColor clearColor];
+    _beCareLabel.text = @"521";
+    //[topView addSubview:_beCareLabel];
+    
+    _careLabel = [[UILabel alloc]initWithFrame:CGRectMake(62, 70, 82, 20)];
+    _careLabel.textAlignment = NSTextAlignmentCenter;
+    _careLabel.textColor = [UIColor blackColor];
+    _careLabel.font = [UIFont systemFontOfSize:20];
+    _careLabel.backgroundColor = [UIColor clearColor];
+    _careLabel.text = @"5210";
+    //[topView addSubview:_careLabel];
+    
+    UILabel *beCare = [[UILabel alloc]initWithFrame:CGRectMake(0, 90, 62, 18)];
+    beCare.textAlignment = NSTextAlignmentCenter;
+    beCare.textColor = [UIColor grayColor];
+    beCare.font = [UIFont systemFontOfSize:14];
+    beCare.backgroundColor = [UIColor clearColor];
+    beCare.text = @"被关注";
+    //[topView addSubview:beCare];
+    
+    UILabel *Care = [[UILabel alloc]initWithFrame:CGRectMake(62, 90, 62, 18)];
+    Care.textAlignment = NSTextAlignmentCenter;
+    Care.textColor = [UIColor grayColor];
+    Care.font = [UIFont systemFontOfSize:14];
+    Care.backgroundColor = [UIColor clearColor];
+    Care.text = @"关注";
+    //Care.adjustsFontSizeToFitWidth = YES;
+    //[topView addSubview:Care];
+    
+    
+    UIWindow *Window = [[UIApplication sharedApplication]keyWindow];
+    _headView = [[UIImageView alloc]initWithFrame:CGRectMake(KscreenWidth-70, 35, 55, 55)];
+    _headView.layer.masksToBounds = YES;
+    _headView.layer.cornerRadius = 27.5;
+    _headView.image = [UIImage imageNamed:@"c_03 (2).png"];
+    [Window addSubview:_headView];
+    
+    [self.view bringSubviewToFront:topView];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"big_cell" ofType:@"plist"];
+    NSArray *localarray = [NSArray arrayWithContentsOfFile:path];
+    _dataArray = [[NSMutableArray alloc]init];
+    for (int i = 0; i<localarray.count; i++) {
+        NSDictionary *lDict = localarray[i];
+        VideoListModel *model = [VideoListModel CreateWithDict:lDict];
+        [_dataArray addObject:model];
+    }
+    
+    _mTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 48,KscreenWidth,  KscreenHeigh-164)];
+    _mTableView.backgroundColor = [UIColor clearColor];
+    _mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _mTableView.delegate = self;
+    _mTableView.dataSource = self;
+    [self.view addSubview:_mTableView];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSLog(@"_dataArray--%@",_dataArray);
+    return _dataArray.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 330.0;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellId = @"cellID";
+    VideoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[VideoListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.delegate = self;
+        cell.headClick = @selector(OnHeadClick:);
+        cell.videoClick = @selector(OnVideoClick:);
+        cell.moreCLick = @selector(OnMoreClick:);
+        cell.haveGoClick = @selector(OnHaveGoClick:);
+        cell.xingClick = @selector(OnXingClick:);
+        cell.locationClick = @selector(OnLocationClick:);
+    }
+    VideoListModel *model = _dataArray[indexPath.row];
+    [cell loadView:model];
+    return cell;
+}
+- (void)OnHeadClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+}
+- (void)OnVideoClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+    VideoDetialViewController *vdvcCtrl = [[VideoDetialViewController alloc]init];
+    //self.hidesBottomBarWhenPushed=YES;
+    [vdvcCtrl setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vdvcCtrl animated:YES];
+}
+- (void)OnMoreClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+}
+- (void)OnHaveGoClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+}
+- (void)OnXingClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+}
+- (void)OnLocationClick:(VideoListTableViewCell *)sender{
+    NSLog(@"cell.tag==%d",sender.tag);
+    MapLineViewController *mvc  = [[MapLineViewController alloc]init];
+    [mvc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:mvc animated:YES];
+}
+
+- (void)SettingClick{
+    NSLog(@"set");
+}
+
+- (void)CareClick{
+    NSLog(@"关注");
+    CareViewController *cvc = [[CareViewController alloc]init];
+    [cvc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:cvc animated:YES];
+}
+- (void)BeCareClick{
+    NSLog(@"被关注");
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

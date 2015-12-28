@@ -1,0 +1,105 @@
+//
+//  UserInfoManager.h
+//  TestRedCollar
+//
+//  Created by Hepburn Alex on 14-5-6.
+//  Copyright (c) 2014年 Hepburn Alex. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "DWUploadItem.h"
+#import "AddressInfo.h"
+
+@interface UserInfoManager : NSObject {
+    
+}
+
+@property (nonatomic, strong) NSString *mCityID;
+@property (nonatomic, strong) NSString *mCityName;
+@property (nonatomic, strong) NSString *mWatermark;
+@property (nonatomic, strong) AddressInfo *mAddInfo;
+@property (nonatomic, assign) float mfMaxWidth;
+
+@property (nonatomic, assign) NSDictionary *mUserDict;
+@property (nonatomic, assign) NSString *mNickName;
+@property (nonatomic, assign) NSString *mHeadImgUrl;
+@property (nonatomic, assign) NSString *mUserID;
+@property (nonatomic, assign) NSString *mToken;
+@property (nonatomic, assign) int miSex;
+@property (nonatomic, assign) BOOL mbWifiUpload;
+@property (nonatomic, assign) BOOL mbAutoSave;
+@property (nonatomic, assign) BOOL mbPush;
+@property (readonly) BOOL mbLogin;
+
++ (UserInfoManager *)Share;
++ (NSString *)GetFormatDateByInterval:(NSTimeInterval)interval;
++ (void)AddiCloudBackUp;
++ (int)sinaCountWord:(NSString*)s;
+- (void)SaveToAlbum:(UIView *)view;
+- (UIImage *)GetViewImage:(UIView *)view :(float)zoomscale;
+
+#define kkToken         [UserInfoManager Share].mToken
+#define kkUserDict      [UserInfoManager Share].mUserDict
+#define kkUserID        [UserInfoManager Share].mUserID
+#define kkSex           [UserInfoManager Share].miSex
+#define kkAvatar        [UserInfoManager Share].mHeadImgUrl
+#define kkNickName      [UserInfoManager Share].mNickName
+#define kkIsLogin       [UserInfoManager Share].mbLogin
+
+#define kUserInfoManager [UserInfoManager Share]
+
+#define kMsg_VideoListRefresh @"kMsg_VideoListRefresh"
+#define kMsg_ReloginRefresh @"kMsg_ReloginRefresh"
+#define kMsg_RefreshComment @"kMsg_RefreshComment"
+#define kMsg_PlayAudio  @"kMsg_PlayAudio"
+#define kMsg_RefreshTimeline  @"kMsg_RefreshTimeline"
+#define kMsg_ShowSubTimeline  @"kMsg_ShowSubTimeline"
+#define kMsg_BecomeActive  @"kMsg_BecomeActive"
+#define kMsg_OrientationError @"kMsg_OrientationError"
+#define kMsg_UploadProgress @"kMsg_UploadProgress"
+#define kMsg_UploadStatus @"kMsg_UploadStatus"
+#define kMsg_ShowLeft  @"kMsg_ShowLeft"
+#define kMsg_ShowCenter @"kMsg_ShowCenter"
+#define kMsg_Logout @"kMsg_Logout"
+
+#define kDefault_FontName @"Helvetica-Light"
+
+#define SafePerformSelector(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define kLibraryPath [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+#define IOS_VER [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IOS_7 ([[[UIDevice currentDevice] systemVersion] intValue] >= 7)
+
+#define IsiPadUI (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IsRetina CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size)
+#define IsiPhone5 CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)
+#define IsiPad CGSizeEqualToSize(CGSizeMake(768, 1024), [[UIScreen mainScreen] currentMode].size)
+#define IsiPhone6 CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size)
+#define IsiPhone6Plus CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)
+
+#define kDefault_Color [UIColor colorWithRed:0.97 green:0.43 blue:0.27 alpha:1.0]
+#define kDefault_Color2 [UIColor colorWithRed:0.23 green:0.48 blue:0.85 alpha:1.0]
+
+#define UIViewAutoresizingFlexibleFourMargin UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin
+//REPLAY
+
+
+#define DWACCOUNT_USERID    @"A552FBA73BFCDC1F"
+#define DWACCOUNT_APIKEY    @"DFlfjFBBUtOyNL3p9OhlLy9cUtAn1CkI"
+#define BAIDU_KEY           @"hKotcfBWIvMkFLIVU8M95A3y"
+
+#define WX_APPKey           @"wx1a5dd422927a0b26"
+#define WX_APPSecret        @"aa6bdd946ba5494387c3864586c1aae6"
+#define UMENG_KEY           @"544719d5fd98c5c27c013e1e"
+
+#define APP_ID              @"635281031"
+
+@end
