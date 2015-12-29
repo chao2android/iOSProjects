@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the '好妈妈' target in the '好妈妈' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "Share.h"
+#import "UserLocationManager.h"
+#import "UserInfoManager.h"
+
+#define Screen_Height [[UIScreen mainScreen] bounds].size.height
+#define Screen_Width  [[UIScreen mainScreen] bounds].size.width
+#define IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)
+#define KUIOS_7(NUM) IOS_7?(NUM+20):NUM
+
+#endif
+
+#define LIGHTBACK_COLOR  [UIColor colorWithWhite:0.79 alpha:1.0]
+
+#define UMENG_APPKEY @"5370b02356240bc8e600d825"
+#define SERVER_URL @"http://apptest.mum360.com/web/home/index/"
+
+#define HideVipMsg
