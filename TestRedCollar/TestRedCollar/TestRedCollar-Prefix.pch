@@ -1,0 +1,46 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#import "UserInfoManager.h"
+#endif
+
+#ifndef IOS_7
+#define IOS_7 ([[[UIDevice currentDevice] systemVersion] intValue] >= 7)
+#endif
+
+#define IsiPadUI (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IsiPhone4 [BaseConfigManager IsiPhone4]
+#define IsRetina CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size)
+#define IsiPhone5 CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)
+#define IsiPad CGSizeEqualToSize(CGSizeMake(768, 1024), [[UIScreen mainScreen] currentMode].size)
+
+#define SHARE_URL @"http://www.rctailor.com"
+
+//#define UMENG_KEY @"53e82652fd98c5b5ab0047d7"
+#define UMENG_KEY @"53f475abfd98c51aba005781"
+#define QQ_APPID  @"801527590"
+#define QQ_APPKEY @"2bf1db80a0d086adf04e01606b807f3e"
+#define WX_APPID  @"wx11160c7a77713491"
+
+
+#define URL_HEADER @"http://www.rctailor.com/"
+
+#define SERVER_URL @"http://www.rctailor.com/soaapi/soap/"
+
+#define WORDGRAYCOLOR [UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1]
+#define WORDREDCOLOR [UIColor colorWithRed:129.0/255.0 green:18.0/255.0 blue:24.0/255.0 alpha:1]
+
+#define Default_Color [UIColor colorWithRed:0.6 green:0.0 blue:0.0 alpha:1.0]

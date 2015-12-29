@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6560A6CB-59B5-4B26-9DBA-CA02EAC0BB47</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TestRedCollar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>bafe27c7-519b-364e-b266-84e0515dc77c</key>
+		<string>svn://202.85.214.88/redcollarios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TestRedCollar/TestRedCollar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>bafe27c7-519b-364e-b266-84e0515dc77c</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>bafe27c7-519b-364e-b266-84e0515dc77c</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>bafe27c7-519b-364e-b266-84e0515dc77c</string>
+			<key>IDESourceControlWCCName</key>
+			<string>redcollarios8.8</string>
+		</dict>
+	</array>
+</dict>
+</plist>
