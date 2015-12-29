@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 按钮底部为圆角的按钮背景 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 按钮禁用状态 -->
+	<item
+		android:drawable="@drawable/background_leftbottom_circule_blue_bg"
+		android:state_enabled="false" />
+	<!-- 按钮焦点状态 -->
+	<item
+		android:drawable="@drawable/background_leftbottom_circule_blue_bg"
+		android:state_enabled="true"
+		android:state_focused="true" />
+	<!-- 按钮按下状态 -->
+	<item
+		android:drawable="@drawable/background_leftbottom_circule_blue_bg"
+		android:state_enabled="true"
+		android:state_pressed="true" />
+	<!-- 按钮正常展示的状态 -->
+	<item
+		android:drawable="@drawable/background_leftbottom_circule_globalcolor_bg"
+		android:state_enabled="true" />
+</selector>

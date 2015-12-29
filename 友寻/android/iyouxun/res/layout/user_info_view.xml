@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<!-- 头像 -->
+	<com.iyouxun.ui.views.CircularImage
+		android:layout_height="100dp"
+		android:layout_width="100dp"
+		android:id="@+id/supplement_user_icon"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="20dp"
+		android:src="@drawable/bg_upload_avatar"
+		android:scaleType="centerCrop" />
+	<!-- 昵称 -->
+	<LinearLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:paddingLeft="15dp"
+		android:layout_marginTop="30dp"
+		android:background="@drawable/background_top_border"
+		android:focusable="true"
+		android:focusableInTouchMode="true">
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/str_nick"
+			android:gravity="center"
+			android:textSize="14sp"
+			android:textColor="@color/gray_main" />
+		<EditText
+			android:id="@+id/supplement_user_nick"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingRight="30dp"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_black"
+			android:textColorHint="@color/text_normal_gray"
+			android:hint="@string/nick_hint"
+			android:gravity="right|center_vertical"
+			android:background="@color/transparent"
+			android:singleLine="true"
+			android:maxLength="14" />
+	</LinearLayout>
+	<!-- 性别 -->
+	<RelativeLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:background="@color/WhiteColor">
+		<Button
+			android:layout_height="match_parent"
+			android:layout_width="85dp"
+			android:text="@string/str_woman"
+			android:id="@+id/supplement_btn_woman"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/bg_btn_sex"
+			android:textColor="@drawable/text_color_btn_sex"
+			android:textSize="14sp" />
+		<Button
+			android:layout_height="match_parent"
+			android:layout_width="85dp"
+			android:text="@string/str_man"
+			android:id="@+id/supplement_btn_man"
+			android:layout_toLeftOf="@id/supplement_btn_woman"
+			android:background="@drawable/bg_btn_sex"
+			android:textColor="@drawable/text_color_btn_sex"
+			android:textSize="14sp" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="@string/str_sex"
+			android:gravity="left|center_vertical"
+			android:textSize="14sp"
+			android:textColor="@color/gray_main"
+			android:layout_toLeftOf="@id/supplement_btn_man"
+			android:layout_alignParentLeft="true"
+			android:singleLine="true"
+			android:layout_marginLeft="15dp"
+			android:background="@drawable/background_top_bottom_border" />
+	</RelativeLayout>
+	<!-- 情感状态 -->
+	<LinearLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:paddingLeft="15dp"
+		android:orientation="horizontal"
+		android:background="@drawable/background_bottom_border">
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:gravity="center"
+			android:text="@string/emotional_state"
+			android:textSize="14sp"
+			android:textColor="@color/gray_main" />
+		<Button
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:gravity="right|center_vertical"
+			android:text="@string/please_select"
+			android:background="@color/transparent"
+			android:id="@+id/supplement_btn_emotional"
+			android:drawableRight="@drawable/icon_arrow"
+			android:textSize="14sp"
+			android:textColor="@color/text_topNav_center"
+			android:drawablePadding="10dp"
+			android:paddingRight="15dp" />
+	</LinearLayout>
+</LinearLayout>

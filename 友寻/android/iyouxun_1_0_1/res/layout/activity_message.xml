@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 消息页面 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_border" />
+	<!-- 消息列表数据 -->
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		xmlns:ptr="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/message_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="@color/transparent"
+		android:divider="@null"
+		android:dividerHeight="0dp"
+		android:scrollbars="none"
+		android:listSelector="@color/transparent"
+		ptr:ptrAnimationStyle="flip" />
+</LinearLayout>

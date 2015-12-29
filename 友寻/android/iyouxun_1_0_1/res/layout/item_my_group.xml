@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res/com.iyouxun"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 推荐模块 -->
+	<RelativeLayout
+		android:layout_height="45dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_global"
+		android:id="@+id/my_group_recommend_box">
+		<!-- 刷新按钮 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:padding="10dp"
+			android:layout_marginRight="10dp"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_blue"
+			android:text="@string/menu_item_refresh"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true"
+			android:id="@+id/my_group_btn_refresh" />
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="14sp"
+			android:text="@string/group_recommend"
+			android:layout_toLeftOf="@id/my_group_btn_refresh"
+			android:gravity="bottom|left"
+			android:paddingLeft="15dp"
+			android:paddingBottom="10dp" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_height="65dp"
+		android:layout_width="match_parent"
+		android:background="@drawable/list_selector">
+		<!-- 头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:src="@drawable/bg_avatar"
+			android:scaleType="centerCrop"
+			android:layout_marginLeft="15dp"
+			android:layout_centerVertical="true"
+			android:id="@+id/my_group_avatar"
+			jy:border_width="2dp"
+			jy:border_color="@color/background_border" />
+		<!-- 加入按钮 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textColor="@color/text_normal_blue"
+			android:textSize="14sp"
+			android:text="@string/str_join"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:padding="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/my_group_btn_join" />
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_toLeftOf="@id/my_group_btn_join"
+			android:layout_toRightOf="@id/my_group_avatar"
+			android:paddingLeft="13dp"
+			android:paddingRight="10dp"
+			android:gravity="center_vertical">
+			<!-- 名称 -->
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:textColor="@color/text_normal_black"
+				android:textSize="14sp"
+				android:id="@+id/my_group_name"
+				android:singleLine="true" />
+			<!-- 好友数量 -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:textSize="12sp"
+				android:textColor="@color/text_normal_gray"
+				android:singleLine="true"
+				android:id="@+id/my_group_content" />
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

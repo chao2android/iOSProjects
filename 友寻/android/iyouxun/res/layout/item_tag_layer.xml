@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:id="@+id/item_tag_box"
+		android:layout_width="wrap_content"
+		android:layout_height="30dp"
+		android:orientation="horizontal"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="5dp">
+		<TextView
+			android:id="@+id/item_tag_click_num"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:textColor="@color/text_tags"
+			android:textSize="@dimen/text_tags"
+			android:paddingLeft="8dp"
+			android:paddingRight="8dp"
+			android:layout_gravity="center_vertical"
+			android:gravity="center" />
+		<TextView
+			android:id="@+id/item_tag_name"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:textColor="@color/text_tags"
+			android:textSize="@dimen/text_tags"
+			android:gravity="center" />
+		<ImageView
+			android:id="@+id/item_tag_close"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:src="@drawable/icon_del_tag"
+			android:background="@drawable/bg_tag_right"
+			android:visibility="gone" />
+	</LinearLayout>
+</LinearLayout>

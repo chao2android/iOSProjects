@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<!-- 内容 -->
+			<com.iyouxun.ui.views.MyEditText
+				android:id="@+id/addNewsContent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minHeight="100dp"
+				android:padding="15dp"
+				android:gravity="left|top"
+				android:background="@color/transparent"
+				android:hint="说说最近有什么新鲜事？" />
+			<!-- 添加照片 -->
+			<LinearLayout
+				android:id="@+id/photo_layer_box"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:minHeight="60dp"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:orientation="vertical"
+				android:visibility="gone">
+				<com.iyouxun.ui.views.NotScollGridView
+					android:id="@+id/addNewPhotoGv"
+					android:layout_width="260dp"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:numColumns="4"
+					android:verticalSpacing="5dp"
+					android:horizontalSpacing="5dp" />
+			</LinearLayout>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<!-- 选择图片 -->
+				<ImageButton
+					android:id="@+id/photoLayerButton"
+					android:layout_width="50dp"
+					android:layout_height="40dp"
+					android:src="@drawable/icon_select_photo"
+					android:background="@color/transparent"
+					android:layout_alignParentLeft="true" />
+				<!-- 是否同步到相册 -->
+				<CheckBox
+					android:id="@+id/isSyncToAlbum"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:text="同步到相册"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="15dp"
+					android:layout_alignParentRight="true"
+					android:checked="true" />
+			</RelativeLayout>
+		</LinearLayout>
+		<!-- 查看权限选择 -->
+		<RelativeLayout
+			android:id="@+id/addNewsAuthButton"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<TextView
+				android:id="@+id/addNewsTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:paddingLeft="16dp"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:gravity="center_vertical"
+				android:text="查看权限"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal" />
+			<TextView
+				android:id="@+id/addNewsAtuhInfo"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_toRightOf="@id/addNewsTitle"
+				android:drawableRight="@drawable/icon_arrow"
+				android:drawablePadding="15dp"
+				android:paddingRight="15dp"
+				android:gravity="center_vertical|right"
+				android:text="所有好友"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal" />
+		</RelativeLayout>
+		<!-- 上传图片选择 -->
+		<LinearLayout
+			android:id="@+id/addNewsUploadPhotoBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="44dp"
+			android:visibility="invisible"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<!-- 拍照 -->
+			<ImageButton
+				android:id="@+id/addNewsSelectCamera"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="15dp"
+				android:src="@drawable/icon_select_camera"
+				android:background="@color/transparent" />
+			<!-- 相册 -->
+			<ImageButton
+				android:id="@+id/addNewsSelectAlbum"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_marginLeft="25dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="15dp"
+				android:src="@drawable/icon_select_album"
+				android:background="@color/transparent" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+		<View
+			android:layout_height="1dp"
+			android:layout_width="match_parent"
+			android:background="@color/background_border" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@color/WhiteColor"
+			android:paddingBottom="50dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp">
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="35dp">
+				<!-- 用户头像 -->
+				<com.iyouxun.ui.views.CircularImage
+					android:layout_height="50dp"
+					android:layout_width="50dp"
+					android:id="@+id/my_qr_code_avatar"
+					android:scaleType="centerCrop"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true" />
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="vertical"
+					android:layout_toRightOf="@id/my_qr_code_avatar"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="14dp">
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+						<ImageView
+							android:id="@+id/my_qr_code_sex"
+							android:layout_width="16dp"
+							android:layout_height="16dp"
+							android:layout_gravity="center_vertical" />
+						<TextView
+							android:id="@+id/my_qr_code_nick"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="@dimen/text_normal"
+							android:textColor="@color/text_normal_blue"
+							android:singleLine="true"
+							android:layout_marginLeft="6dp"
+							android:layout_gravity="center_vertical" />
+					</LinearLayout>
+					<!-- 婚姻状态 -->
+					<TextView
+						android:id="@+id/my_qr_code_marriage"
+						android:layout_width="wrap_content"
+						android:layout_height="20dp"
+						android:layout_marginTop="5dp"
+						android:textSize="@dimen/text_normal"
+						android:textColor="@color/text_normal_black"
+						android:gravity="center" />
+					<!-- 位置 -->
+					<TextView
+						android:id="@+id/my_qr_code_location"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/text_small"
+						android:textColor="@color/text_small_black"
+						android:layout_marginTop="5dp" />
+				</LinearLayout>
+			</RelativeLayout>
+			<ImageView
+				android:id="@+id/my_qr_code_iv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:minWidth="180dp"
+				android:minHeight="180dp"
+				android:layout_marginTop="25dp"
+				android:src="@drawable/pic_default_square"
+				android:layout_gravity="center_horizontal"
+				android:background="@color/background_global"
+				android:padding="10dp" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 系统消息 -->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+
+	<!-- 消息列表数据 -->
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		xmlns:ptr="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/system_message_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="@color/transparent"
+		android:divider="@null"
+		android:dividerHeight="1dp"
+		android:scrollbars="none"
+		android:listSelector="@color/transparent"
+		ptr:ptrAnimationStyle="flip" />
+	<TextView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:text="@string/no_new_system_msg"
+		android:gravity="center"
+		android:textColor="@color/text_small_gray"
+		android:textSize="14sp"
+		android:id="@+id/system_message_no_data"
+		android:visibility="gone" />
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_border" />
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 新浪微博好友页面 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="29dp"
+		android:gravity="center_vertical|left"
+		android:paddingLeft="15dp"
+		android:id="@+id/sina_weibo_friends_size"
+		android:text="可邀请的好友"
+		android:textSize="12sp"
+		android:textColor="@color/text_normal_gray"
+		android:background="@drawable/background_top_bottom_border" />
+	<ListView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:id="@+id/sina_weibo_friends_list"
+		android:divider="@drawable/background_list_divider_left_right"
+		android:dividerHeight="0.5dp"
+		android:cacheColorHint="@null"
+		android:listSelector="@color/transparent"
+		android:drawSelectorOnTop="true"></ListView>
+</LinearLayout>

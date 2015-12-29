@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 引导页面 -->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 页面内容 -->
+	<android.support.v4.view.ViewPager
+		android:id="@+id/vpMain"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center">
+	</android.support.v4.view.ViewPager>
+	<!-- 四个小黑点 -->
+	<LinearLayout
+		android:id="@+id/dotBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="bottom|center_horizontal"
+		android:layout_marginBottom="80dp">
+		<ImageView
+			android:id="@+id/page0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="matrix"
+			android:src="@drawable/page_now1" />
+		<ImageView
+			android:id="@+id/page1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/global_px18dp"
+			android:scaleType="matrix"
+			android:src="@drawable/page" />
+		<ImageView
+			android:id="@+id/page2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/global_px18dp"
+			android:scaleType="matrix"
+			android:src="@drawable/page" />
+		<ImageView
+			android:id="@+id/page3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/global_px18dp"
+			android:scaleType="matrix"
+			android:src="@drawable/page" />
+	</LinearLayout>
+</FrameLayout>

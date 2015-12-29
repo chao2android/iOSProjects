@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- unlogin -->
+    <string name="stat_unlogin_login">九宫格页面登录按钮被按下</string>
+	<string name="stat_unlogin_register">九宫格页面注册按钮被按下</string> 
+	<string name="stat_unlogin_profile">九宫格页面九宫格头像照被按下</string>  
+	<!-- end unlogin -->
+	
+	<!-- desktop -->
+	<string name="stat_desktop_more">主页更多图标被按下</string>
+	<string name="stat_desktop_contact">主页联系人图标被按下</string>
+	<string name="stat_desktop_shopping">主页购物图标被按下</string>
+	<string name="stat_desktop_search">主页找人按钮被按下</string>
+	<string name="stat_desktop_message">主页消息按钮被按下</string>
+	<string name="stat_desktop_discover">主页发现按钮被按下</string>
+	<string name="stat_desktop_match">主页缘分按钮被按下</string>
+	<string name="stat_desktop_more_my_home">主页_更多-个人资料按钮被按下</string>
+	<string name="stat_desktop_more_my_photo">主页_更多-我的相册按钮被按下</string>
+	<string name="stat_desktop_more_setting">主页_更多-设置按钮被按下</string>
+	<!-- end desktop -->
+	
+	<!-- register -->
+	<string name="stat_register_phone_register">注册页面手机号注册按钮被按下</string>
+	<string name="stat_register_email_register">注册页面邮箱注册按钮被按下</string>
+	<!-- phone register -->
+	<string name="stat_register_phone_send_valicode">注册-手机号注册页面点击获取按钮被按下</string>
+	<string name="stat_register_phone_submit">注册-手机号注册页面提交按钮被按下</string>
+	<!-- end phone register -->
+	<!-- email register -->
+	<string name="stat_register_email_submit">注册-邮箱注册页面提交按钮被按下</string>
+	<!-- end email register -->
+	<!-- register complete into -->
+	<string name="stat_register_info_avatar">注册-个人资料详细页点击头像按钮被按下</string>
+	<string name="stat_register_info_sex_f">注册-个人资料详细页性别选择_女</string>
+	<string name="stat_register_info_sex_m">注册-个人资料详细页性别选择_男</string>
+	<string name="stat_register_info_birthday">注册-个人资料详细页生日选择按钮被按下</string>
+	<string name="stat_register_info_area">注册-个人资料详细页地区选择按钮被按下</string>
+	<string name="stat_register_info_height">注册-个人资料详细页身高点击选择</string>
+	<string name="stat_register_info_marriage">注册-个人资料详细页婚史点击选择</string>
+	<string name="stat_register_info_education">注册-个人资料详细页学历点击选择</string>
+	<string name="stat_register_info_income">注册-个人资料详细页收入点击选择</string>
+	<string name="stat_register_info_submit">注册-个人资料详细页完成注册按钮被按下</string>
+	<!-- end register complete into -->
+	<!-- end register -->
+	
+	<!-- login -->
+	<string name="stat_login_register">登录页面_注册账号按钮被按下</string>
+	<string name="stat_login_find_pwd">登录页面_找回密码按钮被按下</string>
+	<string name="stat_login_login">登录页面_登录按钮被按下</string>
+	<!-- end login -->
+	
+	<!-- match -->
+	<string name="stat_match_profile">缘分页_点击个人资料</string>
+	<string name="stat_match_send_match">缘分页_有眼缘按钮被按下</string>
+	<string name="stat_match_send_mail_Intercept">缘分页_发信拦截层弹出次数</string>
+	<string name="stat_match_send_mail_with_stamp">缘分页_贴邮票发送按钮被按下</string>
+	<string name="stat_match_send_mail_no_stamp">缘分页_不贴邮票发送按钮被按下</string>
+	<string name="stat_match_send_mail_default_free">缘分页_勾选默认免费</string>
+	<string name="stat_match_next">缘分页_下一位按钮被按下</string>
+	<string name="stat_match_slide_up">缘分页_滑动次数</string>
+	<!-- end match -->
+	
+	<!-- discover -->
+	<string name="stat_discover_neighbors">发现页_附近的人按钮被按下</string>
+	<string name="stat_discover_miss">发现页_擦肩而过按钮被按下</string>
+	<string name="stat_discover_cupid">发现页_丘比特之箭按钮被按下</string>
+	<!-- end discover -->
+	
+	<!-- neighbors -->
+	<string name="stat_neighbors_profile">附近的人页面_点击个人资料</string>
+	<string name="stat_neighbors_send_match">附近的人页面_有眼缘按钮被按下</string>
+	<string name="stat_neighbors_mail">附近的人页面_聊天按钮被按下</string>
+	<!-- end neighbors -->
+	
+	<!-- miss -->
+	<string name="stat_miss_profile">擦肩而过页面_点击个人资料</string>
+	<string name="stat_miss_send_match">擦肩而过页面_有眼缘按钮被按下</string>
+	<string name="stat_miss_mail">擦肩而过页面_聊天按钮被按下</string>
+	<string name="stat_miss_nearby">擦肩而过页面_身边的它按钮被按下</string>
+	<!-- end miss -->
+	
+	<!-- cupid -->
+	<string name="stat_cupid_send_cupid">丘比特页面_发送按钮被按下</string>
+	<string name="stat_cupid_introduce">丘比特页面_规则按钮被按下</string>
+	<!-- end cupid -->
+	
+	<!-- my home -->
+	<string name="stat_my_home_avatar">个人中心-资料页面_头像按钮被按下</string>
+	<string name="stat_my_home_avatar_gallery">个人中心-资料页面_来自相册按钮被按下</string>
+	<string name="stat_my_home_avatar_camera">个人中心-资料页面_拍照按钮被按下</string>
+	<string name="stat_my_home_avatar_cancel">个人中心-资料页面_取消按钮被按下</string>
+	<string name="stat_my_home_buy">个人中心-资料页面_购买按钮被按下</string>
+	<string name="stat_my_home_gift">个人中心-资料页面_礼物按钮被按下</string>
+	<string name="stat_my_home_account">个人中心-资料页面_账户按钮被按下</string>
+	<string name="stat_my_home_edit_tag">个人中心-资料页面_优势-编辑按钮被按下</string>
+	<string name="stat_my_home_add_photo">个人中心-资料页面_添加生活照按钮被按下</string>
+	<string name="stat_my_home_edit_note">个人中心-资料页面_独白-编辑按钮被按下</string>
+	<string name="stat_my_home_edit_basic_info">个人中心-资料页面_基本信息-编辑按钮被按下</string>
+	<string name="stat_my_home_edit_mate_info">个人中心-资料页面_择偶要求-编辑按钮被按下</string>
+	<string name="stat_my_home_edit_family_info">个人中心-资料页面_家庭资料-编辑按钮被按下</string>
+	<string name="stat_my_home_edit_love_info">个人中心-资料页面_爱情规划-编辑按钮被按下</string>
+	<string name="stat_my_home_edit_friend_info">个人中心-资料页面_交友状态-编辑按钮被按下</string>
+	<!-- end my home -->
+	
+	<!-- my photo -->
+	<string name="stat_my_photo_avatar">我的相册页面_上传生活照图标被按下</string>
+	<string name="stat_my_photo_avatar_gallery">我的相册页面_来自相册按钮被按下</string>
+	<string name="stat_my_photo_avatar_camera">我的相册页面_拍照按钮被按下</string>
+	<string name="stat_my_photo_avatar_cancel">我的相册页面_取消按钮被按下</string>
+	<string name="stat_my_photo_delete">我的相册页面_删除按钮被按下</string>
+	<!-- end my photo -->
+	
+	<!-- profile -->
+	<string name="stat_profile_attention">对方资料页面_关注按钮被按下</string>
+	<string name="stat_profile_last_login_date">对方资料页面_点这看他登录时间按钮被按下</string>
+	<string name="stat_profile_send_gift">对方资料页面_礼物按钮被按下</string>
+	<string name="stat_profile_send_mail">对方资料页面_打招呼按钮被按下</string>
+	<string name="stat_profile_send_match">对方资料页面_有眼缘按钮被按下</string>
+	<!-- end profile -->
+	
+	<!-- profile photo -->
+	<string name="stat_profile_photo_send_match">对方资料-生活照页面_有眼缘按钮被按下</string>
+	<string name="stat_profile_photo_send_gift">对方资料-生活照页面_礼物按钮被按下</string>
+	<!-- end profile photo -->
+	
+	
+	<!-- setting -->
+	<string name="stat_setting_push">设置页面_推送设置按钮被按下</string>
+	<string name="stat_setting_location">设置页面_位置设置按钮被按下</string>
+	<string name="stat_setting_match">设置页面_有眼缘发信设置被按下</string>
+	<string name="stat_setting_feedback">设置页面_意见反馈被按下</string>
+	<string name="stat_setting_about">设置页面_关于软件被按下</string>
+	<string name="stat_setting_check_version">设置页面_检查新版本被按下</string>
+	<string name="stat_setting_logout">设置页面_注销登录被按下</string>
+	<!-- end setting -->
+    <!-- hwh add  -->
+    <string name="stat_search_tag">找人页面%1$s标签被点击</string>
+    <string name="stat_search_item">找人页面列表被点击</string>
+    <string name="stat_search_item_match">找人页面列表有眼缘按钮被点击</string>
+    <string name="stat_search_conn">找人页面搜索条件按钮</string>
+    <string name="stat_search_refresh">找人页面下拉刷新</string>
+    <string name="stat_searchres_item_match">搜索结果页有眼缘按钮</string>
+    <string name="stat_searchres_item_profile">搜索结果页条目点击进个人资料</string>
+	<string name="stat_searchres_refresh">搜索结果页下拉刷新</string>
+	<string name="stat_searchcon_back">搜索条件页面back按钮</string>
+	<string name="stat_searchcon_search">搜索条件页面搜索按钮</string>
+	<string name="stat_searchcon_input">搜索条件页面输入框</string>
+	<string name="stat_msg_new">消息页面新消息条目</string>
+	<string name="stat_msg_sent">消息页面已发消息条目</string>
+	<string name="stat_msg_refresh">消息页面下拉刷新</string>
+	<string name="stat_readmail_item_avatar">读信写信页面列表头像</string>
+	<string name="stat_readmail_more">读信写信页面更多按钮</string>
+	<string name="stat_readmail_audio">读信写信页面语音按钮</string>
+	<string name="stat_readmail_send">读信写信页面发送按钮</string>
+	<string name="stat_readmail_back">读信写信页面头部返回按钮</string>
+	<string name="stat_readmail_stop">读信写信页面阻止/取消阻止按钮</string>
+	<string name="stat_readmail_follow">读信写信页面关注/取消关注按钮</string>
+	<string name="stat_readmail_report">读信写信页面举报按钮</string>
+	<string name="stat_chat_item_avatar">聊天页面列表头像</string>
+	<string name="stat_chat_more">聊天页面更多按钮</string>
+	<string name="stat_chat_audio">聊天页面语音按钮</string>
+	<string name="stat_chat_send">聊天页面发送按钮</string>
+	<string name="stat_chat_back">聊天页面头部返回按钮</string>
+	<string name="stat_chat_stop">聊天页面阻止/取消阻止按钮</string>
+	<string name="stat_chat_follow">聊天页面关注/取消关注按钮</string>
+	<string name="stat_chat_report">聊天页面举报按钮</string>
+    <!-- hwh add end -->
+</resources>

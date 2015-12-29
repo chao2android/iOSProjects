@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_content">
+	<!-- 顶部横线 -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/background_border" />
+	<!-- 列表listview -->
+	<ListView
+		android:id="@+id/newsDetailListView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="1dp"
+		android:divider="@color/background_border"
+		android:dividerHeight="0.5dp"
+		android:listSelector="@color/transparent" />
+	<!-- 公共输入框 -->
+	<RelativeLayout
+		android:id="@+id/news_global_edittext_box"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:visibility="gone">
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			layout="@layout/inputbox_face_relativelayout_news" />
+	</RelativeLayout>
+</FrameLayout>

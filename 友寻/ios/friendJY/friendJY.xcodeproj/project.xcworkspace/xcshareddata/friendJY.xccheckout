@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6C4F7AC-6206-46EC-8EFE-C2C3A9BAC267</string>
+	<key>IDESourceControlProjectName</key>
+	<string>friendJY</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013</key>
+		<string>svn://120.132.40.44:3692</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>src/ios/friendJY/friendJY.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c68cba49-e6c5-4b23-bbd2-86e54b669013</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c68cba49-e6c5-4b23-bbd2-86e54b669013</string>
+			<key>IDESourceControlWCCName</key>
+			<string>120.132.40.44</string>
+		</dict>
+	</array>
+</dict>
+</plist>

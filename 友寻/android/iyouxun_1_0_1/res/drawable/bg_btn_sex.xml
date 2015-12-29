@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 性别选择按钮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:state_enabled="true"
+		android:drawable="@drawable/background_top_bottom_border"></item>
+	<item
+		android:state_enabled="false"
+		android:drawable="@drawable/bg_security_normal"></item>
+</selector>

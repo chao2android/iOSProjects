@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:padding="10dp">
+	<CheckBox
+		android:id="@+id/sortListCk"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="全选" />
+	<!-- 新建群组聊天选择好友时显示 -->
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="群组成员上限为50人"
+		android:id="@+id/sortListTv"
+		android:textColor="@color/RedColor"
+		android:layout_marginLeft="5dp"
+		android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 顶部内容 -->
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/background_top_globalcolor_border_white_bg"
+		android:layout_marginTop="1dp">
+		<!-- 底部内容-共同好友/他的好友 -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/background_content">
+			<!-- 两个按钮 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@id/spaceView"
+				android:padding="15dp">
+				<Button
+					android:id="@+id/shareMyFriendButton"
+					android:layout_width="0dp"
+					android:layout_height="25dp"
+					android:layout_weight="1"
+					android:text="我的好友"
+					android:textSize="@dimen/text_normal"
+					android:textColor="@color/button_text_blue_white_color"
+					android:background="@drawable/button_lefttopbottom_circule"
+					android:enabled="false" />
+				<Button
+					android:id="@+id/shareMyGroupButton"
+					android:layout_width="0dp"
+					android:layout_height="25dp"
+					android:layout_weight="1"
+					android:text="我的群组"
+					android:textSize="@dimen/text_normal"
+					android:textColor="@color/button_text_blue_white_color"
+					android:background="@drawable/button_righttopbottom_circule" />
+			</LinearLayout>
+		</RelativeLayout>
+	</FrameLayout>
+
+	<!-- 联系人列表 -->
+	<android.support.v4.view.ViewPager
+		android:id="@+id/share_user_viewPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+</LinearLayout>

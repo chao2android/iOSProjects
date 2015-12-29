@@ -1,0 +1,61 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<RelativeLayout
+		android:id="@+id/show_image_rl_main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:id="@+id/show_image_rl_selected"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/global_px120dp"
+			android:layout_alignParentBottom="true"
+			android:background="@color/transparent75">
+			<!-- 确认按钮 -->
+			<Button
+				android:id="@+id/show_image_btn_submit"
+				android:layout_width="@dimen/global_px102dp"
+				android:layout_height="@dimen/global_px75dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="@dimen/global_px24dp"
+				android:background="@drawable/button_dialog_blue"
+				android:text="@string/str_ok_select"
+				android:textColor="@color/text_normal_white"
+				android:textSize="14sp" />
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/global_px75dp"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="@dimen/global_px24dp"
+				android:layout_marginRight="@dimen/global_px21dp"
+				android:layout_toLeftOf="@id/show_image_btn_submit">
+				<!-- 缩略图 -->
+				<LinearLayout
+					android:id="@+id/show_image_ll_thumbnail"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:orientation="horizontal">
+				</LinearLayout>
+			</HorizontalScrollView>
+		</RelativeLayout>
+		<!-- 图片列表 -->
+		<GridView
+			android:id="@+id/child_grid"
+			android:layout_above="@id/show_image_rl_selected"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:cacheColorHint="@android:color/transparent"
+			android:columnWidth="50dp"
+			android:gravity="center"
+			android:horizontalSpacing="@dimen/global_px12dp"
+			android:listSelector="@android:color/transparent"
+			android:numColumns="auto_fit"
+			android:padding="10dp"
+			android:stretchMode="columnWidth"
+			android:verticalSpacing="@dimen/global_px12dp">
+		</GridView>
+	</RelativeLayout>
+</LinearLayout>

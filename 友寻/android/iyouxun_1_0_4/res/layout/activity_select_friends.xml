@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择好友页面 -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:id="@+id/select_friends_title_box"
+		android:background="@drawable/background_top_bottom_border">
+		<!-- 筛选按钮 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/str_filter"
+			android:id="@+id/select_friends_btn_filter"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@color/transparent"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_blue"
+			android:layout_marginRight="10dp"
+			android:padding="5dp" />
+		<!-- 好友数量 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:gravity="left|center_vertical"
+			android:layout_toLeftOf="@id/manage_friends_btn_filter"
+			android:layout_marginLeft="15dp"
+			android:id="@+id/select_friends_count"
+			android:layout_centerVertical="true"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_gray" />
+	</RelativeLayout>
+	<!-- 选择列表 -->
+	<RelativeLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/select_friends_select_box">
+		<!-- 确定按钮 -->
+		<Button
+			android:layout_height="44dp"
+			android:layout_width="100dp"
+			android:text="确定"
+			android:id="@+id/select_friends_btn_ok"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/btn_get_security_code_bg"
+			android:textColor="@color/text_normal_white"
+			android:textSize="14sp" />
+		<HorizontalScrollView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_toLeftOf="@id/select_friends_btn_ok"
+			android:background="@drawable/background_top_bottom_border"
+			android:paddingLeft="15dp"
+			android:scrollbars="none">
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:id="@+id/select_friends_selected"
+				android:gravity="center_vertical"
+				android:layout_gravity="center_vertical"></LinearLayout>
+		</HorizontalScrollView>
+	</RelativeLayout>
+	<!-- 好友列表 -->
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/select_friends_title_box"
+		android:layout_above="@id/select_friends_select_box">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			xmlns:ptr="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/select_friends_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:cacheColorHint="@android:color/transparent"
+			android:divider="@color/transparent"
+			android:dividerHeight="0dp"
+			android:listSelector="@color/transparent"
+			android:layout_marginRight="15dp">
+		</com.handmark.pulltorefresh.library.PullToRefreshListView>
+		<!-- 右侧索引栏 -->
+		<com.iyouxun.ui.views.SideBar
+			android:id="@+id/select_friends_sidebar"
+			android:layout_width="15dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="right|center" />
+	</FrameLayout>
+</RelativeLayout>

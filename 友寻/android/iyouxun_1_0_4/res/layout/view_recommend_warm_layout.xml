@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+	<!-- 推荐 -->
+	<LinearLayout
+		android:id="@+id/recommendFriendsLayer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/background_globalcolor_border_white_bg"
+		android:visibility="gone">
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="推荐给你的好友"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:paddingLeft="10dp"
+			android:paddingTop="10dp" />
+		<!-- 头像列表 -->
+		<HorizontalScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:id="@+id/recommendFriendsBox"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:paddingBottom="10dp"
+				android:paddingTop="10dp">
+			</LinearLayout>
+		</HorizontalScrollView>
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,29 @@
+<com.iyouxun.ui.views.FaceRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/FaceRelativeLayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+	android:focusableInTouchMode="true">
+	<!-- 公共输入框 -->
+	<include
+		layout="@layout/inputbox_face_input_layout"
+		android:id="@+id/face_layout_global_input_box" />
+	<!-- 图片选择区域 -->
+	<include
+		layout="@layout/inputbox_face_img_box"
+		android:id="@+id/face_layout_choose_img_box"
+		android:layout_below="@id/face_layout_global_input_box"
+		android:layout_height="180dp"
+		android:layout_width="match_parent"
+		android:visibility="gone" />
+	<!-- 表情区域 -->
+	<include
+		layout="@layout/inputbox_face_face_box"
+		android:layout_height="180dp"
+		android:layout_width="match_parent"
+		android:layout_below="@id/face_layout_global_input_box"
+		android:id="@+id/face_layout_face_box"
+		android:visibility="gone" />
+
+</com.iyouxun.ui.views.FaceRelativeLayout>

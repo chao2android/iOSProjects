@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+pod "AFNetworking", "~> 2.5.1"
+pod "FMDB", "~> 2.5"
+pod "SDWebImage", "~> 3.7.1"
+pod "UMengAnalytics-NO-IDFA", "~> 3.5.9"
+pod "Masonry", "~> 0.6.1"
+pod "libqrencode", "~> 3.4.2"

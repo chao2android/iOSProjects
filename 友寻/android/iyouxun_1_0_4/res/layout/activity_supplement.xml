@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:background="@color/background_global"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 补充页面 -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:focusable="true"
+		android:focusableInTouchMode="true">
+		<!-- 基本信息 -->
+		<include
+			layout="@layout/user_info_view"
+			android:paddingTop="10dp" />
+		<!-- 手机号 -->
+		<LinearLayout
+			android:layout_height="44dp"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_marginTop="30dp"
+			android:background="@drawable/background_top_border">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="@string/str_register_phone_86"
+				android:gravity="center"
+				android:paddingLeft="@dimen/input_padding_left"
+				android:paddingRight="20dp"
+				android:textSize="14sp"
+				android:textColor="@color/text_topNav_center" />
+			<TextView
+				android:layout_height="32dp"
+				android:layout_width="1dp"
+				android:layout_gravity="center_vertical"
+				android:background="@color/background_border" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/supplement_input_phone_number"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:gravity="left|center_vertical"
+				android:inputType="phone"
+				android:maxLength="11"
+				android:hint="@string/input_phone_number"
+				android:singleLine="true"
+				android:paddingLeft="20dp"
+				android:textSize="14sp"
+				android:background="@color/transparent"
+				android:textColor="@color/text_normal_black"
+				android:textColorHint="@color/text_normal_gray"
+				android:paddingRight="15dp" />
+		</LinearLayout>
+		<!-- 验证码 -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/input_height"
+			android:background="@color/WhiteColor">
+			<Button
+				android:id="@+id/supplement_btn_security_code"
+				android:layout_width="120dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentRight="true"
+				android:text="@string/security_code"
+				android:background="@drawable/btn_get_security_code_bg"
+				android:textColor="@color/WhiteColor"
+				android:textSize="14sp" />
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:layout_toLeftOf="@id/supplement_btn_security_code"
+				android:orientation="horizontal"
+				android:background="@drawable/background_top_bottom_border">
+				<TextView
+					android:layout_height="match_parent"
+					android:layout_width="wrap_content"
+					android:text="@string/input_security_code"
+					android:paddingLeft="@dimen/input_padding_left"
+					android:gravity="center"
+					android:textSize="14sp"
+					android:textColor="@color/gray_main" />
+				<com.iyouxun.ui.views.ClearEditText
+					android:id="@+id/supplement_input_security_code"
+					android:layout_height="match_parent"
+					android:layout_width="match_parent"
+					android:gravity="left|center_vertical"
+					android:singleLine="true"
+					android:inputType="numberSigned"
+					android:background="@color/transparent"
+					android:textSize="14sp"
+					android:textColor="@color/text_normal_black"
+					android:paddingRight="15dp"
+					android:paddingLeft="20dp" />
+			</LinearLayout>
+		</RelativeLayout>
+		<!-- 完成按钮 -->
+		<Button
+			android:layout_height="44dp"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:id="@+id/supplement_btn_complete"
+			android:text="@string/str_complete"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/btn_get_security_code_bg"
+			android:textSize="14sp"
+			android:textColor="@color/WhiteColor"
+			android:enabled="false" />
+	</LinearLayout>
+</ScrollView>

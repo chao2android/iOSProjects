@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:id="@+id/profile_detail_box"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<!-- 左侧头像 -->
+		<ImageView
+			android:id="@+id/profile_edit_avatar"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="20dp" />
+		<!-- title -->
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="编辑昵称"
+			android:textSize="@dimen/text_small"
+			android:textColor="@color/text_small_gray"
+			android:paddingLeft="10dp"
+			android:paddingTop="9dp"
+			android:paddingBottom="9dp"
+			android:layout_marginTop="24dp" />
+		<RelativeLayout
+			android:id="@+id/profile_edit_nick_box"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<!-- 左侧标题 -->
+			<TextView
+				android:id="@+id/profile_edit_left_title1"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:text="昵称"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:layout_alignParentLeft="true"
+				android:paddingLeft="10dp" />
+			<!-- 中间内容 -->
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/profile_edit_nick"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:singleLine="true"
+				android:maxLength="14"
+				android:gravity="center_vertical"
+				android:layout_toRightOf="@id/profile_edit_left_title1"
+				android:background="@color/transparent"
+				android:paddingRight="15dp" />
+		</RelativeLayout>
+		<!-- title -->
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="编辑资料"
+			android:textSize="@dimen/text_small"
+			android:textColor="@color/text_small_gray"
+			android:paddingLeft="10dp"
+			android:paddingTop="9dp"
+			android:paddingBottom="9dp"
+			android:layout_marginTop="17dp" />
+		<RelativeLayout
+			android:id="@+id/profile_edit_marry_box"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<!-- 左侧标题 -->
+			<TextView
+				android:id="@+id/profile_edit_left_title2"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:paddingLeft="10dp"
+				android:gravity="center_vertical"
+				android:text="情感状态"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal" />
+			<!-- 中间内容 -->
+			<TextView
+				android:id="@+id/profile_edit_marry"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_toRightOf="@id/profile_edit_left_title2"
+				android:drawableRight="@drawable/icon_arrow"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingRight="15dp" />
+		</RelativeLayout>
+		<!-- 其他资料编辑 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="15dp"
+			android:layout_marginBottom="30dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<RelativeLayout
+				android:id="@+id/profile_edit_location_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="1dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title3"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="地区" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_location"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:layout_toRightOf="@id/profile_edit_left_title3"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/profile_edit_address_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="1dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title9"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="常驻" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_address"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:singleLine="true"
+					android:ellipsize="end"
+					android:layout_toRightOf="@id/profile_edit_left_title9"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/profile_edit_birth_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title4"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="生日" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_birth"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:layout_toRightOf="@id/profile_edit_left_title4"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/profile_edit_height_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title5"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="身高" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_height"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:layout_toRightOf="@id/profile_edit_left_title5"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/profile_edit_weight_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title6"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="体重" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_weight"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:layout_toRightOf="@id/profile_edit_left_title6"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/profile_edit_job_box"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title7"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="职业" />
+				<!-- 中间内容 -->
+				<TextView
+					android:id="@+id/profile_edit_job"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="5dp"
+					android:layout_toRightOf="@id/profile_edit_left_title7"
+					android:drawableRight="@drawable/icon_arrow" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 左侧标题 -->
+				<TextView
+					android:id="@+id/profile_edit_left_title8"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:text="公司" />
+				<!-- 中间内容 -->
+				<com.iyouxun.ui.views.ClearEditText
+					android:id="@+id/profile_edit_company"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:paddingRight="15dp"
+					android:singleLine="true"
+					android:layout_toRightOf="@id/profile_edit_left_title8"
+					android:background="@color/transparent" />
+			</RelativeLayout>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

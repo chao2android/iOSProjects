@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<Button
+		android:id="@+id/button_select_unbind"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:text="解除绑定"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/button_dialog_circular" />
+
+	<Button
+		android:id="@+id/button_selece_cancel"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:text="取 消"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_margin="10dp"
+		android:background="@drawable/button_dialog_circular" />
+</LinearLayout>

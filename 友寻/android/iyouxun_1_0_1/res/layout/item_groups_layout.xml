@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:descendantFocusability="blocksDescendants">
+	<View
+		android:id="@+id/groups_top_space"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:background="@color/background_global"
+		android:visibility="gone" />
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<CheckBox
+			android:id="@+id/groups_item_cb"
+			android:layout_width="20dp"
+			android:layout_height="15dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/button_radio"
+			android:button="@null"
+			android:clickable="false"
+			android:layout_marginRight="15dp" />
+		<TextView
+			android:id="@+id/groups_item_name"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@id/groups_item_cb"
+			android:gravity="center_vertical"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="@dimen/text_normal" />
+	</RelativeLayout>
+	<!-- 底线 -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/gray_assist"
+		android:layout_marginLeft="15dp"
+		android:layout_gravity="bottom" />
+</LinearLayout>

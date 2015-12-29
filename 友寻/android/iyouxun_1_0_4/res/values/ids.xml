@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<item
+		name="tv_name"
+		type="id" />
+	<item
+		name="tv_sex"
+		type="id" />
+	<item
+		name="tv_location"
+		type="id" />
+	<item
+		name="tv_age"
+		type="id" />
+	<item
+		name="iv_avatar"
+		type="id" />
+	<item
+		name="img_1"
+		type="id" />
+	<item
+		name="img_2"
+		type="id" />
+	<item
+		name="img_3"
+		type="id" />
+	<item
+		name="img_4"
+		type="id" />
+	<item
+		name="img_5"
+		type="id" />
+	<item
+		name="layout1"
+		type="id" />
+	<item
+		name="layout2"
+		type="id" />
+	<item
+		name="layout3"
+		type="id" />
+	<item
+		name="layout4"
+		type="id" />
+	<item
+		name="layout5"
+		type="id" />
+	<item
+		name="layout6"
+		type="id" />
+	<item
+		name="txt_1"
+		type="id" />
+	<item
+		name="txt_2"
+		type="id" />
+	<item
+		name="txt_3"
+		type="id" />
+	<item
+		name="txt_4"
+		type="id" />
+	<item
+		name="txt_5"
+		type="id" />
+	<item
+		name="txt_6"
+		type="id" />
+	<item
+		name="edt_1"
+		type="id" />
+	<item
+		name="edt_2"
+		type="id" />
+	<item
+		name="edt_3"
+		type="id" />
+	<item
+		name="edt_4"
+		type="id" />
+	<item
+		name="edt_5"
+		type="id" />
+	<item
+		name="l_layout_1"
+		type="id" />
+	<item
+		name="l_layout_2"
+		type="id" />
+	<item
+		name="l_layout_3"
+		type="id" />
+	<item
+		name="l_layout_4"
+		type="id" />
+	<item
+		name="l_layout_5"
+		type="id" />
+	<item
+		name="l_layout_6"
+		type="id" />
+	<item
+		name="r_layout_1"
+		type="id" />
+	<item
+		name="r_layout_2"
+		type="id" />
+	<item
+		name="r_layout_3"
+		type="id" />
+	<item
+		name="r_layout_4"
+		type="id" />
+	<item
+		name="r_layout_5"
+		type="id" />
+	<item
+		name="r_layout_6"
+		type="id" />
+	<item
+		name="r_layout_7"
+		type="id" />
+	<item
+		name="r_layout_8"
+		type="id" />
+	<item
+		name="r_layout_9"
+		type="id" />
+	<item
+		name="r_layout_10"
+		type="id" />
+	<item
+		name="r_layout_11"
+		type="id" />
+	<item
+		name="r_layout_12"
+		type="id" />
+	<item
+		name="r_layout_13"
+		type="id" />
+	<item
+		name="r_layout_14"
+		type="id" />
+	<item
+		name="r_layout_15"
+		type="id" />
+	<item
+		name="r_layout_16"
+		type="id" />
+	<item
+		name="r_layout_17"
+		type="id" />
+	<item
+		name="r_layout_18"
+		type="id" />
+	<item
+		name="r_layout_19"
+		type="id" />
+	<item
+		name="r_layout_20"
+		type="id" />
+	<item
+		name="r_layout_21"
+		type="id" />
+	<item
+		name="r_layout_22"
+		type="id" />
+	<item
+		name="r_layout_23"
+		type="id" />
+	<item
+		name="r_layout_24"
+		type="id" />
+	<item
+		name="r_layout_25"
+		type="id" />
+	<item
+		name="r_layout_26"
+		type="id" />
+	<item
+		name="f_layout_1"
+		type="id" />
+	<item
+		name="f_layout_2"
+		type="id" />
+	<item
+		name="f_layout_3"
+		type="id" />
+	<item
+		name="f_layout_4"
+		type="id" />
+	<item
+		name="f_layout_5"
+		type="id" />
+	<item
+		name="btn_1"
+		type="id" />
+	<item
+		name="btn_2"
+		type="id" />
+	<item
+		name="btn_3"
+		type="id" />
+	<item
+		name="btn_4"
+		type="id" />
+	<item
+		name="btn_5"
+		type="id" />
+	<item
+		name="listView_1"
+		type="id" />
+	<item
+		name="listView_2"
+		type="id" />
+	<item
+		name="listView_3"
+		type="id" />
+	<item
+		name="scrollView1"
+		type="id" />
+	<item
+		name="scrollView2"
+		type="id" />
+	<item
+		name="scrollView3"
+		type="id" />
+	<item
+		name="listView_4"
+		type="id" />
+	<item
+		name="gridview_1"
+		type="id" />
+	<item
+		name="gridview_2"
+		type="id" />
+	<item
+		name="gridview_3"
+		type="id" />
+	<item
+		name="tab1"
+		type="id" />
+	<item
+		name="tab2"
+		type="id" />
+	<item
+		name="tab3"
+		type="id" />
+	<item
+		name="tab4"
+		type="id" />
+	<item
+		name="tab5"
+		type="id" />
+	<item
+		name="tag1"
+		type="id" />
+	<item
+		name="tag2"
+		type="id" />
+	<item
+		name="tag3"
+		type="id" />
+	<item
+		name="tag4"
+		type="id" />
+	<item
+		name="tag5"
+		type="id" />
+	<item
+		name="progressBar_1"
+		type="id" />
+	<item
+		name="progressBar_2"
+		type="id" />
+	<item
+		name="progressBar_3"
+		type="id" />
+	<item
+		name="title_back"
+		type="id" />
+	<item
+		name="title_layout"
+		type="id" />
+	<item
+		name="title_txt"
+		type="id" />
+	<item
+		name="title_arrow"
+		type="id" />
+	<item
+		name="title_right_img"
+		type="id" />
+	<item
+		name="title_right_txt"
+		type="id" />
+	<item
+		name="layout_content"
+		type="id" />
+	<item
+		name="title_bar"
+		type="id" />
+	<item
+		name="refresh_bar"
+		type="id" />
+	<item
+		name="refresh_layout"
+		type="id" />
+
+	<!-- 自定义 -->
+	<item
+		name="quickGameAnswerBtn1"
+		type="id"></item>
+	<item
+		name="quickGameAnswerBtn2"
+		type="id"></item>
+	<item
+		name="quickGameAnswerBtn3"
+		type="id"></item>
+	<item
+		name="quickGameAnswerBtn4"
+		type="id"></item>
+
+
+	<item
+		name="titleAvatar"
+		type="id"></item>
+	<item
+		name="titleRightTxt"
+		type="id"></item>
+	<item
+		name="titleRightImageButton"
+		type="id"></item>
+	<item
+		name="titleLeftTxt"
+		type="id"></item>
+	<item
+		name="titleLeftImageButton"
+		type="id"></item>
+	<item
+		name="titleBox"
+		type="id"></item>
+	<item
+		name="timeGuessingTzTime"
+		type="id"></item>
+	<item
+		name="timeGuessingKjTime"
+		type="id"></item>
+	<item
+		name="timeGuessingTzTime2"
+		type="id"></item>
+	<item
+		name="timeGuessingKjTime2"
+		type="id"></item>
+	<!-- 第三方平台已经完成授权 -->
+	<item
+		name="third_platform_is_valid"
+		type="id"></item>
+	<!-- 重新发送消息 -->
+	<item
+		name="resend_msg"
+		type="id"></item>
+	<!-- 隐藏键盘 -->
+	<item
+		name="hide_keyboard"
+		type="id"></item>
+	<item
+		name="decode"
+		type="id" />
+	<item
+		name="decode_failed"
+		type="id" />
+	<item
+		name="decode_succeeded"
+		type="id" />
+	<item
+		name="quit"
+		type="id" />
+	<item
+		name="restart_preview"
+		type="id" />
+	<item
+		name="return_scan_result"
+		type="id" />
+</resources>

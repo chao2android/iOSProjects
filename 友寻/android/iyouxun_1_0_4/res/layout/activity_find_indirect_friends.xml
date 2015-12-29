@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 发现二度好友 -->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+		<!-- 简单筛选条件 -->
+		<LinearLayout
+			android:id="@+id/find_indirect_simple_filter_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingTop="10dp"
+			android:paddingBottom="15dp"
+			android:background="@color/background_content"
+			android:visibility="gone">
+			<!-- 简单性别筛选 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:text="@string/str_sex"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical" />
+				<TextView
+					android:id="@+id/find_indirect_sex_nolimit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<TextView
+					android:id="@+id/find_indirect_sex_male"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_man"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<TextView
+					android:id="@+id/find_indirect_sex_famale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_woman"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+			</LinearLayout>
+			<!-- 简单情感状态筛选 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="15dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:text="@string/emotional_state"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical" />
+				<TextView
+					android:id="@+id/find_indirect_emotional_nolimit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<TextView
+					android:id="@+id/find_indirect_emotional_single"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_single"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+			</LinearLayout>
+		</LinearLayout>
+		<!-- 更多筛选条件按钮 -->
+		<LinearLayout
+			android:layout_height="29dp"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:background="@color/background_global"
+			android:id="@+id/find_indirect_btn_simple_filter">
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textSize="14sp"
+				android:textColor="@color/text_normal_blue"
+				android:text="@string/more_filter_conditions" />
+			<ImageView
+				android:layout_height="8dp"
+				android:layout_width="12.5dp"
+				android:src="@drawable/icon_down"
+				android:scaleType="centerInside"
+				android:layout_marginLeft="15dp"
+				android:id="@+id/find_indirect_icn_simple_filter" />
+		</LinearLayout>
+		<FrameLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent">
+			<!-- 二度好友数据 -->
+			<com.handmark.pulltorefresh.library.PullToRefreshListView
+				xmlns:ptr="http://schemas.android.com/apk/res-auto"
+				android:id="@+id/find_indirect_friends_list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:cacheColorHint="@android:color/transparent"
+				android:divider="@color/transparent"
+				android:dividerHeight="1dp"
+				android:listSelector="@color/transparent"
+				android:layout_marginRight="15dp">
+			</com.handmark.pulltorefresh.library.PullToRefreshListView>
+			<!-- 右侧索引栏 -->
+			<com.iyouxun.ui.views.SideBar
+				android:id="@+id/find_indirect_friends_sidebar"
+				android:layout_width="15dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="right|center" />
+		</FrameLayout>
+	</LinearLayout>
+	<!-- 筛选视图 -->
+	<include
+		layout="@layout/filter_indirect_friends"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:id="@+id/find_indirect_friends_filter"
+		android:visibility="gone" />
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_border"
+		android:layout_gravity="top" />
+</FrameLayout>

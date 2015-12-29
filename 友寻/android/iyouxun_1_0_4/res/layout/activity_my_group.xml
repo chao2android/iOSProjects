@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的群组 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<View
+		android:layout_height="0.5dp"
+		android:layout_width="match_parent"
+		android:background="@drawable/background_top_border" />
+	<ListView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:id="@+id/my_group_list"
+		android:listSelector="@color/transparent"
+		android:cacheColorHint="@null"
+		android:dividerHeight="0.5dp"
+		android:divider="@drawable/background_list_divider_left"></ListView>
+</LinearLayout>

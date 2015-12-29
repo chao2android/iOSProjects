@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/group_warm_box"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:visibility="gone">
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="取消勾选后，群组将不会在资料页进行展示"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp"
+		android:gravity="center_vertical"
+		android:textColor="@color/bg_color1" />
+</LinearLayout>

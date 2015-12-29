@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 右下角为圆角-背景为公共色 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+	<solid android:color="@color/background_global" />
+	<corners android:bottomRightRadius="5dp" />
+</shape>

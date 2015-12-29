@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B32923FD-207E-4977-9953-4F26AAAEE9F8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>friendJY</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013</key>
+		<string>svn://120.132.40.44:3692</string>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013++1248</key>
+		<string>svn://120.132.40.44:3692/src/ios/friendJY/friendJY/Images.xcassets</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>src/ios/friendJY/friendJY.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013</key>
+		<string>../../../..</string>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013++1248</key>
+		<string>../../../../../CheckOutFriendJY/src/ios/friendJY/friendJY/Images.xcassets</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>c68cba49-e6c5-4b23-bbd2-86e54b669013++1248</key>
+		<string>svn://120.132.40.44:3692</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c68cba49-e6c5-4b23-bbd2-86e54b669013</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c68cba49-e6c5-4b23-bbd2-86e54b669013</string>
+			<key>IDESourceControlWCCName</key>
+			<string>120.132.40.44</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c68cba49-e6c5-4b23-bbd2-86e54b669013++1248</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Images.xcassets</string>
+		</dict>
+	</array>
+</dict>
+</plist>

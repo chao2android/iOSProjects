@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="StickyScrollView">
+		<attr
+			name="stuckShadowHeight"
+			format="dimension" />
+		<attr
+			name="stuckShadowDrawable"
+			format="reference" />
+	</declare-styleable>
+	<declare-styleable name="Android">
+
+		<!-- Text color. -->
+		<attr name="android:textColor" />
+		<!-- Size of the text. Recommended dimension type for text is "sp" for scaled-pixels (example: 15sp). -->
+		<attr name="android:textSize" />
+		<!-- Style (bold, italic, bolditalic) for the text. -->
+		<attr name="android:textStyle" />
+		<!-- Typeface (normal, sans, serif, monospace) for the text. -->
+		<attr name="android:typeface" />
+		<!-- Color of the text selection highlight. -->
+		<attr name="android:textColorHighlight" />
+		<!-- Color of the hint text. -->
+		<attr name="android:textColorHint" />
+		<!-- Color of the links. -->
+		<attr name="android:textColorLink" />
+	</declare-styleable>
+	<declare-styleable name="CircleImageView">
+		<attr
+			name="border_width"
+			format="dimension" />
+		<attr
+			name="border_color"
+			format="color" />
+		<attr
+			name="rounded_corner"
+			format="boolean" />
+		/>
+	</declare-styleable>
+
+
+	<declare-styleable name="ShowProgressCircleView">
+		<attr
+			name="progress"
+			format="integer" />
+		<attr
+			name="roundColor"
+			format="color" />
+		<attr
+			name="progressColor"
+			format="color" />
+		<attr
+			name="textSize"
+			format="float" />
+		<attr
+			name="textcolor"
+			format="color" />
+	</declare-styleable>
+
+	<declare-styleable name="ProgressWheel">
+		<attr
+			name="m_text"
+			format="string" />
+		<attr
+			name="m_textColor"
+			format="color" />
+		<attr
+			name="m_textSize"
+			format="dimension" />
+		<attr
+			name="m_barColor"
+			format="color" />
+		<attr
+			name="m_rimColor"
+			format="color" />
+		<attr
+			name="m_rimWidth"
+			format="dimension" />
+		<attr
+			name="m_spinSpeed"
+			format="dimension" />
+		<attr
+			name="m_delayMillis"
+			format="integer" />
+		<attr
+			name="m_circleColor"
+			format="color" />
+		<attr
+			name="m_radius"
+			format="dimension" />
+		<attr
+			name="m_barWidth"
+			format="dimension" />
+		<attr
+			name="m_barLength"
+			format="dimension" />
+		<attr
+			name="m_contourColor"
+			format="color" />
+		<attr
+			name="m_ontourSize"
+			format="dimension" />
+		<attr
+			name="m_contourSize"
+			format="dimension" />
+		<attr
+			name="m_progress"
+			format="integer" />
+	</declare-styleable>
+
+	<declare-styleable name="PagerSlidingTabStrip">
+		<attr
+			name="pstsIndicatorColor"
+			format="color" />
+		<attr
+			name="pstsUnderlineColor"
+			format="color" />
+		<attr
+			name="pstsDividerColor"
+			format="color" />
+		<attr
+			name="pstsIndicatorHeight"
+			format="dimension" />
+		<attr
+			name="pstsUnderlineHeight"
+			format="dimension" />
+		<attr
+			name="pstsDividerPadding"
+			format="dimension" />
+		<attr
+			name="pstsTabPaddingLeftRight"
+			format="dimension" />
+		<attr
+			name="pstsScrollOffset"
+			format="dimension" />
+		<attr
+			name="pstsTabBackground"
+			format="reference" />
+		<attr
+			name="pstsShouldExpand"
+			format="boolean" />
+		<attr
+			name="pstsTextAllCaps"
+			format="boolean" />
+	</declare-styleable>
+
+
+	<declare-styleable name="CropImageView">
+		<attr name="guidelines">
+			<enum
+				name="on"
+				value="2" />
+			<enum
+				name="onTouch"
+				value="1" />
+			<enum
+				name="off"
+				value="0" />
+		</attr>
+		<attr
+			name="fixAspectRatio"
+			format="boolean" />
+		<attr
+			name="aspectRatioX"
+			format="integer" />
+		<attr
+			name="aspectRatioY"
+			format="integer" />
+		<attr
+			name="imageResource"
+			format="reference" />
+	</declare-styleable>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 管理一度好友 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<!-- 好友分组 -->
+	<RelativeLayout
+		android:id="@+id/manage_friends_btn_group"
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:background="@drawable/background_top_bottom_border">
+		<ImageView
+			android:id="@+id/manage_friends_icn1"
+			android:layout_height="25dp"
+			android:layout_width="25dp"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="10dp"
+			android:src="@drawable/icn_manage_friends"
+			android:scaleType="centerInside" />
+		<ImageView
+			android:id="@+id/manage_friends_icn2"
+			android:layout_width="8dp"
+			android:layout_height="13dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/icon_arrow"
+			android:layout_marginRight="15dp" />
+		<LinearLayout
+			android:layout_height="44dp"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center_vertical"
+			android:layout_toLeftOf="@id/manage_friends_icn2"
+			android:layout_toRightOf="@id/manage_friends_icn1">
+			<!-- 显示内容 -->
+			<TextView
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:gravity="center_vertical"
+				android:textColor="@color/text_small_blue"
+				android:textSize="14sp"
+				android:singleLine="true"
+				android:text="@string/friends_group" />
+			<!-- 好友数量 -->
+			<TextView
+				android:id="@+id/manage_friends_group_count"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:textColor="@color/text_small_blue"
+				android:textSize="14sp"
+				android:singleLine="true" />
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_height="34dp"
+		android:layout_width="match_parent">
+		<!-- 筛选按钮 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/str_filter"
+			android:id="@+id/manage_friends_btn_filter"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@color/transparent"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_blue"
+			android:layout_marginRight="10dp"
+			android:padding="5dp" />
+		<!-- 好友数量 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:gravity="left|center_vertical"
+			android:text="共12345个好友"
+			android:layout_toLeftOf="@id/manage_friends_btn_filter"
+			android:layout_marginLeft="15dp"
+			android:id="@+id/manage_friends_count"
+			android:layout_centerVertical="true"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_gray" />
+	</RelativeLayout>
+	<!-- 好友列表 -->
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			xmlns:ptr="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/manage_friends_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:cacheColorHint="@android:color/transparent"
+			android:divider="@color/transparent"
+			android:dividerHeight="0dp"
+			android:listSelector="@color/transparent"
+			android:layout_marginRight="15dp">
+		</com.handmark.pulltorefresh.library.PullToRefreshListView>
+		<!-- 右侧索引栏 -->
+		<com.iyouxun.ui.views.SideBar
+			android:id="@+id/manage_friends_sidebar"
+			android:layout_width="15dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="right|center" />
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/WhiteColor"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/spd_tv_title"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/global_px75dp"
+		android:layout_marginBottom="@dimen/global_px30dp"
+		android:background="@drawable/line_white_bottom_blue_text"
+		android:gravity="center"
+		android:padding="5dp"
+		android:text="@string/choose_sex"
+		android:textColor="@color/blue"
+		android:textSize="@dimen/tsize18" />
+
+	<LinearLayout
+		android:id="@+id/spd_views"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_single"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:visibility="gone" />
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_year"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:visibility="gone" />
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_month"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:visibility="gone" />
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_day"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:visibility="gone" />
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_province"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.6"
+			android:visibility="gone" />
+
+		<com.iyouxun.ui.views.WheelView
+			android:id="@+id/wv_city"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:visibility="gone" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginTop="@dimen/global_px30dp"
+		android:background="@drawable/line_blue"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:paddingTop="1dp">
+		<Button
+			android:id="@+id/dsp_btn_cancel"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1.0"
+			android:background="@drawable/selector_dialog_btn"
+			android:text="@string/ipk_cancel" />
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="@color/blue" />
+		<Button
+			android:id="@+id/dsp_btn_confirm"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1.0"
+			android:background="@drawable/selector_dialog_btn"
+			android:text="@string/ipk_confirm" />
+	</LinearLayout>
+</LinearLayout>

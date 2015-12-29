@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 编辑分组好友数据 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res/com.iyouxun"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<!-- 头像 -->
+	<FrameLayout
+		android:id="@+id/friends_user_avatar_box"
+		android:layout_width="46.5dp"
+		android:layout_height="46.5dp"
+		android:layout_gravity="center_horizontal">
+		<com.iyouxun.ui.views.CircularImage
+			android:layout_height="44dp"
+			android:layout_width="44dp"
+			jy:border_width="2dp"
+			jy:border_color="@color/background_border"
+			android:scaleType="centerCrop"
+			android:id="@+id/edit_group_avatar" />
+		<com.iyouxun.ui.views.CircularImage
+			android:layout_height="44dp"
+			android:layout_width="44dp"
+			jy:border_width="2dp"
+			jy:border_color="@color/background_border"
+			android:scaleType="centerCrop"
+			android:id="@+id/edit_group_edit"
+			android:visibility="gone" />
+		<ImageView
+			android:id="@+id/edit_group_del"
+			android:layout_width="12dp"
+			android:layout_height="12dp"
+			android:src="@drawable/icn_del"
+			android:layout_gravity="top|right" />
+	</FrameLayout>
+	<!-- 昵称 -->
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:textSize="10sp"
+		android:textColor="@color/text_normal_blue"
+		android:layout_gravity="center_horizontal"
+		android:id="@+id/edit_group_nick"
+		android:singleLine="true" />
+</LinearLayout>

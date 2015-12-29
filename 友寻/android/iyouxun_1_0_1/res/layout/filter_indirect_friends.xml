@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 二度好友筛选 -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor"
+	android:paddingBottom="8dp"
+	android:focusable="true"
+	android:focusableInTouchMode="true">
+	<!-- 更多筛选条件按钮 -->
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:id="@+id/indirect_btn_filter"
+		android:layout_alignParentBottom="true"
+		android:layout_marginTop="15dp">
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_blue"
+			android:text="@string/more_filter_conditions" />
+		<ImageView
+			android:layout_height="8dp"
+			android:layout_width="12.5dp"
+			android:src="@drawable/icon_up"
+			android:scaleType="centerInside"
+			android:layout_marginLeft="10dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_above="@id/indirect_btn_filter"
+		android:id="@+id/indirect_bottom_box">
+		<!-- 重置按钮 -->
+		<Button
+			android:id="@+id/indirect_btn_reset"
+			android:layout_height="44dp"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="@string/str_reset"
+			android:background="@drawable/button_profile_tab"
+			android:textColor="@color/button_text_blue_white_color"
+			android:textSize="@dimen/text_normal" />
+		<!-- 确定按钮 -->
+		<Button
+			android:id="@+id/indirect_btn_ok"
+			android:layout_height="44dp"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="@string/dialog_btn_ok"
+			android:background="@drawable/button_profile_tab_help"
+			android:textColor="@color/text_normal_white"
+			android:textSize="@dimen/text_normal" />
+	</LinearLayout>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true"
+		android:layout_above="@id/indirect_bottom_box"
+		android:layout_alignParentTop="true"
+		android:id="@+id/indirect_filter_scroll">
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:paddingTop="15dp"
+			android:paddingBottom="20dp">
+			<!-- 性别筛选 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:text="@string/str_sex"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical" />
+				<!-- 性别不限 -->
+				<TextView
+					android:id="@+id/indirect_sex_nolimit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<!-- 性别男 -->
+				<TextView
+					android:id="@+id/indirect_sex_male"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_man"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<!-- 性别女 -->
+				<TextView
+					android:id="@+id/indirect_sex_famale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_woman"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+			</LinearLayout>
+			<!-- 简单情感状态筛选 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="15dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:text="@string/emotional_state"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical" />
+				<!-- 情感状态不限 -->
+				<TextView
+					android:id="@+id/indirect_emotional_nolimit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+				<!-- 情感状态单身 -->
+				<TextView
+					android:id="@+id/indirect_emotional_single"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_single"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp" />
+			</LinearLayout>
+			<!-- 星座 -->
+			<RelativeLayout
+				android:id="@+id/indirect_sign_box"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="20dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true"
+					android:id="@+id/indirect_sign_text"
+					android:text="@string/str_sign" />
+				<!-- 星座展开按钮 -->
+				<ImageView
+					android:id="@+id/indirect_btn_sign"
+					android:layout_alignParentRight="true"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/icon_gray_down"
+					android:scaleType="centerInside"
+					android:padding="10dp"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp" />
+				<!-- 星座不限 -->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@id/indirect_sign_text"
+					android:id="@+id/indirect_sign_btn_unlimited" />
+			</RelativeLayout>
+			<!-- 星座数据 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/indirect_sign_ll"
+				android:visibility="gone"
+				android:layout_marginTop="25dp"
+				android:paddingRight="15dp"
+				android:layout_marginLeft="42dp">
+				<com.iyouxun.ui.views.MyGridView
+					android:id="@+id/indirect_sign_gridview"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:horizontalSpacing="7.5dp"
+					android:numColumns="4"
+					android:verticalSpacing="15dp"
+					android:listSelector="@color/transparent">
+				</com.iyouxun.ui.views.MyGridView>
+			</LinearLayout>
+			<!-- 年龄 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:gravity="center_vertical"
+				android:layout_marginTop="25dp"
+				android:focusable="true"
+				android:focusableInTouchMode="true">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical"
+					android:layout_gravity="center_vertical"
+					android:text="@string/str_age" />
+				<!-- 年龄下限 -->
+				<RelativeLayout
+					android:layout_height="25dp"
+					android:layout_width="60dp"
+					android:layout_marginLeft="15dp"
+					android:layout_gravity="center_vertical"
+					android:paddingRight="5dp"
+					android:background="@drawable/bg_filter_conditions_normal">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:text="@string/str_years"
+						android:id="@+id/indirect_age_min_text"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true" />
+					<EditText
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:id="@+id/indirect_age_min"
+						android:inputType="numberSigned"
+						android:digits="1234567890"
+						android:layout_toLeftOf="@id/indirect_age_min_text"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:gravity="center"
+						android:maxLength="2"
+						android:background="@color/transparent" />
+				</RelativeLayout>
+				<View
+					android:layout_height="2dp"
+					android:layout_width="20dp"
+					android:layout_marginLeft="9dp"
+					android:layout_marginRight="9dp"
+					android:layout_gravity="center_vertical"
+					android:background="@color/background_blue" />
+				<!-- 年龄上限 -->
+				<RelativeLayout
+					android:layout_height="25dp"
+					android:layout_width="60dp"
+					android:layout_gravity="center_vertical"
+					android:paddingRight="5dp"
+					android:background="@drawable/bg_filter_conditions_normal">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:text="@string/str_years"
+						android:id="@+id/indirect_age_max_text"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true" />
+					<EditText
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:id="@+id/indirect_age_max"
+						android:layout_toLeftOf="@id/indirect_age_max_text"
+						android:inputType="numberSigned"
+						android:digits="1234567890"
+						android:gravity="center"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:maxLength="2"
+						android:background="@color/transparent" />
+
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- 身高 -->
+			<RelativeLayout
+				android:id="@+id/indirect_height_box"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="25dp"
+				android:visibility="gone">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true"
+					android:id="@+id/indirect_height_text"
+					android:text="@string/register_text_height" />
+				<!-- 身高展开 -->
+				<ImageView
+					android:id="@+id/indirect_btn_height"
+					android:layout_alignParentRight="true"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/icon_gray_down"
+					android:scaleType="centerInside"
+					android:padding="10dp"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp" />
+				<!-- 身高不限 -->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@id/indirect_height_text"
+					android:id="@+id/indirect_height_btn_unlimited" />
+			</RelativeLayout>
+			<!-- 身高数据 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/indirect_height_ll"
+				android:visibility="gone"
+				android:layout_marginTop="25dp"
+				android:paddingRight="15dp"
+				android:layout_marginLeft="42dp">
+				<com.iyouxun.ui.views.MyGridView
+					android:id="@+id/indirect_height_gridview"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:horizontalSpacing="13dp"
+					android:numColumns="2"
+					android:verticalSpacing="15dp"
+					android:listSelector="@color/transparent">
+				</com.iyouxun.ui.views.MyGridView>
+			</LinearLayout>
+			<!-- 地区 -->
+			<RelativeLayout
+				android:id="@+id/indirect_area_box"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="25dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true"
+					android:id="@+id/indirect_area_text"
+					android:text="@string/register_text_area" />
+				<!-- 地区展开按钮 -->
+				<ImageView
+					android:id="@+id/indirect_btn_area"
+					android:layout_alignParentRight="true"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/icon_gray_down"
+					android:scaleType="centerInside"
+					android:padding="10dp"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp" />
+				<!-- 地区不限 -->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/str_no_limit"
+					android:paddingLeft="11dp"
+					android:paddingRight="11dp"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:enabled="false"
+					android:textColor="@color/button_text_white_gray_color"
+					android:textSize="@dimen/text_normal"
+					android:background="@drawable/button_blue_white_bg"
+					android:layout_marginLeft="29dp"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@id/indirect_area_text"
+					android:id="@+id/indirect_area_btn_unlimited" />
+			</RelativeLayout>
+			<!-- 地区数据 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/indirect_area_ll"
+				android:visibility="gone"
+				android:layout_marginTop="25dp"
+				android:paddingRight="15dp"
+				android:layout_marginLeft="42dp">
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:layout_marginBottom="15dp">
+					<!-- 定位信息 -->
+					<TextView
+						android:id="@+id/indirect_area_location"
+						android:layout_height="25dp"
+						android:layout_width="wrap_content"
+						android:paddingLeft="10dp"
+						android:paddingRight="10dp"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_blue"
+						android:background="@drawable/bg_filter_conditions_normal"
+						android:drawableLeft="@drawable/icn_location"
+						android:gravity="center"
+						android:drawablePadding="10dp"
+						android:layout_gravity="center_vertical" />
+					<!-- 重新定位 -->
+					<TextView
+						android:id="@+id/indirect_area_refresh_loaction"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/refresh_location"
+						android:textSize="@dimen/text_normal"
+						android:background="@drawable/button_blue_white_bg"
+						android:layout_marginLeft="20dp"
+						android:layout_gravity="center_vertical"
+						android:paddingLeft="11dp"
+						android:paddingRight="11dp"
+						android:paddingTop="6dp"
+						android:paddingBottom="6dp"
+						android:textColor="@color/button_text_white_gray_color" />
+				</LinearLayout>
+				<!-- 地区数据 -->
+				<com.iyouxun.ui.views.MyGridView
+					android:id="@+id/indirect_area_gridview"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:horizontalSpacing="7.5dp"
+					android:numColumns="4"
+					android:verticalSpacing="15dp"
+					android:listSelector="@color/transparent">
+				</com.iyouxun.ui.views.MyGridView>
+			</LinearLayout>
+			<!--标签 -->
+			<RelativeLayout
+				android:id="@+id/indirect_tag_box"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="25dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:gravity="right|center_vertical"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentLeft="true"
+					android:paddingTop="6dp"
+					android:paddingBottom="6dp"
+					android:id="@+id/indirect_tag_text"
+					android:text="@string/str_tag" />
+				<!-- 标签展开 -->
+				<ImageView
+					android:id="@+id/indirect_btn_tag"
+					android:layout_alignParentRight="true"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/icon_gray_down"
+					android:scaleType="centerInside"
+					android:padding="10dp"
+					android:layout_alignParentTop="true"
+					android:layout_marginRight="5dp" />
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:layout_marginLeft="29dp"
+					android:layout_marginRight="10dp"
+					android:layout_toLeftOf="@id/indirect_btn_tag"
+					android:layout_toRightOf="@id/indirect_tag_text"
+					android:id="@+id/indirect_tag_selected_box"></LinearLayout>
+
+			</RelativeLayout>
+			<!-- 标签数据 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/indirect_tag_ll"
+				android:visibility="gone"
+				android:layout_marginTop="25dp"
+				android:paddingRight="15dp"
+				android:layout_marginLeft="42dp">
+				<LinearLayout
+					android:id="@+id/indirect_tag_view"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+				</LinearLayout>
+				<!-- 换一批按钮 -->
+				<TextView
+					android:id="@+id/indirect_tag_change"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:background="@drawable/button_profile_tab_help"
+					android:text="@string/str_change_tag"
+					android:layout_gravity="right"
+					android:gravity="center"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+					android:paddingLeft="5dp"
+					android:paddingRight="5dp"
+					android:layout_marginRight="2dp"
+					android:textColor="@color/text_normal_white"
+					android:textSize="@dimen/text_normal" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

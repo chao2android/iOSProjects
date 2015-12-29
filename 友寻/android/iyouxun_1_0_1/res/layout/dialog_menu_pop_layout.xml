@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="107dp"
+		android:layout_height="74dp"
+		android:orientation="vertical"
+		android:background="@drawable/bg_search_menu"
+		android:layout_marginLeft="5dp">
+		<Button
+			android:id="@+id/menuDialogAllButton"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@drawable/background_tab_button"
+			android:textColor="@color/blue_main"
+			android:textSize="@dimen/text_normal"
+			android:text="全部" />
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/background_border"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" />
+		<Button
+			android:id="@+id/menuDialogSingleButton"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@drawable/background_tab_button"
+			android:textColor="@color/blue_main"
+			android:textSize="@dimen/text_normal"
+			android:text="只看单身" />
+	</LinearLayout>
+</LinearLayout>

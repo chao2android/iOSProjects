@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_content">
+	<View
+		android:id="@+id/item_black_line"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/background_border"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginTop="1dp"
+		android:visibility="gone" />
+	<!-- 索引的首个字母 -->
+	<TextView
+		android:id="@+id/blackSortCatalog"
+		android:layout_width="match_parent"
+		android:layout_height="22dp"
+		android:textColor="@color/text_normal_black"
+		android:textSize="@dimen/text_normal"
+		android:background="@color/background_global"
+		android:paddingLeft="15dp"
+		android:gravity="center_vertical" />
+	<!-- 中间内容 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginLeft="15dp">
+		<!-- 头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:id="@+id/blackUserAvatar"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			jy:border_width="2dp"
+			jy:border_color="@color/background_border"
+			android:layout_gravity="right|bottom"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true" />
+		<!-- 一度好友 -->
+		<ImageView
+			android:id="@+id/blackDimen"
+			android:layout_width="40.5dp"
+			android:layout_height="41dp"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:src="@drawable/icon_dimen_one" />
+		<!-- 昵称 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="10dp"
+			android:layout_toRightOf="@id/blackUserAvatar"
+			android:layout_toLeftOf="@id/blackDimen"
+			android:layout_centerVertical="true">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/blackUserNick"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal"
+					android:layout_gravity="center_vertical" />
+				<ImageView
+					android:id="@+id/blackUserSex"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5dp"
+					android:src="@drawable/icon_male_s"
+					android:layout_gravity="center_vertical" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/blackUserSameNum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:textColor="@color/text_small_gray"
+				android:textSize="@dimen/text_small" />
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

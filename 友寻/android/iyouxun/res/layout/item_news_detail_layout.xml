@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="15dp"
+		android:paddingBottom="15dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="10dp">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<!-- 头像 -->
+			<com.iyouxun.ui.views.CircularImage
+				android:id="@+id/newsUserAvatar"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				jy:border_width="2dp"
+				jy:border_color="@color/background_border"
+				android:layout_alignParentLeft="true" />
+			<!-- 时间 -->
+			<TextView
+				android:id="@+id/newsDataInfo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_small_gray"
+				android:textSize="@dimen/text_small"
+				android:layout_alignParentRight="true" />
+			<!-- 用户信息 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_toRightOf="@id/newsUserAvatar"
+				android:layout_toLeftOf="@id/newsDataInfo"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+				<!-- 昵称 -->
+				<TextView
+					android:id="@+id/newsUserNick"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_blue"
+					android:textSize="@dimen/text_normal"
+					android:singleLine="true"
+					android:ellipsize="end"
+					android:layout_marginLeft="5dp"
+					android:layout_gravity="center_vertical" />
+				<!-- 婚姻状况 -->
+				<TextView
+					android:id="@+id/newsTitleInfo"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="10dp"
+					android:drawablePadding="5dp" />
+			</LinearLayout>
+		</RelativeLayout>
+		<!-- 图片和转播内容的显示 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/newsContent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:layout_marginBottom="10dp"
+				android:layout_marginLeft="60dp"
+				android:lineSpacingExtra="5dp"
+				android:visibility="gone" />
+			<!-- 单张图片 -->
+			<LinearLayout
+				android:id="@+id/newsContentTypePhotoOneBox"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginLeft="60dp"
+				android:visibility="gone">
+				<ImageView
+					android:id="@+id/newsContentTypePhotoOne"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</LinearLayout>
+			<!-- 发表图片 -->
+			<LinearLayout
+				android:id="@+id/newsContentTypePhotoBox"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginLeft="60dp"
+				android:visibility="gone">
+				<com.iyouxun.ui.views.NotScollGridView
+					android:id="@+id/newsContentTypePhoto"
+					android:layout_width="220dp"
+					android:layout_height="wrap_content"
+					android:scrollbars="none"
+					android:numColumns="3"
+					android:verticalSpacing="2dp"
+					android:horizontalSpacing="2dp" />
+			</LinearLayout>
+			<!-- 转播动态 -->
+			<TextView
+				android:id="@+id/newsRelayContentTitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:text="转播动态"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:visibility="gone" />
+			<LinearLayout
+				android:id="@+id/newsRelayContentBox"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginTop="5dp"
+				android:padding="10dp"
+				android:background="@drawable/background_globalcolor_border_white_bg"
+				android:visibility="gone">
+				<!-- 性别、昵称和时间 -->
+				<RelativeLayout
+					android:id="@+id/newsRelayUserBox"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<!-- 转播内容的时间 -->
+					<TextView
+						android:id="@+id/newsRelayDate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/text_small_gray"
+						android:textSize="@dimen/text_small"
+						android:layout_alignParentRight="true" />
+					<!-- 转播内容人昵称 -->
+					<TextView
+						android:id="@+id/newsRelayNick"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textColor="@color/text_normal_blue"
+						android:textSize="@dimen/text_normal"
+						android:layout_toLeftOf="@id/newsRelayDate" />
+					<!-- 婚姻状态 -->
+					<TextView
+						android:id="@+id/newsRelayMarriage"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/text_normal_gray"
+						android:textSize="@dimen/text_normal"
+						android:drawablePadding="5dp"
+						android:layout_below="@id/newsRelayNick" />
+				</RelativeLayout>
+				<!-- 标题 -->
+				<TextView
+					android:id="@+id/newsRelayTitleInfo"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="6dp"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:lineSpacingExtra="5dp" />
+				<LinearLayout
+					android:id="@+id/newsRelayDetailInfo"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+					<!-- 描述文字 -->
+					<TextView
+						android:id="@+id/newsRelayContent"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/text_normal_black"
+						android:textSize="@dimen/text_normal"
+						android:layout_marginTop="10dp"
+						android:lineSpacingExtra="5dp"
+						android:visibility="gone" />
+					<!-- 单张图片 -->
+					<LinearLayout
+						android:id="@+id/newsRelayContentTypePhotoOneBox"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:layout_marginTop="10dp"
+						android:visibility="gone">
+						<ImageView
+							android:id="@+id/newsRelayContentTypePhotoOne"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+					<!-- 发表图片 -->
+					<com.iyouxun.ui.views.NotScollGridView
+						android:id="@+id/newsRelayContentTypePhoto"
+						android:layout_width="220dp"
+						android:layout_height="wrap_content"
+						android:scrollbars="none"
+						android:numColumns="3"
+						android:layout_marginTop="10dp"
+						android:verticalSpacing="2dp"
+						android:horizontalSpacing="2dp"
+						android:visibility="gone" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<!-- 朋友类型 -->
+			<TextView
+				android:id="@+id/newsUserFriendDimen"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:paddingTop="10dp" />
+			<!-- 评论数 -->
+			<TextView
+				android:id="@+id/newsCommentNum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:paddingLeft="10dp"
+				android:paddingTop="10dp" />
+			<!-- 转播数 -->
+			<TextView
+				android:id="@+id/newsReBroadcastNum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_toLeftOf="@id/newsCommentNum"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:layout_centerVertical="true" />
+			<!-- 赞的数量 -->
+			<TextView
+				android:id="@+id/newsPraiseNum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:layout_toLeftOf="@id/newsReBroadcastNum"
+				android:layout_centerVertical="true" />
+		</RelativeLayout>
+	</LinearLayout>
+	<!-- 赞、转播、评论的详细列表 -->
+	<LinearLayout
+		android:id="@+id/newsFriendsInfoBox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/background_topbottom_globalcolor_border_global_bg"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:paddingBottom="10dp"
+		android:visibility="gone">
+		<!-- 赞过的人 -->
+		<LinearLayout
+			android:id="@+id/newsLikeInfoBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp"
+			android:visibility="gone">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="赞过"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_marginLeft="15dp" />
+			<TextView
+				android:id="@+id/newsLikeInfo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_marginLeft="7dp" />
+		</LinearLayout>
+		<!-- 转播的人 -->
+		<LinearLayout
+			android:id="@+id/newsRelayInfoBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp"
+			android:visibility="gone">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="转播"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_marginLeft="15dp" />
+			<TextView
+				android:id="@+id/newsRelayInfo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_marginLeft="7dp" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

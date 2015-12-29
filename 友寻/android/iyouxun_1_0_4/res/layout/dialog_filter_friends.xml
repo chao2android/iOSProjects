@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="110dp"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_btn_filiter">
+	<TextView
+		android:layout_height="36dp"
+		android:layout_width="match_parent"
+		android:id="@+id/filter_friends_btn_all"
+		android:layout_gravity="center_horizontal"
+		android:text="@string/all_friends"
+		android:gravity="center"
+		android:textSize="14sp"
+		android:textColor="@color/button_filter_text_color"
+		android:background="@drawable/list_selector" />
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@color/background_border" />
+	<TextView
+		android:layout_height="36dp"
+		android:layout_width="match_parent"
+		android:id="@+id/filter_friends_btn_single"
+		android:layout_gravity="center_horizontal"
+		android:text="@string/single_friends"
+		android:gravity="center"
+		android:textSize="14sp"
+		android:textColor="@color/button_filter_text_color"
+		android:background="@drawable/list_selector" />
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@color/background_border" />
+	<TextView
+		android:layout_height="36dp"
+		android:layout_width="match_parent"
+		android:id="@+id/filter_friends_btn_opposite"
+		android:layout_gravity="center_horizontal"
+		android:text="@string/opposite_friends"
+		android:gravity="center"
+		android:textSize="14sp"
+		android:textColor="@color/button_filter_text_color"
+		android:background="@drawable/list_selector" />
+</LinearLayout>

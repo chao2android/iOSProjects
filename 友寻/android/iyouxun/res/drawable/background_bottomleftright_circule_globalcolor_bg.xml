@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部左右两角为圆角-背景为浅灰 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+	<solid android:color="@color/background_global" />
+	<corners
+		android:bottomLeftRadius="5dp"
+		android:bottomRightRadius="5dp" />
+</shape>

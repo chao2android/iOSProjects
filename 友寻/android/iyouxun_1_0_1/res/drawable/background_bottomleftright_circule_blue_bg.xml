@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部左右两角为圆角-背景为蓝色 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+	<solid android:color="@color/blue_assist" />
+	<corners
+		android:bottomLeftRadius="5dp"
+		android:bottomRightRadius="5dp" />
+</shape>

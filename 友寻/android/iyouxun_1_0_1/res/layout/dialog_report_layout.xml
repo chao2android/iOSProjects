@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/transparent">
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="请选择举报类型"
+		android:textColor="@color/text_normal_gray"
+		android:textSize="@dimen/text_normal"
+		android:gravity="center"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/button_dialog_top_circular" />
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/gray_assist"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<ListView
+		android:id="@+id/dialogReportLv"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@color/transparent"
+		android:divider="@color/gray_assist"
+		android:dividerHeight="0.5dp" />
+	<Button
+		android:id="@+id/dialogReportCancel"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="取 消"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_margin="10dp"
+		android:background="@drawable/button_dialog_circular" />
+</LinearLayout>

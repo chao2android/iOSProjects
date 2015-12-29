@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注册协议页面 -->
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/agreement"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:text="@string/str_agreement"
+			android:layout_marginTop="28dp"
+			android:layout_centerHorizontal="true"
+			android:textColor="@color/text_topNav_center"
+			android:textSize="14sp"
+			android:gravity="center" />
+		<TextView
+			android:layout_below="@id/agreement"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:text="@string/str_agreement_content"
+			android:layout_marginTop="28dp"
+			android:layout_centerHorizontal="true"
+			android:textColor="@color/text_topNav_center"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:textSize="14sp"
+			android:gravity="left" />
+	</RelativeLayout>
+</ScrollView>

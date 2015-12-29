@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 邀请TA加入按钮 -->
+	<Button
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:background="@drawable/btn_get_security_code_bg"
+		android:textColor="@color/WhiteColor"
+		android:textSize="14sp"
+		android:text="@string/invite_join_youxun"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/not_join_invite_btn" />
+	<ScrollView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:layout_above="@id/not_join_invite_btn"
+		android:layout_alignParentTop="true">
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:background="@drawable/background_globalcolor_border_white_bg">
+				<!-- 一度好友标示 -->
+				<ImageView
+					android:layout_height="41dp"
+					android:layout_width="41dp"
+					android:scaleType="centerCrop"
+					android:src="@drawable/icn_my_friend"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentRight="true"
+					android:id="@+id/not_join_friends_tip" />
+				<!-- 头像 -->
+				<RelativeLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true"
+					android:id="@+id/not_join_avatar_box"
+					android:padding="10dp">
+					<com.iyouxun.ui.views.CircularImage
+						android:id="@+id/not_join_avatar"
+						android:layout_width="70dp"
+						android:layout_height="70dp"
+						android:scaleType="centerCrop"
+						android:layout_gravity="center"
+						jy:border_width="2dp"
+						jy:border_color="@color/background_border"
+						android:src="@drawable/icon_avatar" />
+				</RelativeLayout>
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:layout_toRightOf="@id/not_join_avatar_box"
+					android:layout_toLeftOf="@id/not_join_friends_tip"
+					android:paddingRight="5dp"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="7dp">
+					<!-- 联系人 -->
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:singleLine="true"
+						android:ellipsize="end"
+						android:id="@+id/not_join_nick" />
+					<!-- 手机号 -->
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:textSize="12sp"
+						android:textColor="@color/text_normal_black"
+						android:singleLine="true"
+						android:ellipsize="end"
+						android:id="@+id/not_join_number"
+						android:layout_marginTop="10dp"
+						android:visibility="gone" />
+				</LinearLayout>
+			</RelativeLayout>
+			<!-- 标签页 -->
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:minHeight="54dp"
+				android:orientation="vertical"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:background="@drawable/background_globalcolor_border_white_bg"
+				android:id="@+id/not_join_tags"
+				android:padding="10dp"></LinearLayout>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:gravity="center"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_small"
+				android:text="@string/add_tag_to_not_join_user_title" />
+
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

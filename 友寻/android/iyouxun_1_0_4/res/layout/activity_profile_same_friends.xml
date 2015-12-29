@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 顶部内容 -->
+	<FrameLayout
+		android:id="@+id/sameFriendTopbox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/background_top_globalcolor_border_white_bg"
+		android:layout_marginTop="1dp">
+		<!-- 底部内容-共同好友/他的好友 -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/background_content">
+			<!-- 只做占位用 -->
+			<Button
+				android:id="@+id/spaceView"
+				android:layout_width="match_parent"
+				android:layout_height="29dp"
+				android:background="@color/transparent" />
+			<!-- 两个按钮 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@id/spaceView"
+				android:padding="15dp">
+				<Button
+					android:id="@+id/sameFriendButton"
+					android:layout_width="0dp"
+					android:layout_height="25dp"
+					android:layout_weight="1"
+					android:text="共同好友"
+					android:textSize="@dimen/text_normal"
+					android:textColor="@color/button_text_blue_white_color"
+					android:background="@drawable/button_lefttopbottom_circule"
+					android:enabled="false" />
+				<Button
+					android:id="@+id/oppoFriendButton"
+					android:layout_width="0dp"
+					android:layout_height="25dp"
+					android:layout_weight="1"
+					android:textSize="@dimen/text_normal"
+					android:textColor="@color/button_text_blue_white_color"
+					android:background="@drawable/button_righttopbottom_circule" />
+			</LinearLayout>
+		</RelativeLayout>
+		<!-- 筛选条件 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/profile_sf_search_box"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingTop="10dp"
+				android:paddingBottom="15dp"
+				android:background="@color/background_content"
+				android:visibility="gone">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:layout_width="70dp"
+						android:layout_height="wrap_content"
+						android:text="性别"
+						android:textColor="@color/text_normal_black"
+						android:textSize="@dimen/text_normal"
+						android:gravity="right|center_vertical" />
+					<TextView
+						android:id="@+id/profile_sf_sex_nolimit"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="不限"
+						android:paddingLeft="11dp"
+						android:paddingRight="11dp"
+						android:paddingTop="6dp"
+						android:paddingBottom="6dp"
+						android:enabled="false"
+						android:textColor="@color/button_text_blue_white_color"
+						android:textSize="@dimen/text_normal"
+						android:background="@drawable/button_blue_white_bg"
+						android:layout_marginLeft="29dp" />
+					<TextView
+						android:id="@+id/profile_sf_sex_male"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="男"
+						android:paddingLeft="11dp"
+						android:paddingRight="11dp"
+						android:paddingTop="6dp"
+						android:paddingBottom="6dp"
+						android:textColor="@color/button_text_blue_white_color"
+						android:textSize="@dimen/text_normal"
+						android:background="@drawable/button_blue_white_bg"
+						android:layout_marginLeft="29dp" />
+					<TextView
+						android:id="@+id/profile_sf_sex_famale"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="女"
+						android:paddingLeft="11dp"
+						android:paddingRight="11dp"
+						android:paddingTop="6dp"
+						android:paddingBottom="6dp"
+						android:textColor="@color/button_text_blue_white_color"
+						android:textSize="@dimen/text_normal"
+						android:background="@drawable/button_blue_white_bg"
+						android:layout_marginLeft="29dp" />
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginTop="15dp">
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+						<TextView
+							android:layout_width="70dp"
+							android:layout_height="wrap_content"
+							android:text="情感状态"
+							android:textColor="@color/text_normal_black"
+							android:textSize="@dimen/text_normal"
+							android:gravity="right|center_vertical" />
+						<TextView
+							android:id="@+id/profile_sf_marray_nolimit"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="不限"
+							android:paddingLeft="11dp"
+							android:paddingRight="11dp"
+							android:paddingTop="6dp"
+							android:paddingBottom="6dp"
+							android:enabled="false"
+							android:textColor="@color/button_text_blue_white_color"
+							android:textSize="@dimen/text_normal"
+							android:background="@drawable/button_blue_white_bg"
+							android:layout_marginLeft="29dp" />
+						<TextView
+							android:id="@+id/profile_sf_marray_single"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="单身"
+							android:paddingLeft="11dp"
+							android:paddingRight="11dp"
+							android:paddingTop="6dp"
+							android:paddingBottom="6dp"
+							android:textColor="@color/button_text_blue_white_color"
+							android:textSize="@dimen/text_normal"
+							android:background="@drawable/button_blue_white_bg"
+							android:layout_marginLeft="29dp" />
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<!-- 筛选条件按钮 -->
+			<com.iyouxun.ui.views.DrawableCenterFromRightButton
+				android:id="@+id/profile_sf_search_button"
+				android:layout_width="match_parent"
+				android:layout_height="29dp"
+				android:text="筛选条件"
+				android:drawableRight="@drawable/icon_down"
+				android:drawablePadding="6dp"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:background="@color/background_global" />
+		</LinearLayout>
+	</FrameLayout>
+
+	<!-- 联系人列表 -->
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/background_content">
+		<!-- 联系人列表 -->
+		<android.support.v4.view.ViewPager
+			android:id="@+id/same_user_viewPager"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+	</FrameLayout>
+</LinearLayout>

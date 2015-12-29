@@ -1,0 +1,46 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 底部栏 -->
+	<FrameLayout
+		android:id="@+id/bottom"
+		android:layout_width="match_parent"
+		android:layout_height="72dp"
+		android:layout_alignParentBottom="true"
+		android:background="@color/background_content">
+		<!-- 取消，返回 -->
+		<ImageButton
+			android:id="@+id/btn_back"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:src="@drawable/icon_camera_cancel"
+			android:background="@color/transparent"
+			android:layout_gravity="left|center_vertical" />
+		<!-- 确定 -->
+		<ImageButton
+			android:id="@+id/btn_useit"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:src="@drawable/icon_camera_ok"
+			android:background="@color/transparent"
+			android:layout_gravity="right|center_vertical" />
+	</FrameLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@id/bottom"
+		android:gravity="center">
+		<com.edmodo.cropper.CropImageView
+			android:id="@+id/iv"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop">
+		</com.edmodo.cropper.CropImageView>
+	</LinearLayout>
+</RelativeLayout>

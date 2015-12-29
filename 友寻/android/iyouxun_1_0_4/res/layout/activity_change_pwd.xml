@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="34dp"
+		android:background="@drawable/background_top_bottom_border">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/changePwdTitle1"
+				android:layout_width="132dp"
+				android:layout_height="match_parent"
+				android:text="输入原密码："
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/changePwdOldPwd"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:inputType="textPassword"
+				android:maxLength="20"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:hint="输入当前密码"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/background_border"
+			android:layout_marginLeft="15dp" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/changePwdTitle2"
+				android:layout_width="132dp"
+				android:layout_height="wrap_content"
+				android:text="输入新密码："
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/changePwdNewPwd"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:inputType="textPassword"
+				android:maxLength="20"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:hint="密码长度6至20个字"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/background_border"
+			android:layout_marginLeft="15dp" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/changePwdTitle3"
+				android:layout_width="132dp"
+				android:layout_height="wrap_content"
+				android:text="再次输入新密码："
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/changePwdReNewPwd"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:inputType="textPassword"
+				android:maxLength="20"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:hint="与新密码一致"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

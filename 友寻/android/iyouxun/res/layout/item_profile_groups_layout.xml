@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:background="@drawable/background_top_globalcolor_border_white_bg"
+		android:layout_marginLeft="1dp"
+		android:layout_marginRight="1dp"
+		android:layout_marginBottom="1dp">
+		<!-- 添加按钮 -->
+		<ImageButton
+			android:id="@+id/item_group_add"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:src="@drawable/icon_add"
+			android:background="@null"
+			android:layout_alignParentRight="true"
+			android:paddingRight="13dp"
+			android:paddingLeft="13dp" />
+		<!-- 群组成员人数 -->
+		<TextView
+			android:id="@+id/item_goup_num"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="@dimen/text_normal"
+			android:layout_toLeftOf="@id/item_group_add"
+			android:layout_centerVertical="true"
+			android:gravity="center_vertical" />
+		<!-- 群组名称 -->
+		<TextView
+			android:id="@+id/item_group_name"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:gravity="center_vertical"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:layout_marginLeft="10dp"
+			android:layout_toLeftOf="@id/item_goup_num"
+			android:layout_centerVertical="true" />
+	</RelativeLayout>
+</LinearLayout>

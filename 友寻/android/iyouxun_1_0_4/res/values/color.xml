@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 统一的颜色 START -->
+	<color name="background_global">#EDF1F4</color>
+	<color name="background_content">#FFFFFF</color>
+	<color name="background_border">#E2E5E7</color>
+	<color name="background_pop">#E2E5E7</color>
+	<color name="background_blue">#2695FF</color>
+
+	<color name="blue_main">#2695FF</color>
+	<color name="blue_assist">#6BBCFF</color>
+	<color name="red_main">#FA544F</color>
+	<color name="red_assist">#FF7F74</color>
+	<color name="gray_main">#848484</color>
+	<color name="gray_assist">#B9B9B9</color>
+
+	<color name="text_topNav_center">#303030</color>
+	<color name="text_topNav_left_right">#2695FF</color>
+	<color name="text_normal_blue">#2695FF</color>
+	<color name="text_normal_black">#303030</color>
+	<color name="text_normal_gray">#848484</color>
+	<color name="text_normal_white">#FFFFFF</color>
+	<color name="text_normal_red">#FA544F</color>
+
+	<color name="text_small_blue">#2695FF</color>
+	<color name="text_small_black">#303030</color>
+	<color name="text_small_gray">#848484</color>
+	<color name="text_small_white">#FFFFFF</color>
+
+	<color name="text_tags">#FFFFFF</color>
+	<!-- 统一的颜色 END -->
+
+	<color name="holo_blue_light">#ff33b5e5</color>
+	<color name="transparent">#00000000</color>
+	<color name="WhiteColor">#ffffff</color>
+	<color name="BlackColor">#000000</color>
+	<color name="BlueColor">#00B1FF</color>
+	<color name="YellowColor">#FFD800</color>
+	<color name="black_alpha">#99000000</color>
+	<color name="RedColor">#ff0000</color>
+	<color name="GrayColor">#FFB3B3B3</color>
+	<color name="light_grey">#b9b9b9</color>
+	<color name="dim_foreground_disabled_holo_dark">#80bebebe</color>
+	<color name="dim_foreground_holo_dark">#bebebe</color>
+	<color name="background_holo_light">#fff3f3f3</color>
+	<color name="bright_foreground_holo_dark">@color/background_holo_light</color>
+	<color name="bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+
+	<color name="ipk_black_title">#141318</color>
+	<color name="ipk_light_blue">#720074bd</color>
+	<color name="ipk_high_light_blue">#2b94E2</color>
+	<color name="ipk_challenge_black_color">#1D1C24</color>
+	<color name="ipk_challenge_pressed_black_color">#030303</color>
+	<color name="ipk_challenge_blue_color">#20B7FF</color>
+	<color name="ipk_challenge_bg_blue">#124682</color>
+	<color name="ipk_challenge_bg_red">#531934</color>
+	<color name="ipk_challenge_bg_green">#3E4D15</color>
+	<color name="ipk_challenge_text_blue">#1FADF4</color>
+	<color name="ipk_challenge_text_red">#FC446D</color>
+	<color name="ipk_challenge_text_green">#9EC32F</color>
+
+	<color name="ipk_rank_gold_coin">#FFD800</color>
+	<color name="ipk_rank_blue_rank">#29AAC3</color>
+	<color name="ipk_rank_green_rank">#ADD61C</color>
+
+
+	<color name="pink_color">#FE5165</color>
+	<color name="tab_line">#DE214E</color>
+	<color name="deep_red">#C41940</color>
+	<color name="deep_red_disable">#E497A9</color>
+	<color name="title_color">#5a5a5a</color>
+	<color name="deep_gray">#7c6c5b</color>
+	<color name="blue">#0074bd</color>
+	<color name="gray_white">#dedede</color>
+	<color name="gray">#bbbbbb</color>
+	<color name="gray1">#797979</color>
+	<color name="chat_send_blue">#3b859a</color>
+	<color name="chat_page_bg">#f2f2f2</color>
+	<color name="un_follow_color">#0488ca</color>
+	<color name="no_data_hint_color">#b58888</color>
+	<color name="recommend_tag_color">#fdaf37</color>
+	<color name="recommend_txt_color">#fdd097</color>
+
+	<color name="login_red">#F08080</color>
+	<color name="match_network_tips">#b1b1b1</color>
+	<color name="match_network_fresh">#d0d0d0</color>
+	<color name="refresh_color">#0074bd</color>
+
+	<color name="match_tag_color">#feb434</color>
+	<color name="msg_color">#3f3f3f</color>
+	<color name="msg_time_color">#888888</color>
+
+	<!-- profile -->
+	<color name="profile_send_selection">#98a3b2</color>
+	<color name="profile_note_color">#555555</color>
+	<color name="dividing_line">#e9e9e9</color>
+
+	<!-- miss -->
+	<color name="miss_nick_name">#343434</color>
+	<color name="miss_count">#3cd4f5</color>
+	<color name="miss_text">#888888</color>
+
+	<!-- 礼物弹出框 -->
+	<!-- 礼物名称 字体颜色 -->
+	<color name="gift_name">#464244</color>
+	<!-- 邮票文案 字体颜色 -->
+	<color name="gift_stamp">#47ad69</color>
+	<!-- 魅力文案 字体颜色 -->
+	<color name="gift_charm">#df2d6c</color>
+
+	<!-- 个性标签颜色 -->
+	<color name="personal_tag_bg">#fff3ea</color>
+	<color name="dividing_line_personal_tag">#ffc9b8</color>
+	<color name="personal_tag_1">#ff9936</color>
+	<color name="personal_tag_2">#ff7a7a</color>
+	<color name="personal_tag_3">#72d28b</color>
+	<color name="personal_tag_4">#dd76ff</color>
+	<color name="personal_tag_5">#7acbff</color>
+	<color name="personal_tag_6">#7091c7</color>
+	<color name="personal_tag_7">#f76cbe</color>
+	<color name="personal_tag_8">#c6be2e</color>
+	<color name="personal_tag_9">#37abe4</color>
+	<color name="personal_tag_10">#96b862</color>
+	<color name="personal_tag_11">#e27000</color>
+	<color name="personal_tag_12">#946da4</color>
+	<color name="personal_tag_13">#fabf3d</color>
+	<color name="personal_tag_14">#4ecac6</color>
+	<color name="personal_tag_15">#b87c60</color>
+	<color name="personal_tag_text_press">#b7b7b7</color>
+
+	<!-- login -->
+	<color name="login_bg">#f2f2f2</color>
+	<color name="et_text_color">#565656</color>
+	<color name="et_hint_text_color">#a6a6a6</color>
+	<color name="et_listview_bg">#dedede</color>
+	<color name="et_listview_select">#bbbbbb</color>
+	<color name="select_color">#de214e</color>
+	<color name="disable_color">#bebebe</color>
+	<!-- select dialog -->
+	<color name="dialog_bg_color">#ededed</color>
+	<color name="dialog_title_color">#363636</color>
+	<color name="dialog_text_color">#565656</color>
+	<color name="dialog_item_no_select">#dad0de</color>
+	<color name="dialog_item_no_select_press">#859baa</color>
+
+	<!-- setting -->
+	<color name="setting_select_color">#d2d2d2</color>
+	<color name="distance_setting_color">#0091d4</color>
+	<color name="setting_version_text_color">#848484</color>
+	<color name="setting_service_text_color">#565656</color>
+	<color name="setting_copyright_text_color">#898989</color>
+	<!-- report view color -->
+	<color name="report_name_color">#B8B8B8</color>
+	<color name="report_title_color">#666666</color>
+	<color name="report_reason_color">#D9D9D9</color>
+	<color name="report_rule_text_color">#999999</color>
+	<color name="report_info_text_color">#647B9F</color>
+
+	<!-- miss tip color -->
+	<color name="miss_no_data_tip_color">#B58989</color>
+
+	<!-- 注册 -->
+	<color name="register_prompt_text_color">#909090</color>
+
+	<color name="match_setting_select_color">#dfdfdf</color>
+	<!-- profile note -->
+	<color name="profile_note_switch_bg">#989898</color>
+
+	<!-- 发送有眼缘弹框 -->
+	<color name="dialog_send_match_color">#504d46</color>
+	<color name="submit_btn_bg_press">#a81337</color>
+	<!-- 登录那块忘记密码 -->
+	<color name="forget_pwd_color_press">#85a0b1</color>
+	<!-- 弹出框 -->
+	<color name="popup_item_color_press">#858585</color>
+	<!-- title 右边文字点击 -->
+	<color name="title_color_press">#e87d90</color>
+
+	<!-- 透明度 -->
+	<color name="transparent75">#BF000000</color>
+	<color name="transparent70">#b2000000</color>
+	<color name="transparent60">#99000000</color>
+	<color name="transparent80">#33000000</color>
+	<color name="transparent50">#32000000</color>
+
+	<!-- 背景颜色 -->
+	<color name="bg_color1">#8D8D8D</color>
+	<color name="bg_dialog_normal">#241C1D</color>
+	<color name="bg_separator">#00b1ff</color>
+	<color name="bg_title">#FAFAFA</color>
+</resources>

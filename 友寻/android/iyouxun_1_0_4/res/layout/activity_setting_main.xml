@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbars="none">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<Button
+			android:id="@+id/settingSecutiryButton"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:text="帐号安全"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:gravity="left|center_vertical"
+			android:drawableRight="@drawable/icon_arrow"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/background_top_bottom_border" />
+
+		<Button
+			android:id="@+id/settingMyQRCode"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:text="我的二维码"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:gravity="left|center_vertical"
+			android:drawableRight="@drawable/icon_arrow"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/background_top_bottom_border" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/background_top_bottom_border"
+			android:layout_marginTop="20dp">
+			<Button
+				android:id="@+id/settingPrivacyButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="隐私设置"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingMsgButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="消息提醒"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/background_top_bottom_border"
+			android:layout_marginTop="20dp">
+			<Button
+				android:id="@+id/settingBlackButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="黑名单"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingOpenPlatformButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="第三方帐号"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingAddressBookButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="同步手机通讯录"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingClearButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="清除缓存"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:id="@+id/lastLineView"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingMarkButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="给应用打分"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingUpdateButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="检查更新"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingAboutUs"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="关于我们"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/background_border"
+				android:layout_marginLeft="15dp" />
+			<Button
+				android:id="@+id/settingFeedbackButton"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="意见反馈"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="left|center_vertical"
+				android:drawableRight="@drawable/icon_arrow"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+
+		<Button
+			android:id="@+id/settingLoginOut"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:text="退出登录"
+			android:textColor="@color/red_main"
+			android:textSize="@dimen/text_button_big"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:layout_marginTop="40dp"
+			android:layout_marginBottom="40dp"
+			android:background="@color/background_content" />
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="6" android:versionName="1.0.4" package="com.iyouxun">
+
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
+
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.READ_CONTACTS"/>
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.FLASHLIGHT"/>
+	<uses-feature android:name="android.hardware.camera"/>
+	<uses-feature android:name="android.hardware.camera.autofocus"/>
+	<!-- 华为手机判断快捷方式 -->
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+	<!-- htc手机判断快捷方式 -->
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+	<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+
+	<application android:allowBackup="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:name="com.iyouxun.J_Application" android:persistent="true" android:theme="@style/AppTheme">
+
+		<!-- ================== Activity配置START ================== -->
+		<activity android:name="com.alipay.android.app.sdk.WapPayActivity" android:screenOrientation="portrait">
+		</activity>
+		<activity android:name=".ui.activity.SplashActivity" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:launchMode="singleTask" android:name=".ui.activity.MainBoxActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.news.NewsMainActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileMainActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingMainActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileDetailEditActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+		<activity android:name=".ui.activity.center.ProfileNewsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileAlbumActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfilePhotoViewActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileSignerActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileTagsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileGroupActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileEditActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.common.ClipPhoto" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileViewActivity" android:screenOrientation="portrait"/>
+		<activity android:launchMode="singleTask" android:name=".ui.activity.login.LoginActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.login.SupplementActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.login.ResetPasswordActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.register.RegisterActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.register.RegisterUserInfoActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.register.EmotionalSelectActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.register.AgreementActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.register.UploadContactActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.GuideActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileSameFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.FindActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.AddFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.ContactActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+		<activity android:name=".ui.activity.find.SinaWeiboFriendListActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.ManageFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.FriendsGroupActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.SelectFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.FindIndirectFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.EditFriendsGroupActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.find.NoFriendsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.news.AddNewNewsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+		<activity android:name=".ui.activity.find.CaptureActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.news.NewsLookAuthActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.news.NewsMsgActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.news.NewsDetailActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingSecurityActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingFindPwdActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingChangePwdActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingChangeMobileActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingPrivacyActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingPrivacyDetailActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingMsgWarmActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingBlackListActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingAddBlackListActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingOpenPlatformActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.MessageMainActivity" android:screenOrientation="portrait"/>
+		<activity android:launchMode="singleTask" android:name=".ui.activity.message.ChatMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+		<activity android:name=".ui.activity.message.AddGroupMemebersActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.GroupSettingsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.EditGroupNameActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.EditGroupIntroductionActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.EditGroupPrivilegeActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.GroupMembersActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.message.MyGroupActivity" android:screenOrientation="portrait"/>
+		<activity android:launchMode="singleTask" android:name=".ui.activity.message.SystemMsgActivity" android:screenOrientation="portrait"/>
+		<activity android:launchMode="singleTask" android:name=".ui.activity.message.SystemReadMsgActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.center.ProfileGroupDetailActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.open.ShareUserSelectActivity" android:screenOrientation="portrait"/>
+		<activity android:name="com.iyouxun.ui.activity.news.ImageScanActivity" android:process="com.iyouxun.image" android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.iyouxun.ui.activity.news.ShowImageActivity" android:process="com.iyouxun.image" android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.iyouxun.ui.activity.setting.SettingFeedbackActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingAboutUsActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ui.activity.setting.SettingMyQRCodeActivity" android:screenOrientation="portrait"/>
+		<!-- ================== Activity配置END ================== -->
+
+
+		<!-- ================== Service配置Start ================== -->
+		<service android:name="com.iyouxun.j_libs.statistics.jiayuan.J_JiaYuanStatisticsService"/>
+		<service android:name="com.iyouxun.service.UpdateService"/>
+		<service android:name="com.iyouxun.service.SoundService"/>
+		<service android:name="com.iyouxun.service.UploadNewsService"/>
+		<service android:name="com.iyouxun.service.UpdateChatUserList"/>
+		<!-- ================== Service配置END ================== -->
+
+
+		<!-- ================== 百度推送服务START ================== -->
+		<service android:exported="true" android:name="com.baidu.android.pushservice.CommandService"/>
+		<receiver android:name="com.iyouxun.receivers.PushMessageReceiver">
+			<intent-filter>
+				<!-- 接收push消息 -->
+				<action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+				<!-- 接收bind、setTags等method的返回结果 -->
+				<action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+				<!-- 可选。接受通知点击事件，和通知自定义内容 -->
+				<action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+			</intent-filter>
+		</receiver>
+		<!-- 用于接收系统消息以保证PushService正常运行 -->
+		<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+				<action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+				<action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+			</intent-filter>
+		</receiver>
+		<!-- Push服务接收客户端发送的各种请求 -->
+		<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+			<intent-filter>
+				<action android:name="com.baidu.android.pushservice.action.METHOD"/>
+				<action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+				<data android:scheme="package"/>
+			</intent-filter>
+		</receiver>
+
+		<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+			<intent-filter>
+				<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+			</intent-filter>
+		</service>
+		<!-- ================== 百度推送服务END ==================== -->
+
+
+		<!-- ================== 百度定位服务START ================== -->
+		<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+		</service>
+		<!-- meta-data需要写在application中 -->
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="ViRhOnUnBxHkFHmPbl8ZGU7P"/>
+		<!-- ================== 百度定位服务END ================== -->
+
+
+		<!-- ================== shareSDK分享服务START ================= -->
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.mob.tools.MobUIShell" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden|adjustResize">
+			<intent-filter>
+				<data android:scheme="tencent1104528074"/>
+
+				<action android:name="android.intent.action.VIEW"/>
+
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<!-- 微信分享回调 -->
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+		<!-- ================== shareSDK分享服务END ================= -->
+
+
+		<!-- ================== 友盟统计服务START ================== -->
+		<meta-data android:name="UMENG_APPKEY" android:value="5537070667e58e8424005a3e">
+		</meta-data>
+		<meta-data android:name="UMENG_CHANNEL" android:value="211"/>
+		<!-- ================== 友盟统计服务END ================== -->
+
+
+		<!-- ================== app配置信息START ================== -->
+		<meta-data android:name="APP_CHANNEL" android:value="211"/>
+		<!-- ================== app配置信息END ================== -->
+	</application>
+
+</manifest>

@@ -1,0 +1,1 @@
+ant release -f D:\android\friendJY\src\android\iyouxun\build.xml

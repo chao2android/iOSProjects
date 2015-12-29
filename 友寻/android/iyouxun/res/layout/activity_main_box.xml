@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+	<LinearLayout
+		android:id="@+id/drawerlayout"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<!-- TabHost必须包含一个 TabWidget和一个FrameLayout -->
+		<TabHost
+			android:id="@+id/tabhost"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
+			<TabWidget
+				android:id="@android:id/tabs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone" />
+			<!-- FrameLayout的id属性必须为 @android:id/tabcontent -->
+			<FrameLayout
+				android:id="@android:id/tabcontent"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+			</FrameLayout>
+		</TabHost>
+
+		<!-- 菜单 -->
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/main_box_global_menu"
+			android:layout_gravity="bottom">
+			<include layout="@layout/global_menu" />
+		</RelativeLayout>
+	</LinearLayout>
+	<!-- 公共输入框 -->
+	<RelativeLayout
+		android:id="@+id/news_global_edittext_box"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:visibility="gone">
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			layout="@layout/inputbox_face_relativelayout_news" />
+	</RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 四角圆角-背景为灰色 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+	<solid android:color="@color/transparent80" />
+	<corners
+		android:topLeftRadius="26px"
+		android:topRightRadius="26px"
+		android:bottomLeftRadius="26px"
+		android:bottomRightRadius="26px" />
+</shape>

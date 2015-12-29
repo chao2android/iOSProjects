@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 按下状态 -->
+	<item
+		android:state_pressed="true"
+		android:drawable="@drawable/chatting_setmode_voice_btn_pressed" />
+	<!-- 焦点状态 -->
+	<item
+		android:state_focused="true"
+		android:drawable="@drawable/chatting_setmode_voice_btn_pressed" />
+	<!-- 正常状态 -->
+	<item android:drawable="@drawable/chatting_setmode_voice_btn_normal" />
+</selector>

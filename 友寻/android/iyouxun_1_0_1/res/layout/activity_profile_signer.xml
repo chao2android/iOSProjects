@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/profileIntroBox"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="30dp"
+		android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="签 名"
+			android:gravity="center_vertical"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="@dimen/text_normal"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="45dp" />
+		<EditText
+			android:id="@+id/profile_singer_et"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/transparent"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:lineSpacingExtra="3dp"
+			android:gravity="left|top"
+			android:hint="请填写签名信息"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingRight="15dp" />
+	</LinearLayout>
+</LinearLayout>

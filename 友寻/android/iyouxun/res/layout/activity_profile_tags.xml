@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="30dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="标签"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp" />
+			<LinearLayout
+				android:id="@+id/profile_tags_box"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingLeft="7.5dp"
+				android:paddingRight="7.5dp"
+				android:paddingBottom="7.5dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="暂无标签"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="7.5dp"
+					android:layout_marginTop="7.5dp"
+					android:layout_marginBottom="7.5dp"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="10dp"
+				android:paddingBottom="5dp">
+				<!-- 标签总数量 -->
+				<TextView
+					android:id="@+id/profile_tags_nums"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="15dp" />
+				<!-- 删除标签数量 -->
+				<TextView
+					android:id="@+id/profile_tags_del_nums"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_normal_red"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="30dp" />
+			</LinearLayout>
+		</LinearLayout>
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:paddingBottom="30dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<TextView
+				android:id="@+id/profile_tags_recom_title"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:text="推荐标签"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentLeft="true"
+				android:paddingRight="15dp"
+				android:paddingLeft="15dp"
+				android:gravity="center_vertical" />
+			<TextView
+				android:id="@+id/profile_tags_change"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:text="换一批"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentRight="true"
+				android:paddingRight="15dp"
+				android:paddingLeft="15dp"
+				android:gravity="center_vertical" />
+			<LinearLayout
+				android:id="@+id/profile_tags_recom_box"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingLeft="7.5dp"
+				android:paddingRight="7.5dp"
+				android:paddingBottom="7.5dp"
+				android:layout_below="@id/profile_tags_recom_title">
+				<TextView
+					android:id="@+id/profile_tags_recom_empty"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="暂无推荐标签"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="7.5dp"
+					android:layout_marginTop="7.5dp"
+					android:layout_marginBottom="7.5dp"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp" />
+			</LinearLayout>
+			<View
+				android:id="@+id/profile_tags_recom_deliver"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_below="@id/profile_tags_recom_box"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="10dp"
+				android:background="@color/background_border" />
+			<TextView
+				android:id="@+id/profile_tags_add_button"
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:text="手动添加"
+				android:textColor="@color/text_normal_white"
+				android:textSize="@dimen/text_normal"
+				android:background="@drawable/bg_tag_normal"
+				android:layout_below="@id/profile_tags_recom_deliver"
+				android:layout_alignParentLeft="true"
+				android:layout_margin="15dp"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:gravity="center_vertical" />
+		</RelativeLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/dialog_bg_color"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/titlebar_hight"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp">
+
+		<TextView
+			android:id="@id/txt_1"
+			style="@style/item_txt_large"
+			android:layout_centerVertical="true"
+			android:text="@string/exit_confirm"
+			android:textColor="@color/dialog_title_color" />
+	</RelativeLayout>
+
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:background="@color/RedColor" />
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/select_txt_1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:padding="10dp"
+			android:gravity="center"
+			android:textSize="@dimen/global_px27sp"
+			android:textColor="@color/WhiteColor"
+			android:text="@string/exit_confirm_exit"
+			android:background="@drawable/submit_btn_bg_selector" />
+		<TextView
+			android:id="@+id/select_txt_2"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:padding="10dp"
+			android:gravity="center"
+			android:textSize="@dimen/global_px27sp"
+			android:textColor="@color/WhiteColor"
+			android:text="@string/exit_confirm_clear_account"
+			android:background="@drawable/cancel_btn_bg_selector" />
+		<TextView
+			android:id="@+id/select_txt_3"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:padding="10dp"
+			android:gravity="center"
+			android:textSize="@dimen/global_px27sp"
+			android:textColor="@color/WhiteColor"
+			android:text="@string/exit_confirm_cancel"
+			android:background="@drawable/cancel_btn_bg_selector" />
+	</LinearLayout>
+
+
+</LinearLayout>

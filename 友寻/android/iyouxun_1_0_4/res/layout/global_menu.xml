@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainbox_menu"
+	android:layout_width="match_parent"
+	android:layout_height="45dp"
+	android:clickable="true"
+	android:orientation="horizontal"
+	android:background="@color/WhiteColor">
+	<!-- 动态 -->
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1">
+		<RadioButton
+			android:id="@+id/global_menu_button_news"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/background_tab_button_news"
+			android:button="@null"
+			android:checked="false" />
+		<ImageView
+			android:id="@+id/global_menu_news_warm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_reddot"
+			android:layout_gravity="right|top"
+			android:layout_marginTop="5dp"
+			android:layout_marginRight="28dp"
+			android:visibility="gone" />
+	</FrameLayout>
+	<!-- 消息 -->
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1">
+		<RadioButton
+			android:id="@+id/global_menu_button_msg"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/background_tab_button_msg"
+			android:button="@null"
+			android:checked="false" />
+		<!-- 新消息数字 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:minHeight="5dp"
+			android:minWidth="5dp"
+			android:textSize="10sp"
+			android:textColor="@color/WhiteColor"
+			android:background="@drawable/bg_new_msg_tip"
+			android:layout_gravity="top|center_horizontal"
+			android:gravity="center"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="15dp"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+			android:id="@+id/global_menu_msg_warm"
+			android:visibility="gone" />
+	</FrameLayout>
+	<!-- 发现 -->
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1">
+		<RadioButton
+			android:id="@+id/global_menu_button_find"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/background_tab_button_find"
+			android:button="@null"
+			android:checked="false" />
+	</FrameLayout>
+	<!-- 我 -->
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1">
+		<RadioButton
+			android:id="@+id/global_menu_button_center"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/background_tab_button_center"
+			android:button="@null"
+			android:checked="false" />
+	</FrameLayout>
+</LinearLayout>

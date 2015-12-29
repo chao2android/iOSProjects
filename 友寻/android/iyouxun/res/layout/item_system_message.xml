@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/list_selector">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="65dp"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp">
+		<!-- 用户头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:src="@drawable/icon_avatar"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:id="@+id/system_message_user_avatar" />
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_toRightOf="@id/system_message_user_avatar"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="12dp"
+			android:paddingBottom="5dp">
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="10sp"
+					android:text="yitianqian "
+					android:textColor="@color/text_normal_gray"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentTop="true"
+					android:id="@+id/system_message_time"
+					android:includeFontPadding="false" />
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:layout_toLeftOf="@id/system_message_time"
+					android:layout_alignParentLeft="true"
+					android:layout_alignParentTop="true"
+					android:gravity="left"
+					android:textSize="14sp"
+					android:textColor="@color/text_normal_black"
+					android:text="和放大法"
+					android:singleLine="true"
+					android:layout_marginRight="10dp"
+					android:includeFontPadding="false"
+					android:id="@+id/system_message_nick" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="9dp">
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:id="@+id/system_message_btn_box">
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:textSize="14sp"
+						android:textColor="@color/button_text_red_gray_color"
+						android:text="@string/str_refuse"
+						android:id="@+id/system_message_btn_refuse"
+						android:paddingLeft="10dp"
+						android:paddingTop="10dp"
+						android:paddingBottom="10dp" />
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:textSize="14sp"
+						android:textColor="@color/button_text_blue_gray_color"
+						android:text="@string/str_add"
+						android:paddingLeft="15dp"
+						android:paddingTop="10dp"
+						android:paddingBottom="10dp"
+						android:id="@+id/system_message_btn_agree" />
+					<ImageView
+						android:layout_width="50dp"
+						android:layout_height="50dp"
+						android:src="@drawable/error_no_data"
+						android:scaleType="centerCrop"
+						android:layout_gravity="center"
+						android:id="@+id/system_message_thumbnail"
+						android:visibility="gone"/>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:layout_toLeftOf="@id/system_message_btn_box"
+					android:paddingRight="5dp">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:includeFontPadding="false"
+						android:textColor="@color/text_normal_gray"
+						android:textSize="10sp"
+						android:text="北京市 朝阳区"
+						android:id="@+id/system_message_area"
+						android:singleLine="true"
+						android:layout_marginBottom="5dp" />
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:singleLine="true"
+						android:includeFontPadding="false"
+						android:textSize="10sp"
+						android:textColor="@color/text_normal_gray"
+						android:text="申请加入我们的家"
+						android:layout_marginBottom="5dp"
+						android:id="@+id/system_message_group_apply" />
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:singleLine="true"
+						android:textSize="10sp"
+						android:textColor="@color/text_normal_gray"
+						android:text="共同好友数量。。。。"
+						android:layout_marginBottom="5dp"
+						android:id="@+id/system_message_mutual_friend" />
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:textSize="10sp"
+						android:textColor="@color/text_normal_gray"
+						android:text="房间都开啦进口量的房间爱丽丝"
+						android:layout_marginBottom="5dp"
+						android:id="@+id/system_message_content_text" />
+				</LinearLayout>
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_border"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp" />
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 图片上传选择框 -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/chat_page_bg"
+	android:paddingTop="15dp"
+	android:paddingLeft="15dp">
+	<ImageButton
+		android:id="@+id/btn_choose_camera"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:background="@color/transparent"
+		android:src="@drawable/icn_choose_camera"
+		android:scaleType="fitCenter" />
+	<ImageButton
+		android:id="@+id/btn_choose_gallery"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:background="@color/transparent"
+		android:src="@drawable/icn_choose_gallery"
+		android:layout_toRightOf="@id/btn_choose_camera"
+		android:layout_marginLeft="25dp"
+		android:scaleType="fitCenter" />
+</RelativeLayout>

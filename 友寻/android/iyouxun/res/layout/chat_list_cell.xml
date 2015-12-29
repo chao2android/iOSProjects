@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:my="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:duplicateParentState="true"
+	android:clickable="false"
+	android:id="@+id/chat_listitem_box"
+	android:paddingLeft="15dp"
+	android:paddingRight="15dp">
+
+	<!-- 时间戳 -->
+	<LinearLayout
+		android:id="@+id/chatTimeline"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="gone"
+		android:layout_marginTop="21dp"
+		android:layout_marginBottom="14dp">
+		<TextView
+			android:id="@+id/chat_time_show"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="14sp"
+			android:includeFontPadding="false"
+			android:gravity="center|center_vertical" />
+	</LinearLayout>
+	<!-- 系统消息 -->
+	<TextView
+		android:id="@+id/chat_system_msg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:textColor="@color/text_normal_gray"
+		android:textSize="14sp"
+		android:includeFontPadding="false"
+		android:gravity="center|center_vertical"
+		android:layout_marginTop="21dp"
+		android:layout_marginBottom="14dp"
+		android:visibility="gone" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginBottom="22dp">
+		<!-- 左侧发送人头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:id="@+id/chat_sender"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:scaleType="centerCrop"
+			android:clickable="true"
+			android:src="@drawable/icon_avatar"
+			android:layout_alignParentLeft="true"
+			my:border_width="2dp"
+			my:border_color="@color/background_border" />
+
+		<!-- 右侧接收人头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:id="@+id/chat_reciver"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:scaleType="centerCrop"
+			android:clickable="true"
+			android:src="@drawable/icon_avatar"
+			android:layout_alignParentRight="true"
+			my:border_width="2dp"
+			my:border_color="@color/background_border" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:duplicateParentState="true"
+			android:layout_toRightOf="@id/chat_sender"
+			android:layout_toLeftOf="@id/chat_reciver">
+			<!-- 左侧昵称 -->
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_gray"
+				android:includeFontPadding="false"
+				android:gravity="left|center_vertical"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:visibility="gone"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:id="@+id/chat_msg_nick_left"
+				android:singleLine="true"
+				android:layout_marginLeft="10dp" />
+			<!-- 左侧信息发布状态标识 -->
+			<LinearLayout
+				android:id="@+id/chat_msg_frame_left"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginLeft="@dimen/global_px9dp"
+				android:layout_marginRight="@dimen/global_px10dp"
+				android:layout_alignParentLeft="true"
+				android:visibility="gone"
+				android:layout_below="@id/chat_msg_nick_left">
+				<!-- 聊天内容框 -sender -->
+				<LinearLayout
+					android:id="@+id/chat_text_container_sender"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="left"
+					android:orientation="horizontal">
+					<!-- 聊天内容-普通聊天内容 -->
+					<TextView
+						android:id="@+id/chat_text_sender"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center_vertical"
+						android:clickable="true"
+						android:longClickable="true"
+						android:background="@drawable/bg_recive_text_msg"
+						android:textSize="14sp"
+						android:textColor="@color/text_normal_black"
+						android:visibility="gone"
+						android:minHeight="40dp" />
+					<!-- 语音内容 -->
+					<RelativeLayout
+						android:id="@+id/chatVoiceSenderBox"
+						android:layout_width="wrap_content"
+						android:layout_height="@dimen/global_px60dp"
+						android:visibility="gone">
+						<!-- 小红点 -->
+						<ImageView
+							android:id="@+id/chatVoiceSenderIsRead"
+							android:layout_width="9dp"
+							android:layout_height="9dp"
+							android:src="@drawable/icn_voice_not_read"
+							android:layout_marginLeft="15dp"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true" />
+						<RelativeLayout
+							android:id="@+id/chatVoiceSenderButtonBox"
+							android:layout_width="match_parent"
+							android:layout_height="40dp"
+							android:background="@drawable/bg_recive_text_msg"
+							android:layout_toLeftOf="@id/chatVoiceSenderIsRead"
+							android:clickable="true">
+							<!-- 三角箭头 -->
+							<ImageView
+								android:id="@+id/chatVoiceSenderIcon"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:src="@null"
+								android:background="@drawable/bottle_receiver_voice_node_playing003"
+								android:layout_alignParentLeft="true"
+								android:layout_centerVertical="true" />
+							<!-- 时长 -->
+							<TextView
+								android:id="@+id/chatVoiceSenderLength"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="@color/text_normal_black"
+								android:textSize="14sp"
+								android:includeFontPadding="false"
+								android:layout_alignParentTop="true"
+								android:layout_marginLeft="5dp"
+								android:layout_toRightOf="@id/chatVoiceSenderIcon" />
+						</RelativeLayout>
+					</RelativeLayout>
+
+					<!-- 图片内容 -->
+					<LinearLayout
+						android:id="@+id/chatImageSenderBox"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:background="@drawable/bg_recive_img_msg"
+						android:visibility="gone">
+						<com.iyouxun.ui.views.CircularImage
+							android:id="@+id/chatImageSenderContentShow"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:minHeight="40dp"
+							android:minWidth="40dp"
+							my:rounded_corner="true"
+							android:scaleType="centerCrop"
+							my:border_width="3dp"
+							my:border_color="@color/transparent" />
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<!-- 右侧信息发布状态标识 -->
+			<LinearLayout
+				android:id="@+id/chat_msg_frame_right"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginLeft="@dimen/global_px10dp"
+				android:layout_marginRight="@dimen/global_px5dp"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:visibility="gone">
+				<FrameLayout
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent">
+					<!-- 左侧信息发布状态标识 -->
+					<ImageView
+						android:id="@+id/chat_msg_status_left"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:layout_marginRight="@dimen/global_px15dp"
+						android:visibility="gone" />
+				</FrameLayout>
+				<!-- 聊天内容框 -recever -->
+				<LinearLayout
+					android:id="@+id/chat_text_container_recever"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:orientation="horizontal">
+					<!-- 聊天内容 -->
+					<TextView
+						android:id="@+id/chat_text_recever"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center_vertical"
+						android:clickable="true"
+						android:longClickable="true"
+						android:background="@drawable/bg_send_text_msg"
+						android:textSize="14sp"
+						android:textColor="@color/WhiteColor"
+						android:visibility="gone"
+						android:minHeight="40dp" />
+					<!-- 语音内容 -->
+					<RelativeLayout
+						android:id="@+id/chatVoiceReceverBox"
+						android:layout_width="wrap_content"
+						android:layout_height="@dimen/global_px60dp"
+						android:visibility="gone">
+						<!-- 左侧的提示信息，小红点，时长、已读标记 -->
+						<RelativeLayout
+							android:id="@+id/chatVoiceReceverButtonBox"
+							android:layout_width="match_parent"
+							android:layout_height="40dp"
+							android:background="@drawable/bg_send_text_msg"
+							android:layout_alignParentLeft="true"
+							android:clickable="true">
+							<!-- 右侧三角图标 -->
+							<ImageView
+								android:id="@+id/chatVoiceReceverIcon"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:src="@null"
+								android:background="@drawable/chatto_voice_playing_f3"
+								android:layout_alignParentRight="true"
+								android:layout_centerVertical="true" />
+							<!-- 时长 -->
+							<TextView
+								android:id="@+id/chatVoiceReceverLength"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="@color/WhiteColor"
+								android:textSize="14sp"
+								android:singleLine="true"
+								android:includeFontPadding="false"
+								android:layout_gravity="top|right"
+								android:layout_marginRight="5dp"
+								android:layout_toLeftOf="@id/chatVoiceReceverIcon" />
+						</RelativeLayout>
+					</RelativeLayout>
+					<!-- 图片内容 -->
+					<RelativeLayout
+						android:id="@+id/chatImageReceverBox"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/bg_send_img_msg"
+						android:visibility="gone">
+						<com.iyouxun.ui.views.CircularImage
+							android:id="@+id/chatImageReceverContentShow"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:minHeight="40dp"
+							android:minWidth="40dp"
+							my:rounded_corner="true"
+							android:scaleType="centerCrop"
+							my:border_width="3dp"
+							my:border_color="@color/transparent" />
+						<TextView
+							android:id="@+id/chatImageReceverContentShowPercent"
+							android:layout_height="40dp"
+							android:layout_width="40dp"
+							android:minHeight="40dp"
+							android:minWidth="40dp"
+							android:textSize="12sp"
+							android:textColor="@color/WhiteColor"
+							android:singleLine="true"
+							android:background="@drawable/background_send_image_msg"
+							android:visibility="gone"
+							android:gravity="center"
+							android:layout_centerInParent="true"
+							android:padding="1dp" />
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+	<!-- 语音模式 -->
+	<TextView
+		android:id="@+id/chatShowVoiceMode"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_normal_gray"
+		android:textSize="12sp"
+		android:includeFontPadding="false"
+		android:gravity="center"
+		android:layout_marginBottom="10dp"
+		android:visibility="gone" />
+</LinearLayout>

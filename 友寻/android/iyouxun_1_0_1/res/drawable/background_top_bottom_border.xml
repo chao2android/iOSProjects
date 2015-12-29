@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 头部底部边框 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<shape>
+			<solid android:color="@color/background_border" />
+		</shape>
+	</item>
+	<item
+		android:top="1dp"
+		android:bottom="1dp">
+		<shape>
+			<solid android:color="@color/WhiteColor" />
+		</shape>
+	</item>
+</layer-list>

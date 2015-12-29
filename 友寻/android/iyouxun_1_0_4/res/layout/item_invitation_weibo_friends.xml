@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 新浪微博邀请好友页面元素 -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/WhiteColor">
+	<!-- 头像 -->
+	<com.iyouxun.ui.views.CircularImage
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/bg_avatar"
+		android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="10dp"
+		android:id="@+id/sina_weibo_avatar" />
+	<!-- 邀请按钮 -->
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/str_invitation"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:id="@+id/sina_weibo_btn_invitation"
+		android:textSize="14sp"
+		android:textColor="@color/text_normal_blue"
+		android:padding="5dp"
+		android:layout_marginRight="10dp" />
+	<!-- 昵称 -->
+	<TextView
+		android:layout_height="44dp"
+		android:layout_width="match_parent"
+		android:textSize="14sp"
+		android:textColor="@color/text_normal_black"
+		android:layout_toLeftOf="@id/sina_weibo_btn_invitation"
+		android:layout_toRightOf="@id/sina_weibo_avatar"
+		android:layout_centerVertical="true"
+		android:gravity="center_vertical|left"
+		android:id="@+id/sina_weibo_nick"
+		android:singleLine="true" />
+</RelativeLayout>

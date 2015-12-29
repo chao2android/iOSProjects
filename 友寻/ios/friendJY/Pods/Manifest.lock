@@ -1,0 +1,51 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - libqrencode (3.4.2)
+  - Masonry (0.6.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - UMengAnalytics-NO-IDFA (3.5.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.1)
+  - FMDB (~> 2.5)
+  - libqrencode (~> 3.4.2)
+  - Masonry (~> 0.6.1)
+  - SDWebImage (~> 3.7.1)
+  - UMengAnalytics-NO-IDFA (~> 3.5.9)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  UMengAnalytics-NO-IDFA: c5302a2246061c356641bb3056e89dfbdeb37424
+
+COCOAPODS: 0.37.2

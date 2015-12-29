@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注册页面 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_global"
+	android:id="@+id/register_box">
+	<!-- 输入手机号 -->
+	<LinearLayout
+		android:layout_height="@dimen/input_height"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="34dp"
+		android:background="@drawable/background_top_border">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="@string/str_register_phone_86"
+			android:gravity="center"
+			android:paddingLeft="@dimen/input_padding_left"
+			android:paddingRight="20dp"
+			android:textSize="14sp"
+			android:textColor="@color/text_topNav_center" />
+		<TextView
+			android:layout_height="32dp"
+			android:layout_width="1dp"
+			android:layout_gravity="center_vertical"
+			android:background="@color/background_border" />
+		<com.iyouxun.ui.views.ClearEditText
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/register_input_phone_number"
+			android:gravity="left|center_vertical"
+			android:inputType="phone"
+			android:maxLength="11"
+			android:hint="@string/input_phone_number"
+			android:singleLine="true"
+			android:paddingLeft="20dp"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_black"
+			android:textColorHint="@color/text_normal_gray"
+			android:background="@color/transparent"
+			android:paddingRight="15dp" />
+	</LinearLayout>
+	<!-- 验证码 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/input_height"
+		android:background="@color/WhiteColor">
+		<Button
+			android:id="@+id/register_btn_get_security_code"
+			android:layout_width="120dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:text="@string/security_code"
+			android:background="@drawable/btn_get_security_code_bg"
+			android:textColor="@color/WhiteColor"
+			android:textSize="14sp" />
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_toLeftOf="@id/register_btn_get_security_code"
+			android:orientation="horizontal"
+			android:background="@drawable/background_top_bottom_border">
+			<TextView
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:text="@string/input_security_code"
+				android:paddingLeft="@dimen/input_padding_left"
+				android:gravity="center"
+				android:textSize="14sp"
+				android:textColor="@color/gray_main" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/register_input_security_code"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:gravity="left|center_vertical"
+				android:singleLine="true"
+				android:inputType="numberSigned"
+				android:background="@color/transparent"
+				android:textSize="14sp"
+				android:textColor="@color/text_normal_black"
+				android:paddingRight="15dp"
+				android:paddingLeft="20dp" />
+		</LinearLayout>
+	</RelativeLayout>
+	<!-- 密码 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:paddingLeft="@dimen/input_padding_left"
+		android:layout_height="@dimen/input_height"
+		android:background="@drawable/background_top_bottom_border"
+		android:layout_marginTop="28dp">
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/set_password"
+			android:gravity="center"
+			android:textSize="14sp"
+			android:textColor="@color/gray_main"
+			android:layout_alignParentLeft="true"
+			android:id="@+id/register_input_password_title" />
+		<ImageView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:scaleType="centerInside"
+			android:id="@+id/register_btn_show_password"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/btn_show_password_bg"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp" />
+		<com.iyouxun.ui.views.ClearEditText
+			android:id="@+id/register_input_password"
+			android:layout_toLeftOf="@id/register_btn_show_password"
+			android:layout_toRightOf="@id/register_input_password_title"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/input_height"
+			android:gravity="left|center_vertical"
+			android:hint="@string/password_hint"
+			android:inputType="textPassword"
+			android:singleLine="true"
+			android:maxLength="20"
+			android:paddingLeft="34dp"
+			android:background="@color/transparent"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_black"
+			android:textColorHint="@color/text_normal_gray"
+			android:paddingRight="15dp"
+			android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" />
+	</RelativeLayout>
+	<!-- 完成按钮 -->
+	<Button
+		android:id="@+id/register_btn_complete"
+		android:layout_height="@dimen/input_height"
+		android:layout_width="match_parent"
+		android:text="@string/str_complete"
+		android:layout_marginTop="50dp"
+		android:layout_marginLeft="@dimen/input_padding_left"
+		android:layout_marginRight="@dimen/input_padding_left"
+		android:background="@drawable/btn_get_security_code_bg"
+		android:textSize="14sp"
+		android:textColor="@color/WhiteColor"
+		android:enabled="false" />
+	<!-- 服务协议 -->
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginTop="15dp"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp">
+		<CheckBox
+			android:layout_width="15dp"
+			android:layout_height="15dp"
+			android:id="@+id/register_check_box"
+			style="@style/CustomCheckboxTheme"
+			android:layout_centerVertical="true" />
+		<TextView
+			android:id="@+id/register_btn_agree"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/agree_deal"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="10sp"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/register_check_box"
+			android:layout_marginLeft="10dp" />
+	</RelativeLayout>
+
+</LinearLayout>

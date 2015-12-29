@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:descendantFocusability="blocksDescendants">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:layout_marginLeft="15dp">
+		<CheckBox
+			android:id="@+id/itemAuthGroupsCb"
+			android:layout_width="20dp"
+			android:layout_height="15dp"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="15dp"
+			android:layout_marginLeft="15dp"
+			android:button="@null"
+			android:background="@drawable/button_radio"
+			android:clickable="false" />
+		<TextView
+			android:id="@+id/itemAuthGroupName"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:gravity="left|center_vertical"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:layout_toLeftOf="@id/itemAuthGroupsCb"
+			android:layout_marginLeft="5dp" />
+	</RelativeLayout>
+</LinearLayout>

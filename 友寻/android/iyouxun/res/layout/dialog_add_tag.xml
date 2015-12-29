@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/background_global"
+	android:paddingLeft="15dp"
+	android:paddingBottom="15dp">
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:textColor="@color/text_normal_gray"
+		android:textSize="@dimen/text_normal"
+		android:text="@string/he_in_my_eyes"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="15dp"
+		android:id="@+id/add_tag_title" />
+	<ImageView
+		android:layout_height="40dp"
+		android:layout_width="40dp"
+		android:src="@drawable/icon_camera_cancel"
+		android:padding="15dp"
+		android:layout_alignParentRight="true"
+		android:scaleType="centerCrop"
+		android:id="@+id/add_tag_btn_close" />
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_marginTop="15dp"
+		android:id="@+id/add_tag_recommend"
+		android:layout_below="@id/add_tag_title"></LinearLayout>
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/background_border"
+		android:layout_below="@id/add_tag_recommend"
+		android:id="@+id/add_tag_divider"
+		android:layout_marginTop="10dp" />
+	<RelativeLayout
+		android:layout_height="30dp"
+		android:layout_width="match_parent"
+		android:layout_marginTop="15dp"
+		android:layout_below="@id/add_tag_divider">
+		<Button
+			android:layout_width="50dp"
+			android:layout_height="match_parent"
+			android:background="@drawable/btn_get_security_code_bg"
+			android:textColor="@color/WhiteColor"
+			android:textSize="14sp"
+			android:text="@string/dialog_btn_ok"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="40dp"
+			android:id="@+id/add_tag_ok_btn" />
+		<com.iyouxun.ui.views.MyEditText
+			android:id="@+id/add_tag_input_tag"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginRight="10dp"
+			android:singleLine="true"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:background="@drawable/background_globalcolor_border_white_bg"
+			android:layout_toLeftOf="@id/add_tag_ok_btn"
+			android:layout_alignParentLeft="true"
+			android:hint="写标签" />
+	</RelativeLayout>
+</RelativeLayout>

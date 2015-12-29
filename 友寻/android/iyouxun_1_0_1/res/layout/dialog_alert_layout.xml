@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_image60">
+	<!-- 提示信息 -->
+	<TextView
+		android:id="@+id/dialogAlertTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:maxWidth="@dimen/global_px300dp"
+		android:textColor="@color/WhiteColor"
+		android:textSize="@dimen/global_px30sp"
+		android:lineSpacingExtra="0dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/global_px20dp"
+		android:layout_marginLeft="@dimen/global_px20dp"
+		android:layout_marginRight="@dimen/global_px20dp" />
+	<!-- 确定按钮 -->
+	<Button
+		android:id="@+id/dialogAlertButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bg_image16"
+		android:text="确 定"
+		android:textColor="@color/WhiteColor"
+		android:textSize="@dimen/global_px33sp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/global_px50dp" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 左上左下角为圆角-边框为蓝色，背景为浅蓝色 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 边框颜色值 -->
+	<item>
+		<shape>
+			<solid android:color="@color/blue_main" />
+			<corners
+				android:topLeftRadius="5dp"
+				android:bottomLeftRadius="5dp" />
+		</shape>
+	</item>
+	<!-- 主体背景颜色值 -->
+	<item
+		android:bottom="1dp"
+		android:left="1dp"
+		android:top="1dp"
+		android:right="1dp">
+		<shape>
+			<solid android:color="@color/blue_assist" />
+			<corners
+				android:topLeftRadius="5dp"
+				android:bottomLeftRadius="5dp" />
+		</shape>
+	</item>
+</layer-list>

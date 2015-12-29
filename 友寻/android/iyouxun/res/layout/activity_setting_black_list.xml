@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			xmlns:ptr="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/settingBlackListView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginRight="15dp"
+			android:cacheColorHint="@color/transparent"
+			android:divider="@color/transparent"
+			android:dividerHeight="0dp"
+			android:scrollbars="none"
+			android:listSelector="@color/transparent"
+			ptr:ptrAnimationStyle="flip" />
+		<!-- 右侧索引栏 -->
+		<com.iyouxun.ui.views.SideBar
+			android:id="@+id/sidebar"
+			android:layout_width="15dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="right|center" />
+	</FrameLayout>
+</LinearLayout>

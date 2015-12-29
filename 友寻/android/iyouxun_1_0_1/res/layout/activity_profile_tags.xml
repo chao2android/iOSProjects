@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="30dp"
+			android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:text="标签"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp" />
+			<LinearLayout
+				android:id="@+id/profile_tags_box"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingLeft="7.5dp"
+				android:paddingRight="7.5dp"
+				android:paddingBottom="7.5dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="暂无标签"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="7.5dp"
+					android:layout_marginTop="7.5dp"
+					android:layout_marginBottom="7.5dp"
+					android:padding="5dp" />
+			</LinearLayout>
+		</LinearLayout>
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/profile_tags_add_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="添加标签"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentLeft="true"
+				android:paddingLeft="15dp"
+				android:paddingTop="10dp"
+				android:paddingRight="15dp"
+				android:paddingBottom="10dp" />
+			<TextView
+				android:id="@+id/profile_tags_info"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="已选0个标签"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentRight="true"
+				android:paddingTop="10dp"
+				android:paddingRight="15dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="15dp" />
+		</RelativeLayout>
+	</LinearLayout>
+</ScrollView>

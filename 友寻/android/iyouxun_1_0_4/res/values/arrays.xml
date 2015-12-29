@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="privacy_chat_and_friend">
+		<item>允许所有人加我为好友并发起聊天</item>
+		<item>只有二度好友可以加我为好友并发起聊天</item>
+		<item>禁止任何人加我为好友并发起聊天</item>
+	</string-array>
+	<string-array name="privacy_profile">
+		<item>允许所有人查看动态和相册</item>
+		<item>只允许一度好友查看动态和相册</item>
+		<item>允许一度和二度好友查看动态和相册</item>
+		<item>非好友可以查看最新5条更新内容</item>
+	</string-array>
+	<string-array name="privacy_profile_on">
+		<item>允许所有人查看动态和相册</item>
+		<item>允许一度和二度好友查看动态和相册</item>
+		<item>非好友可以查看最新5条更新内容</item>
+	</string-array>
+	<string-array name="privacy_profile_off">
+		<item>允许所有人查看动态和相册</item>
+		<item>只允许一度好友查看动态和相册</item>
+		<item>非好友可以查看最新5条更新内容</item>
+	</string-array>
+	<string-array name="report_pic">
+		<item>色情图片</item>
+		<item>反动图片</item>
+		<item>侵权冒用</item>
+		<item>广告欺诈</item>
+	</string-array>
+	<string-array name="report_profile">
+		<item>骚扰信息</item>
+		<item>虚假资料</item>
+		<item>不良照片</item>
+		<item>反动政治</item>
+		<item>欺诈骗钱</item>
+	</string-array>
+
+	<string-array name="system_msg_info">
+		<item>全部</item>
+		<item>系统</item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item>建群消息</item>
+		<item>申请加入群消息</item>
+		<item>退群消息</item>
+		<item>接受好友加入群</item>
+		<item>拒绝好友加入群</item>
+		<item>群主踢人</item>
+		<item>所有人可以邀请好友加入(一度)</item>
+		<item>动态被赞</item>
+		<item>动态被转播</item>
+		<item>动态被评论</item>
+		<item>被回复评论</item>
+		<item>给用户新的一度好友打标签</item>
+		<item>别人给我打标签</item>
+	</string-array>
+	<string-array name="system_msg_type_info">
+		<item>全部</item>
+		<item>sys</item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item>crgroup</item>
+		<item>addgroup</item>
+		<item>qtgroup</item>
+		<item>accept</item>
+		<item>reject</item>
+		<item>del</item>
+		<item>invite</item>
+		<item>like</item>
+		<item>rebroadcast</item>
+		<item>comment</item>
+		<item>reply</item>
+		<item>friendaddtags</item>
+		<item>ownaddtags</item>
+	</string-array>
+	<string-array name="group_privilege">
+		<item>所有人可以直接加入</item>
+		<item>所有人需要申请加入</item>
+		<item>只允许一度好友和二度好友直接加入</item>
+		<item>只允许一度好友和二度好友申请加入</item>
+		<item>禁止任何人加入</item>
+	</string-array>
+</resources>

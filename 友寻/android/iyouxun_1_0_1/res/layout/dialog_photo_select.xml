@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<Button
+		android:id="@+id/button_select_camera"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:text="拍 照"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/button_dialog_top_circular" />
+	<!-- 分割线 -->
+	<View
+		android:id="@+id/dialog_delimiter_line"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/gray_assist"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<Button
+		android:id="@+id/button_select_album"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:text="从相册选择"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/button_dialog_bottom_circular" />
+	<Button
+		android:id="@+id/button_selece_cancel"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:text="取 消"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:layout_margin="10dp"
+		android:background="@drawable/button_dialog_circular" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription" >
+    <ImageView android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_status_bar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/ivLogo">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			style="@style/NotificationTitle"
+            android:text="@string/app_name" />
+        <ProgressBar
+            android:id="@+id/pbDownload"
+            android:layout_width="match_parent"
+            android:layout_height="12dip"
+            android:progress="0"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal" />
+        <TextView
+            android:id="@+id/tvProcess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/NotificationText"
+            android:text="已下载0%" />
+   </LinearLayout>
+</RelativeLayout>

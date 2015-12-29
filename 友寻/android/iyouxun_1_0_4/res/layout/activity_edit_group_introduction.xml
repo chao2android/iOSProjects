@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 编辑用户简介 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:background="@drawable/background_top_bottom_border"
+		android:layout_marginTop="34dp">
+		<TextView
+			android:layout_height="44dp"
+			android:layout_width="wrap_content"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="14sp"
+			android:text="@string/message_group_introduction"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:id="@+id/edit_group_introduction_title"
+			android:paddingLeft="15sp"
+			android:gravity="center_vertical" />
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:paddingLeft="10dp"
+			android:paddingRight="15dp"
+			android:layout_toRightOf="@id/edit_group_introduction_title"
+			android:background="@color/transparent"
+			android:textColor="@color/text_normal_black"
+			android:textSize="14sp"
+			android:maxLength="50"
+			android:id="@+id/edit_group_introduction"
+			android:minHeight="60dp" />
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="favorite_sports">
+		<item>足球      </item>
+		<item>篮球      </item>
+		<item>排球      </item>
+		<item>网球      </item>
+		<item>羽毛球    </item>
+		<item>乒乓球    </item>
+		<item>壁球      </item>
+		<item>保龄球    </item>
+		<item>手球      </item>
+		<item>橄榄球    </item>
+		<item>棒球      </item>
+		<item>高尔夫    </item>
+		<item>健身      </item>
+		<item>跑步      </item>
+		<item>自行车    </item>
+		<item>摩托车    </item>
+		<item>汽车      </item>
+		<item>舞蹈      </item>
+		<item>体操      </item>
+		<item>跆拳道    </item>
+		<item>柔道      </item>
+		<item>空手道    </item>
+		<item>游泳      </item>
+		<item>潜水      </item>
+		<item>水上运动  </item>
+		<item>航海      </item>
+		<item>滑雪/滑冰 </item>
+		<item>拳击      </item>
+		<item>钓鱼      </item>
+		<item>瑜珈      </item>
+		<item>武术      </item>
+		<item>其它      </item>
+		<item>不喜欢运动</item>
+	</string-array>
+	<string-array name="favorite_space">
+	    <item>饭店            </item>
+		<item>商场            </item>
+		<item>剧院            </item>
+		<item>酒吧            </item>
+		<item>电影院          </item>
+		<item>音乐会          </item>
+		<item>迪斯科          </item>
+		<item>网吧            </item>
+		<item>温泉            </item>
+		<item>图书馆/书店     </item>
+		<item>咖啡厅          </item>
+		<item>游乐场          </item>
+		<item>卡拉OK          </item>
+		<item>体育馆          </item>
+		<item>逛街            </item>
+		<item>在自己或朋友家里</item>
+		<item>其它            </item>
+		<item>不想说          </item>
+	</string-array>
+	<string-array name="favorite_food">
+		<item>中国菜      </item>
+		<item>印度菜      </item>
+		<item>泰国菜      </item>
+		<item>法国菜      </item>
+		<item>意大利菜    </item>
+		<item>俄罗斯菜    </item>
+		<item>日本菜      </item>
+		<item>烧烤        </item>
+		<item>健康食品    </item>
+		<item>素食        </item>
+		<item>快餐        </item>
+		<item>巧克力和甜点</item>
+		<item>其他        </item>
+		<item>无特别爱好  </item>
+	    
+	</string-array>
+	<string-array name="favorite_travel">
+	    <item>惬意海岛     </item> 
+		<item>名山古刹     </item> 
+		<item>繁华都市     </item> 
+		<item>风情名城     </item> 
+		<item>广袤森林     </item> 
+		<item> 高原雪域    </item> 
+		<item>秀美山水     </item> 
+		<item>历史遗迹     </item> 
+		<item>江河大川     </item> 
+		<item>峻秀峡谷     </item> 
+		<item>小桥流水人家 </item> 
+		<item>其他选择     </item> 
+		<item>还没想好     </item> 
+	    
+	</string-array>
+	<string-array name="favorite_film">
+	    <item>爱情    </item>
+		<item>喜剧    </item>
+		<item>动作冒险</item>
+		<item>古装武侠</item>
+		<item>科幻魔幻</item>
+		<item>悬疑推理</item>
+		<item>惊悚恐怖</item>
+		<item>动画    </item>
+		<item>战争    </item>
+		<item>音乐歌舞</item>
+		<item>纪录片  </item>
+		<item>剧情    </item>
+		<item>西部    </item>
+		<item>历史传记</item>
+		<item>其他    </item>
+		<item>什么都看</item>
+	    
+	</string-array>
+	<string-array name="favorite_interest">
+	    <item>网络</item>
+		<item>汽车</item>
+		<item>动物</item>
+		<item>摄影</item>
+		<item>影视</item>
+		<item>音乐</item>
+		<item>写作</item>
+		<item>购物</item>
+		<item>手工艺</item>
+		<item>园艺</item>
+		<item>舞蹈</item>
+		<item>展览</item>
+		<item>烹饪</item>
+		<item>读书</item>
+		<item>绘画</item>
+		<item>计算机</item>
+		<item>体育运动</item>
+		<item>旅游</item>
+		<item>电子游戏</item>
+		<item>其它</item>
+	    </string-array>
+	<string-array name="favorite_book">
+	    <item>校园青春</item>
+	    <item>文学</item>
+	    <item>艺术与摄影</item>
+	    <item>励志与成功</item>
+	    <item>动漫与幽默</item>
+	    <item>政治与军事</item>
+	    <item>哲学与宗教</item>
+	    <item>历史传记</item>
+	    <item>运动健身</item>
+	    <item>健康与养生</item>
+	    <item>烹饪与饮食</item>
+	    <item>旅游</item>
+	    <item>投资理财</item>
+	    <item>婚恋与家庭</item>
+	    <item>期刊杂志</item>
+	    <item>娱乐时尚</item>
+	    <item>人文社科</item>
+	    <item>自然科学</item>
+	    <item>收藏与鉴赏</item>
+	    <item>其他</item>
+	    <item>什么都看</item>
+	</string-array>
+	<string-array name="favorite_sports_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+		<item>21</item>
+		<item>22</item>
+		<item>23</item>
+		<item>24</item>
+		<item>25</item>
+		<item>26</item>
+		<item>27</item>
+		<item>28</item>
+		<item>29</item>
+		<item>32</item>
+		<item>33</item>
+		<item>30</item>
+		<item>31</item>
+			    
+	</string-array>
+	<string-array name="favorite_space_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+	    
+	</string-array>
+	<string-array name="favorite_food_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+			    
+	</string-array>
+	<string-array name="favorite_travel_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+			    
+	</string-array>
+	<string-array name="favorite_film_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+	    
+	</string-array>
+	<string-array name="favorite_interest_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+	</string-array>
+	<string-array name="favorite_book_code">
+	    <item>1 </item>
+		<item>2 </item>
+		<item>3 </item>
+		<item>4 </item>
+		<item>5 </item>
+		<item>6 </item>
+		<item>7 </item>
+		<item>8 </item>
+		<item>9 </item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+		<item>21</item>
+	</string-array>
+</resources>

@@ -1,0 +1,88 @@
+﻿1、在ui/activity/目录中创建自己的模块目录，进行相应模块的开发，
+多注意utils/目录中的工具类，可以自行进行相应方法的查找和完善
+
+2、创建activity
+1)配置consts/PageSettings.java中的页面id
+2)在J_Application.java的initCofigPages（）方法中配置页面
+
+3、网络请求
+1）在net/request/目录下创建对应的请求类文件（创建文件内容格式参照目录下的文件即可）
+2）在consts/NetTaskIDs.java文件中配置对应的请求ID
+3）在consts/NetConstans.java文件中配置对应的网络请求地址
+4）在data/parser/JsonParser.java文件中配置请求返回的json处理方法（该方法中的返回结果格式可以在net/response/目录中配置返回数据格式bean）
+5）在回调方法中处理返回结果数据，该回调方法已经在主线程中，可以对界面进行相应操作
+例如：
+SplashRequest request = new SplashRequest(new OnDataBack() {
+	@Override
+	public void onResponse(Object result) {
+		//主线程中操作处理
+		J_Response response = (J_Response) result;
+		if (response.code == 1) {
+			SplashInfo info = (SplashInfo) response.obj;
+			if (info.images != null && info.images.length > 0) {
+				SharedPreUtil.saveSplashInfo(info);
+				// 如果图片存在，则下载该图片
+				downLoadImg(info.images[0]);
+			}
+		}
+	}
+
+	@Override
+	public void onError(int Error) {
+		//对应Error错误id的错误处理
+		//错误id，可以在j_libs.managers.J_NetManager.java文件中进行查找
+	}
+});
+request.getSplashInfo();
+
+4、图片加载
+J_NetManager.getInstance().loadGifImg(imageView, url);
+J_NetManager.getInstance().loadIMG(imgRequest, url, imageView, defaultDrawableID, errorDrawableID);
+
+5、可以把临时使用的缓存信息存在放data/cache/J_Cache.java中的J_Cache的静态变量中
+如J_Cache.sLoginUser存放的即是登录用户的用户信息
+
+6、所有使用到的javaBean文件都存放到data/beans目录中
+所有使用到的adapter文件都存放到ui/adapter目录中
+所有使用到的dialog文件都存放到ui/dialog目录中
+所有使用到的自定义控件文件都存放到ui/views目录中
+
+7、完成某些操作之后（如：QQ绑定，分享朋友圈），为了获取并提示用户成就获取情况
+需要调用一下http://c.ipk.dev/cmiajax/?mod=medal&func=medalByFuns&mid=501该接口
+①完成QQ号绑定 $mid = 501
+②累计分享到朋友圈10次 $mid = 506
+调用接口返回结果中可能会有本次获得的相应成就信息
+把该成就信息写入J_cache.sAchieveInfo数组中
+然后通过DialogUtils.showAchieve(Activity);进行页面弹框展示
+
+8、
+//经验条的数据显示格式：
+experience-(score_min-1) / score
+
+9、keystore的密码：
+ipk12345!@#
+
+10、相关帐号：
+百度帐号：
+账号：guojingtao@jiayuan.com
+密码：tt!w@jb#
+
+微信公众帐号：3058291071@qq.com
+密码：tt!w@jb#
+
+◆微信开放平台（open.weixin.qq.com）
+登录：1837802684@qq.com
+密码：imgod!@#
+
+
+QQ号：3058291071
+QQ密码：tt!w@jb#
+
+shareSDK:
+Appkey：41ad9cd26a38
+
+友盟帐号：
+
+
+11、添加好友关系
+http://admin.ipk.dev/tools/modtest/?mod=relation&func=add&uid=1053930&to_uid=1054230&type=1

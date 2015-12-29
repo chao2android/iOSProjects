@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 正常状态为浅蓝色背景，按下状态为深蓝色背景 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 按钮禁用状态 -->
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="false" />
+	<!-- 按钮焦点状态 -->
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="true"
+		android:state_focused="true" />
+	<!-- 按钮按下状态 -->
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="true"
+		android:state_pressed="true" />
+	<!-- 按钮正常展示的状态 -->
+	<item
+		android:drawable="@color/background_content"
+		android:state_enabled="true" />
+</selector>

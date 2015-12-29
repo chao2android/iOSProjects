@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp">
+	<LinearLayout
+		android:id="@+id/tag_dialog_layerbox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/background_boder_circule_globalcolor_bg"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp">
+		<TextView
+			android:id="@+id/tag_dialog_title"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:gravity="center_vertical|center_horizontal" />
+		<com.iyouxun.ui.views.ClearEditText
+			android:id="@+id/tag_name_et"
+			android:layout_width="match_parent"
+			android:layout_height="30dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:singleLine="true"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:textColor="@color/text_normal_black"
+			android:textSize="@dimen/text_normal"
+			android:background="@drawable/background_globalcolor_border_white_bg" />
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="@color/gray_main"
+			android:layout_marginTop="20dp" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<Button
+				android:id="@+id/tag_button_cancel"
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="1"
+				android:text="取消"
+				android:textSize="@dimen/text_normal"
+				android:textColor="@color/button_text_blue_white_color"
+				android:background="@drawable/button_dialog_leftbottom_circule" />
+			<View
+				android:layout_width="0.5dp"
+				android:layout_height="40dp"
+				android:background="@color/gray_main" />
+			<Button
+				android:id="@+id/tag_button_ok"
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="1"
+				android:text="确定"
+				android:textSize="@dimen/text_normal"
+				android:textColor="@color/button_text_blue_white_color"
+				android:background="@drawable/button_dialog_rightbottom_circule" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,886 @@
+用户个人中心的接口做新的调整：
+之前放 profile 中的 任务、成就、问题分类、道具 相关接口都被摘除了。
+任务： 暂时找 陈义，
+成就： 暂时找 陈义，
+问题分类： 找 张延楼、汪登科，
+问题答题： 找 张燕楼。
+道具： 找 汪登科。
+现金购买金币： 找汪登科。
+兑换码： 找 我。
+经验值： 找 我。
+用户金币变更明细： 找我。
+其它待定。
+
+登陆:
+http://m.ipk.dev/cmiajax/?mod=login&func=autoLogin&token=1g9rGkmr040XB8YcidJw9KqfIeBtFSljTQKi60RBT7ukxiBP00gJirFH-PxyxIN2J56NUKsUZt9C5RWEoCuyLa1Tj4AlqFJkdgV0rPDzo7Pd3as.&lng=116.4128&lat=39.9810
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+uid: "1022630"
+}
+=============================================================================================
+
+获取用户信息:
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_user_info&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: {
+uid: "1022630",
+sex: "0",
+nick: "用户1022630",
+score: 80,
+birthday: "0000-00-00",
+birthpet: "0",
+star: "0",
+height: "0",
+weight: "0",
+body: "1",
+live_location: "0",
+live_sublocation: "0",
+household: "0",
+household_sub: "0",
+hometown: "0",
+hometown_sub: "0",
+marriage: "0",
+education: "0",
+salary: "0",
+house: "1",
+car: "1",
+status: "0",
+gid: "1",
+completed: "30",
+charm: "0",
+modreason: "0",
+mark: "0",
+update_time: "1414481722",
+template: "0",
+age: 0,
+lastLoginTime: "刚刚",
+avatars: {
+20: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/20/06.png",
+50: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/50/06.png",
+70: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/70/06.png",
+100: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/100/06.png",
+130: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/130/06.png",
+200: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/200/06.png",
+50b: "http://223.202.50.73:8080/images/img/common/avatar/r_avatar/50/06.png"
+},
+avatar: "0",
+experience: "0",
+rank: "1",
+honor: "0",
+honor_max: 0,
+gold: "0",
+ques_total: "0",
+ques_win: "0",
+ques_draw: "0",
+ques_fail: "0",
+win_man: "0",
+answersNum: 0,
+qq: "",
+weixin: "",
+mobile: "",
+is_ver: 2,
+inviteUpload: 0
+}
+}
+=============================================================================================
+
+更新用户信息:
+http://m.ipk.dev/cmiajax/?mod=profile&func=update_user_info
+参数和搭理的一样 要看看
+=============================================================================================
+
+
+
+获取系统任务列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_task_list
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: [ ]
+}
+=============================================================================================
+
+
+获取用户任务列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_user_task_info&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: false
+}
+=============================================================================================
+
+获取系统分类列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_classify_list
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: [
+{
+cid: "1",
+parent_id: "0",
+sub_id: "",
+title: "电影",
+sort_id: "0",
+is_push: "0",
+remark: "",
+ques_total: "0",
+answer_total: "0",
+answer_right: "0",
+win_gold: "0",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00"
+},
+{
+cid: "2",
+parent_id: "0",
+sub_id: "",
+title: "人物",
+sort_id: "0",
+is_push: "0",
+remark: "",
+ques_total: "0",
+answer_total: "0",
+answer_right: "0",
+win_gold: "0",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00"
+},
+{
+cid: "4",
+parent_id: "0",
+sub_id: "",
+title: "综艺",
+sort_id: "0",
+is_push: "0",
+remark: "",
+ques_total: "0",
+answer_total: "0",
+answer_right: "0",
+win_gold: "0",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00"
+}
+]
+}
+
+=============================================================================================
+
+
+获取用户按分类答题统计列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_user_ques_class_info&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: false
+}
+
+=============================================================================================
+
+
+
+获取系统道具列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_prop_list
+返回数据:
+data: 
+[
+{
+pid: "1",
+title: "3秒延时卡",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00",
+desc: "",
+uid: "0",
+propid: "0"
+},
+{
+pid: "2",
+title: "5秒延时卡",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00",
+desc: "",
+uid: "0",
+propid: "0"
+},
+{
+pid: "3",
+title: "10秒延时卡",
+status: "Y",
+oper_uid: "0",
+oper_nick: "",
+ctime: "0000-00-00 00:00:00",
+desc: "",
+uid: "0",
+propid: "0"
+},
+{
+pid: "4",
+title: "道具1",
+status: "Y",
+oper_uid: "30",
+oper_nick: "wangdengke",
+ctime: "2014-10-30 14:52:37",
+desc: "道具1道具1道具1道具1",
+uid: "30",
+propid: "0"
+},
+{
+pid: "5",
+title: "测试啊啊啊道具112",
+status: "Y",
+oper_uid: "30",
+oper_nick: "wangdengke",
+ctime: "2014-10-30 17:28:15",
+desc: "测试啊啊啊道具测试啊啊啊道具测试啊啊啊道具1122",
+uid: "993526",
+propid: "1130"
+},
+{
+pid: "6",
+title: "asdsadasd阿什顿撒的",
+status: "Y",
+oper_uid: "30",
+oper_nick: "wangdengke",
+ctime: "2014-10-30 17:29:18",
+desc: "阿什顿撒旦撒倒萨倒萨",
+uid: "999146",
+propid: "1230"
+},
+{
+pid: "7",
+title: "测试啊啊啊5555565",
+status: "Y",
+oper_uid: "30",
+oper_nick: "wangdengke",
+ctime: "2014-10-30 17:37:57",
+desc: "测试啊啊啊123123测试啊啊啊123123测试啊啊啊123123555555666",
+uid: "991392",
+propid: "1730"
+},
+{
+pid: "8",
+title: "道具1123123",
+status: "Y",
+oper_uid: "30",
+oper_nick: "wangdengke",
+ctime: "2014-10-31 13:52:26",
+desc: "道具1123123道具1123123道具1123123",
+uid: "992883",
+propid: "1830"
+}
+]
+
+=============================================================================================
+
+
+获取用户道具列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_user_prop_info&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: false
+}
+
+=============================================================================================
+
+
+获取系统成就列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_honor_list&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: [ ]
+}
+
+=============================================================================================
+
+
+获取用户成就列表
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_user_honor_info&uid=1022630
+返回格式:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: false
+}
+=============================================================================================
+
+
+获取我的回答动态
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_answer_list&uid=1022630
+返回格式:
+{
+retcode: -1,
+retmean: "param error"
+}
+=============================================================================================
+
+
+获取用户是否验证过手机号...
+http://m.ipk.dev/cmiajax/?mod=profile&func=ver_mobile
+返回格式:
+{
+retcode: 1,
+content: "CMI_AJAX_RET_CODE_SUCC",
+data: {
+is_ver: 0
+}
+}
+
+=============================================================================================
+
+
+获取手机验证码
+http://m.ipk.dev/cmiajax/?mod=profile&func=get_phone_code&phone=15726621594
+返回格式:
+{
+retcode: 1,
+content: "CMI_AJAX_RET_CODE_SUCC"
+}
+
+
+=============================================================================================
+兑换码接口：
+http://doc.ipk.dev/cmi/ajax/api/coupon_ajax.html
+http://m.ipk.dev/cmiajax/?mod=coupon&func=new_share_coupon_gold_code&type=M1
+http://m.ipk.dev/cmiajax/?mod=coupon&func=new_share_coupon_gold_code&type=M2
+http://m.ipk.dev/cmiajax/?mod=coupon&func=new_share_coupon_gold_code&type=N1
+http://m.ipk.dev/cmiajax/?mod=coupon&func=new_share_coupon_gold_code&type=N2
+http://m.ipk.dev/cmiajax/?mod=coupon&func=new_share_coupon_gold_code&type=P
+wangmanjun(王满军) 11-04 15:57:49
+生成，兑换。
+wangmanjun(王满军) 11-04 15:58:11
+目前只支持 金币类型的兑换码。道具的暂不支持。
+
+=============================================================================================
+获取对战分类列表
+http://c.ipk.dev/cmiajax/?mod=question&func=get_battle_classify_list&uid=1022730
+
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": [
+        {
+            "classify": "1",
+            "title": "推荐",
+            "sort_id": "1",
+            "is_push": "1",
+            "remark": "这里是推荐的电影",
+            "sub_classify": [
+                {
+                    "classify": "1",
+                    "title": "电影",
+                    "sort_id": "1",
+                    "is_push": "0",
+                    "remark": "这里有美国，韩国，中国，香港的电影",
+                    "questions_answered": 1,
+                    "statistics": {
+                        "qus_total": "1",
+                        "xuepin_person": null,
+                        "win_gold": null
+                    }
+                }
+            ]
+        },
+        {
+            "classify": "2",
+            "title": "我玩过",
+            "sort_id": "2",
+            "is_push": "1",
+            "remark": "这里是我玩过的",
+            "sub_classify": [
+                {
+                    "classify": "2",
+                    "title": "电影",
+                    "sort_id": "5",
+                    "is_push": "1",
+                    "remark": "这里有美国，韩国，中国，香港的电影",
+                    "questions_answered": 1,
+                    "statistics": {
+                        "qus_total": "1",
+                        "xuepin_person": null,
+                        "win_gold": null
+                    }
+                }
+            ]
+        },
+        {
+            "classify": "3",
+            "title": "电影",
+            "sort_id": "3",
+            "is_push": "1",
+            "remark": "这里是电影",
+            "sub_classify": [
+                {
+                    "classify": "1",
+                    "title": "神话那些事",
+                    "sort_id": "1",
+                    "is_push": "1",
+                    "remark": "这里是神话那些事",
+                    "questions_answered": 0,
+                    "statistics": {
+                        "qus_total": "3",
+                        "xuepin_person": null,
+                        "win_gold": null
+                    }
+                },
+                {
+                    "classify": "2",
+                    "title": "世界之最",
+                    "sort_id": "2",
+                    "is_push": "1",
+                    "remark": "这里是世界之最",
+                    "questions_answered": 1,
+                    "statistics": {
+                        "qus_total": "0",
+                        "xuepin_person": null,
+                        "win_gold": null
+                    }
+                }
+            ]
+        }
+    ]
+}
+=============================================================================================
+获取用户对战列表
+http://m.ipk.dev/cmiajax/?mod=question&func=get_question_battle_statistics&uid=1022630
+返回数据:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: {
+iplayed: null,
+play_total: 0,
+win_total: 0,
+deuce_total: 0,
+fail_total: 0,
+qus_answer_total: 0
+}
+}
+=============================================================================================
+
+获取当前用户是否绑定过QQ
+http://c.ipk.dev/cmiajax/?mod=login&func=getUserOauths&uid=1023230
+返回数据:
+{
+retcode: 1,
+retmean: "CMI_AJAX_RET_CODE_SUCC",
+data: 0		//0表示没有绑定过 ,1绑定过
+}
+
+
+
+=============================================================================================
+获取单个后台配置参数的信息
+http://c.ipk.dev/cmiajax/?mod=config&func=get_config_by_key&pkey=KUAISU_DUIZHAN_CHIP_GOLD
+
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": {
+        "KUAISU_DUIZHAN_CHIP_GOLD": "20"
+    }
+}
+=============================================================================================
+获取所有后台配置参数的信息列表
+http://c.ipk.dev/cmiajax/?mod=config&func=get_config_list
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": {
+        "QUESTION_ANSWER_LIMIT_TIME": {
+            "key": "QUESTION_ANSWER_LIMIT_TIME",
+            "explain": "题目的倒计时时间限制",
+            "type": "global",
+            "value": "100"
+        },
+        "QUESTION_ANSWER_LIMIT_COUNT": {
+            "key": "QUESTION_ANSWER_LIMIT_COUNT",
+            "explain": "PK每局的题目数量",
+            "type": "global",
+            "value": "5"
+        },
+        "KUAISU_DUIZHAN_CHIP_GOLD": {
+            "key": "KUAISU_DUIZHAN_CHIP_GOLD",
+            "explain": "陌生人PK每局的金币数量[快速对战筹码]",
+            "type": "global",
+            "value": "20"
+        }
+    }
+}
+=============================================================================================
+获取对战分类信息中的推荐分类列表信息
+http://c.ipk.dev/cmiajax/?mod=question&func=get_battle_recommend_classify_list&uid=1022830
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": [
+        {
+            "classify": "4",
+            "sort_id": "4",
+            "sub_classify": [
+                {
+                    "classify": "3",
+                    "title": "吃喝玩乐",
+                    "is_push": "1",
+                    "remark": "这里是吃喝玩乐",
+                    "questions_answered": 1,
+                    "statistics": {
+                        "qus_answer": "63",
+                        "qus_correct": "20",
+                        "play": "6",
+                        "win": "1",
+                        "qus_total": "0",
+                        "xuepin_person": "12",
+                        "win_gold": "36000"
+                    }
+                }
+            ]
+        },
+        {
+            "classify": "7",
+            "sort_id": "7",
+            "sub_classify": [
+                {
+                    "classify": "1",
+                    "title": "方言土语",
+                    "is_push": "1",
+                    "remark": "这里是方言土语",
+                    "questions_answered": 1,
+                    "statistics": {
+                        "qus_answer": "21",
+                        "qus_correct": "9",
+                        "play": "1",
+                        "win": "1",
+                        "qus_total": "0",
+                        "xuepin_person": "2",
+                        "win_gold": "6000"
+                    }
+                }
+            ]
+        }
+    ]
+}
+=============================================================================================
+获取我玩过的分类列表
+http://c.ipk.dev/cmiajax/?mod=question&func=get_iplayed_battle_lists&uid=1022830
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": [
+        {
+            "classify": "3",
+            "sub_classify": {
+                "classify": "1",
+                "title": "神话那些事",
+                "remark": "这里是神话那些事",
+                "qus_answer": "60",
+                "qus_correct": "24",
+                "play": "0",
+                "win": "0",
+                "qus_total": "5",
+                "xuepin_person": "20",
+                "win_gold": "1000",
+                "questions_answered": 1
+            }
+        },
+        {
+            "classify": "4",
+            "sub_classify": {
+                "classify": "1",
+                "title": "奇闻异事",
+                "remark": "这里是奇闻异事",
+                "qus_answer": "0",
+                "qus_correct": "0",
+                "play": "1",
+                "win": "1",
+                "qus_total": null,
+                "xuepin_person": "2",
+                "win_gold": "6000",
+                "questions_answered": 1
+            }
+        }
+    ]
+}
+=============================================================================================
+快速对战中---匹配对战用户-及分配对战问题列表
+http://c.ipk.dev/cmiajax/?mod=recommend&func=get_corpse_recommend&uid=1022830
+{
+    "retcode": 1,
+    "retmean": "CMI_AJAX_RET_CODE_SUCC",
+    "data": {
+        "user": {
+            "uid": "11038110",
+            "sex": "1",
+            "nickname": "仗剑走天下",
+            "birthday": "1987-02-24",
+            "live_location": "14",
+            "live_sublocation": "1405",
+            "avatar_id": "32215110",
+            "avatar": "http://p.5idali.com/10/38/04e38925f3abfdcf6478da10d2819d58/32215110100a.jpg",
+            "gold": 388,
+            "experience": 15,
+            "rank": "1",
+            "score": 80,
+            "score_min": 0,
+            "score_max": 80
+        },
+        "question": [
+            {
+                "id": "7230",
+                "uid": "1",
+                "description": "水浒的作者是？",
+                "pic": "300",
+                "options": "[\"\\u65bd\\u8010\\u5eb5\",\"\\u6881\\u535a\",\"\\u5434\\u83ab\\u6101\",\"\\u5434\\u627f\\u6069\"]",
+                "sex": "0",
+                "tags": "[\"\\u7528\\u6237\\u7b54\\u9898\"]",
+                "point": "{\"age\":\"22-26\",\"sex\":\"\\u5973\"}",
+                "answer_num": "4",
+                "comments_num": "0",
+                "chat_num": "0",
+                "like_num": "0",
+                "datetime": "2014-11-04 14:40:44",
+                "status": "0",
+                "flag": "1",
+                "own_option": "1",
+                "from": "1",
+                "is_private": "1",
+                "ip": "124.193.193.25",
+                "comment_id": "0",
+                "comment_num_male": "0",
+                "comment_num_female": "0",
+                "answer_num_male": "0",
+                "answer_num_female": "4",
+                "experience": "0",
+                "opts": [
+                    {
+                        "iid": "44730",
+                        "oid": "4",
+                        "id": "7230",
+                        "description": "吴承恩",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:40:44"
+                    },
+                    {
+                        "iid": "44530",
+                        "oid": "2",
+                        "id": "7230",
+                        "description": "梁博",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:40:44"
+                    },
+                    {
+                        "iid": "44630",
+                        "oid": "3",
+                        "id": "7230",
+                        "description": "吴莫愁",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:40:44"
+                    }
+                ],
+                "pics": {
+                    "300": null
+                },
+                "t": 23,
+                "v": 58,
+                "oppo_option": "4",
+                "is_correct": 0
+            },
+            {
+                "id": "7130",
+                "uid": "1",
+                "description": "西游记的作者是？",
+                "pic": "300",
+                "options": "[\"\\u5f20\\u4e00\\u4e00\",\"\\u6881\\u535a\",\"\\u5434\\u83ab\\u6101\",\"\\u5434\\u627f\\u6069\"]",
+                "sex": "0",
+                "tags": "[\"\\u7528\\u6237\\u7b54\\u9898\"]",
+                "point": "{\"age\":\"22-26\",\"sex\":\"\\u5973\"}",
+                "answer_num": "3",
+                "comments_num": "0",
+                "chat_num": "0",
+                "like_num": "0",
+                "datetime": "2014-11-04 14:39:21",
+                "status": "0",
+                "flag": "1",
+                "own_option": "4",
+                "from": "1",
+                "is_private": "1",
+                "ip": "124.193.193.25",
+                "comment_id": "0",
+                "comment_num_male": "0",
+                "comment_num_female": "0",
+                "answer_num_male": "0",
+                "answer_num_female": "3",
+                "experience": "0",
+                "opts": [
+                    {
+                        "iid": "44330",
+                        "oid": "4",
+                        "id": "7130",
+                        "description": "吴承恩",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:39:21"
+                    },
+                    {
+                        "iid": "44130",
+                        "oid": "2",
+                        "id": "7130",
+                        "description": "梁博",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:39:21"
+                    },
+                    {
+                        "iid": "44030",
+                        "oid": "1",
+                        "id": "7130",
+                        "description": "张一一",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 14:39:21"
+                    }
+                ],
+                "pics": {
+                    "300": null
+                },
+                "t": 24,
+                "v": 49,
+                "oppo_option": "1",
+                "is_correct": 0
+            },
+            {
+                "id": "6930",
+                "uid": "1",
+                "description": "楼梯见到浑身是血的女人？",
+                "pic": "300",
+                "options": "[\"\\u9b3c\\u5a03\\u5a03\",\"\\u5348\\u591c\",\"\\u8bc5\\u5492\",\"\\u6076\\u5a74\"]",
+                "sex": "0",
+                "tags": "[\"\\u7528\\u6237\\u7b54\\u9898\"]",
+                "point": "{\"age\":\"22-26\",\"sex\":\"\\u5973\"}",
+                "answer_num": "3",
+                "comments_num": "0",
+                "chat_num": "0",
+                "like_num": "0",
+                "datetime": "2014-11-04 13:48:19",
+                "status": "0",
+                "flag": "1",
+                "own_option": "2",
+                "from": "1",
+                "is_private": "1",
+                "ip": "124.193.193.25",
+                "comment_id": "0",
+                "comment_num_male": "0",
+                "comment_num_female": "0",
+                "answer_num_male": "0",
+                "answer_num_female": "3",
+                "experience": "0",
+                "opts": [
+                    {
+                        "iid": "43530",
+                        "oid": "4",
+                        "id": "6930",
+                        "description": "恶婴",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 13:48:19"
+                    },
+                    {
+                        "iid": "43430",
+                        "oid": "3",
+                        "id": "6930",
+                        "description": "诅咒",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 13:48:19"
+                    },
+                    {
+                        "iid": "43230",
+                        "oid": "1",
+                        "id": "6930",
+                        "description": "鬼娃娃",
+                        "pic": "0",
+                        "sortid": "0",
+                        "status": "0",
+                        "addtime": "2014-11-04 13:48:19"
+                    }
+                ],
+                "pics": {
+                    "300": null
+                },
+                "t": 30,
+                "v": 54,
+                "oppo_option": "4",
+                "is_correct": 0
+            }
+        ]
+    }
+}
+=============================================================================================
+对战中-回答问题提交答题数据
+http://c.ipk.dev/cmiajax/?mod=question&func=add_answer&uid=1022830&touid=0&answer_result=2&use_time=10&secondclassify=1&answertype=1&qid=7230&experience=31&aclassify=4&option=-1
+{"retcode":1,"retmean":"CMI_AJAX_RET_CODE_SUCC","data":52430}
+=============================================================================================
+对战一局结束后提交一局的答题结果数据
+http://c.ipk.dev/cmiajax/?mod=question&func=commit_battle_pk_result&uid=1022830&battle_result=3&win_gold=20&touid=0&aclassify=4&secondclassify=1
+{"retcode":1,"retmean":"CMI_AJAX_RET_CODE_SUCC","data":true}
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+=============================================================================================
+
+
+ 
+
+
+
+
+
+

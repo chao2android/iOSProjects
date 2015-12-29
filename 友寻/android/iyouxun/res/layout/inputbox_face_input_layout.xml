@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:minHeight="44dp"
+	android:background="@drawable/background_top_bottom_border"
+	android:paddingTop="10dp"
+	android:paddingBottom="10dp">
+	<RelativeLayout
+		android:id="@+id/btn_voice_keyboard_box"
+		android:layout_width="45dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true">
+		<!-- 键盘、声音切换按钮 -->
+		<ImageButton
+			android:id="@+id/btn_voice_keyboard"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/transparent"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/icn_chat_voice"
+			android:scaleType="centerInside"
+			android:layout_centerInParent="true" />
+	</RelativeLayout>
+	<LinearLayout
+		android:id="@+id/btn_img_face_box"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentLeft="true"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:gravity="center_vertical"
+		android:layout_centerVertical="true">
+		<!-- 图片选择按钮 -->
+		<ImageButton
+			android:id="@+id/btn_select_img"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_marginRight="15dp"
+			android:src="@drawable/icn_chat_img"
+			android:scaleType="centerInside"
+			android:background="@color/transparent" />
+		<!-- 表情显示按钮 -->
+		<ImageButton
+			android:id="@+id/btn_select_face"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:background="@color/transparent"
+			android:src="@drawable/icn_chat_face"
+			android:scaleType="centerInside" />
+	</LinearLayout>
+	<FrameLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_toLeftOf="@id/btn_voice_keyboard_box"
+		android:layout_toRightOf="@id/btn_img_face_box"
+		android:layout_centerVertical="true">
+		<!-- 输入框 -->
+		<com.iyouxun.ui.views.MyEditText
+			android:id="@+id/input_msg_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
+			android:background="@drawable/background_text_border"
+			android:hint="说点什么吧"
+			android:maxLength="1000"
+			android:layout_gravity="center"
+			android:textColor="@color/text_normal_black"
+			android:textColorHint="@color/text_normal_gray"
+			android:textSize="14sp"
+			android:imeOptions="actionSend"
+			android:inputType="textImeMultiLine" />
+		<Button
+			android:id="@+id/btn_chat_voice"
+			android:layout_width="match_parent"
+			android:layout_height="35dp"
+			android:background="@drawable/background_text_border"
+			android:layout_gravity="center_vertical"
+			android:text="按住说话"
+			android:textColor="@color/BlackColor"
+			android:textSize="14sp"
+			android:visibility="gone" />
+	</FrameLayout>
+	<EditText
+		android:id="@+id/input_msg_text_hide"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:visibility="gone" />
+</RelativeLayout>

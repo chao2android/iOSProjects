@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="34dp"
+		android:background="@drawable/background_topbottom_globalcolor_border_white_bg">
+		<RelativeLayout
+			android:id="@+id/newsLookAuthAllBoxButton"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="1dp"
+			android:clickable="true"
+			android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:gravity="center_vertical|left"
+				android:text="所有好友"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal" />
+			<CheckBox
+				android:id="@+id/newsLookAuthAllButton"
+				android:layout_width="20dp"
+				android:layout_height="15dp"
+				android:button="@null"
+				android:background="@drawable/button_radio"
+				android:clickable="false"
+				android:layout_marginRight="15dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true" />
+		</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/newsLookAuthGroupBoxButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:layout_marginLeft="15dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg">
+				<!-- 标题 -->
+				<TextView
+					android:id="@+id/newsLookAuthLeftTitle"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:gravity="center_vertical"
+					android:text="指定分组"
+					android:textColor="@color/text_normal_black"
+					android:textSize="@dimen/text_normal" />
+				<!-- 折叠、展开的指示箭头 -->
+				<ImageView
+					android:id="@+id/newsLookAuthStatusIcon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_gray_up"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="45dp" />
+			</RelativeLayout>
+			<ListView
+				android:id="@+id/newsLookAuthGroupListView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:listSelector="@drawable/list_selector"
+				android:divider="@drawable/background_list_divider_left"
+				android:dividerHeight="1dp" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

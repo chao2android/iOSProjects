@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/WhiteColor">
+	<View
+		android:id="@+id/friends_divider"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/background_border"
+		android:layout_marginLeft="15dp"
+		android:visibility="gone" />
+	<!-- 索引的首个字母 -->
+	<TextView
+		android:id="@+id/friends_catalog"
+		android:layout_width="match_parent"
+		android:layout_height="22dp"
+		android:textColor="@color/text_normal_black"
+		android:textSize="@dimen/text_normal"
+		android:background="@drawable/background_bottom_border2"
+		android:paddingLeft="15dp"
+		android:gravity="center_vertical" />
+	<RelativeLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent">
+		<ImageView
+			android:layout_height="14.5dp"
+			android:layout_width="20.5dp"
+			android:layout_alignParentLeft="true"
+			android:id="@+id/friends_checked"
+			android:layout_alignTop="@+id/friends_btn_invitation"
+			android:layout_marginLeft="15dp"
+			android:scaleType="centerInside"
+			android:src="@drawable/icon_ok"
+			android:layout_centerVertical="true" />
+		<!-- 头像 -->
+		<FrameLayout
+			android:id="@+id/friends_user_avatar_box"
+			android:layout_width="32.5dp"
+			android:layout_height="32.5dp"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/friends_checked"
+			android:layout_marginLeft="15dp">
+			<com.iyouxun.ui.views.CircularImage
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_gravity="right|bottom"
+				android:id="@+id/friends_icon"
+				android:src="@drawable/icon_avatar" />
+			<ImageView
+				android:id="@+id/friends_single_icn"
+				android:layout_width="12dp"
+				android:layout_height="12dp"
+				android:src="@drawable/icon_single"
+				android:layout_gravity="left|top" />
+		</FrameLayout>
+		<!-- 邀请按钮 -->
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/str_invitation"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:id="@+id/friends_btn_invitation"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_blue"
+			android:padding="5dp" />
+		<ImageView
+			android:layout_height="41dp"
+			android:layout_width="41dp"
+			android:scaleType="centerCrop"
+			android:src="@drawable/icn_my_friend"
+			android:layout_alignParentTop="true"
+			android:id="@+id/friends_icn_my_friend"
+			android:layout_alignParentRight="true" />
+		<!-- 用户姓名 -->
+		<LinearLayout
+			android:layout_height="44dp"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_toLeftOf="@id/friends_icn_my_friend"
+			android:layout_toRightOf="@id/friends_user_avatar_box"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10dp"
+			android:gravity="center_vertical">
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:gravity="center_vertical"
+				android:layout_marginBottom="5dp">
+				<ImageView
+					android:layout_width="12dp"
+					android:layout_height="12dp"
+					android:scaleType="centerCrop"
+					android:src="@drawable/icn_man"
+					android:id="@+id/friends_sex_icn" />
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:id="@+id/friends_name"
+					android:layout_marginLeft="5dp"
+					android:includeFontPadding="false"
+					android:singleLine="true"
+					android:textSize="14sp"
+					android:textColor="@color/text_normal_black" />
+
+			</LinearLayout>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="10sp"
+				android:textColor="@color/text_small_gray"
+				android:includeFontPadding="false"
+				android:singleLine="true"
+				android:id="@+id/friends_mutual_count" />
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

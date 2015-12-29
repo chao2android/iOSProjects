@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- 标签不限 -->
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/str_no_limit"
+		android:paddingLeft="11dp"
+		android:paddingRight="11dp"
+		android:paddingTop="6dp"
+		android:paddingBottom="6dp"
+		android:layout_marginRight="10dp"
+		android:enabled="false"
+		android:textColor="@color/button_text_white_gray_color"
+		android:textSize="@dimen/text_normal"
+		android:background="@drawable/button_blue_white_bg"
+		android:layout_toRightOf="@id/indirect_tag_text"
+		android:id="@+id/indirect_tag_btn_unlimited" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 已邀请联系人的布局 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:paddingRight="5dp">
+	<com.iyouxun.ui.views.CircularImage
+		android:id="@+id/select_friends_avatar_icn"
+		android:layout_height="30dp"
+		android:layout_width="30dp"
+		android:scaleType="centerCrop" />
+</LinearLayout>

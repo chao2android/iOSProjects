@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbars="none">
+	<LinearLayout
+		android:id="@+id/profileMainBox"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<!-- 用户的资料 -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<RelativeLayout
+				android:id="@+id/profile_user_detail_box"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+				<!-- 头像 -->
+				<FrameLayout
+					android:id="@+id/profile_avatar_box"
+					android:layout_width="78.5dp"
+					android:layout_height="78.5dp"
+					android:background="@drawable/bg_avatar"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true">
+					<com.iyouxun.ui.views.CircularImage
+						android:id="@+id/profile_avatar"
+						android:layout_width="70dp"
+						android:layout_height="70dp"
+						android:scaleType="centerCrop"
+						android:layout_gravity="center" />
+				</FrameLayout>
+
+				<!-- 中间资料 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:orientation="vertical"
+					android:layout_marginLeft="17dp"
+					android:layout_toRightOf="@id/profile_avatar_box">
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+						<ImageView
+							android:id="@+id/profile_sex"
+							android:layout_width="16dp"
+							android:layout_height="16dp"
+							android:layout_gravity="center_vertical" />
+						<TextView
+							android:id="@+id/profile_nick"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="@dimen/text_normal"
+							android:textColor="@color/text_normal_black"
+							android:singleLine="true"
+							android:ellipsize="end"
+							android:layout_marginLeft="6dp"
+							android:layout_marginRight="50dp"
+							android:layout_gravity="center_vertical" />
+					</LinearLayout>
+					<!-- 婚姻状态 -->
+					<TextView
+						android:id="@+id/profile_marriage"
+						android:layout_width="wrap_content"
+						android:layout_height="20dp"
+						android:layout_marginTop="5dp"
+						android:textSize="@dimen/text_normal"
+						android:textColor="@color/text_normal_blue"
+						android:gravity="center" />
+					<!-- 生日 -->
+					<TextView
+						android:id="@+id/profile_birthday"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/text_small"
+						android:textColor="@color/text_small_black"
+						android:layout_marginTop="5dp" />
+					<!-- 位置 -->
+					<TextView
+						android:id="@+id/profile_location"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/text_small"
+						android:textColor="@color/text_small_black"
+						android:layout_marginTop="5dp" />
+				</LinearLayout>
+			</RelativeLayout>
+			<TextView
+				android:id="@+id/profile_main_edit_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="编辑"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:paddingTop="7dp"
+				android:paddingBottom="7dp"
+				android:paddingRight="9dp"
+				android:paddingLeft="9dp" />
+			<!-- 邀请好友帮我认证 -->
+			<TextView
+				android:id="@+id/profile_confirm_invite"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/text_normal_blue"
+				android:text="已有0人确认我是单身 邀请好友帮我认证"
+				android:textColor="@color/text_normal_white"
+				android:textSize="@dimen/text_normal"
+				android:layout_below="@id/profile_user_detail_box"
+				android:gravity="center"
+				android:padding="5dp"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:visibility="gone" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/profile_album_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:paddingTop="15dp"
+			android:paddingBottom="15dp"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<TextView
+				android:id="@+id/profile_left_title4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="相册"
+				android:textSize="@dimen/text_normal"
+				android:textColor="@color/text_normal_gray"
+				android:paddingLeft="10dp"
+				android:layout_alignParentLeft="true" />
+			<!-- 右侧箭头 -->
+			<ImageButton
+				android:id="@+id/profile_right_icon2"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:paddingRight="10dp"
+				android:paddingLeft="10dp"
+				android:src="@drawable/icon_arrow"
+				android:background="@null" />
+			<!-- 左侧图片 -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_toLeftOf="@id/profile_right_icon2"
+				android:layout_toRightOf="@id/profile_left_title4"
+				android:layout_centerVertical="true">
+				<!-- 3张照片列表 -->
+				<LinearLayout
+					android:id="@+id/profile_album"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginLeft="15dp"
+					android:gravity="center_vertical">
+				</LinearLayout>
+				<!-- 添加新照片 -->
+				<LinearLayout
+					android:id="@+id/item_image_upload_box"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+		<!-- 动态 -->
+		<RelativeLayout
+			android:id="@+id/profile_news_box"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<TextView
+				android:id="@+id/profile_main_news_title"
+				android:layout_width="79dp"
+				android:layout_height="match_parent"
+				android:text="动态"
+				android:textSize="@dimen/text_normal"
+				android:textColor="@color/text_normal_gray"
+				android:gravity="center_vertical"
+				android:paddingLeft="10dp"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true" />
+			<!-- 右侧箭头 -->
+			<ImageView
+				android:id="@+id/profile_right_icon3"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:src="@drawable/icon_arrow"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:background="@null" />
+			<TextView
+				android:id="@+id/profile_news_info"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center_vertical"
+				android:text="暂无动态信息"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:layout_toLeftOf="@id/profile_right_icon3"
+				android:layout_toRightOf="@id/profile_main_news_title"
+				android:layout_centerVertical="true" />
+		</RelativeLayout>
+		<!-- 签名 -->
+		<RelativeLayout
+			android:id="@+id/profile_singer_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="44dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true">
+				<!-- title -->
+				<TextView
+					android:id="@+id/profile_left_title3"
+					android:layout_width="79dp"
+					android:layout_height="wrap_content"
+					android:text="个性签名"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_alignParentLeft="true"
+					android:paddingLeft="10dp"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp" />
+				<!-- 右侧箭头 -->
+				<ImageView
+					android:id="@+id/profile_right_icon4"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/icon_arrow"
+					android:padding="10dp"
+					android:background="@null" />
+				<TextView
+					android:id="@+id/profile_signer"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/profile_left_title3"
+					android:maxLines="2"
+					android:ellipsize="end"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:paddingRight="42dp" />
+			</RelativeLayout>
+		</RelativeLayout>
+		<!-- 标签 -->
+		<LinearLayout
+			android:id="@+id/profile_tags_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:orientation="vertical"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<!-- title -->
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="标签"
+					android:textSize="@dimen/text_normal"
+					android:textColor="@color/text_normal_gray"
+					android:layout_alignParentLeft="true"
+					android:padding="10dp" />
+				<TextView
+					android:id="@+id/setting_tags_edit_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="编辑标签"
+					android:textColor="@color/text_normal_blue"
+					android:textSize="@dimen/text_normal"
+					android:layout_alignParentRight="true"
+					android:padding="10dp" />
+			</RelativeLayout>
+			<!-- 标签盒子 -->
+			<LinearLayout
+				android:id="@+id/profile_tags"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginLeft="2dp"
+				android:layout_marginRight="2dp"
+				android:background="@color/WhiteColor">
+				<TextView
+					android:id="@+id/emptyTagView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="暂无标签"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:layout_marginLeft="10dp"
+					android:layout_marginTop="5dp" />
+			</LinearLayout>
+			<!-- 展开、收起按钮 -->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp">
+				<ImageButton
+					android:id="@+id/profile_tag_toggle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_more"
+					android:paddingRight="11dp"
+					android:paddingBottom="15dp"
+					android:paddingLeft="20dp"
+					android:background="@null"
+					android:layout_alignParentRight="true"
+					android:visibility="gone" />
+			</RelativeLayout>
+		</LinearLayout>
+		<!-- 群组 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:background="@drawable/background_globalcolor_border_white_bg">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="群组"
+					android:textColor="@color/text_normal_gray"
+					android:textSize="@dimen/text_normal"
+					android:padding="10dp"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true" />
+				<TextView
+					android:id="@+id/profile_right_icon6"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="编辑群组"
+					android:textColor="@color/text_normal_blue"
+					android:textSize="@dimen/text_normal"
+					android:padding="10dp"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true" />
+			</RelativeLayout>
+			<!-- 群组列表 -->
+			<LinearLayout
+				android:id="@+id/profile_groups"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="44dp"
+					android:background="@drawable/background_top_globalcolor_border_white_bg"
+					android:layout_marginLeft="1dp"
+					android:layout_marginRight="1dp"
+					android:layout_marginBottom="1dp">
+					<!-- 添加按钮 -->
+					<ImageButton
+						android:id="@+id/item_group_add"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/icon_add"
+						android:background="@null"
+						android:layout_alignParentRight="true"
+						android:paddingRight="13dp"
+						android:paddingLeft="13dp"
+						android:visibility="invisible" />
+					<!-- 群组成员人数 -->
+					<TextView
+						android:id="@+id/item_goup_num"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textColor="@color/text_normal_gray"
+						android:textSize="@dimen/text_normal"
+						android:layout_toLeftOf="@id/item_group_add"
+						android:layout_centerVertical="true"
+						android:gravity="center_vertical"
+						android:visibility="invisible" />
+					<!-- 群组名称 -->
+					<TextView
+						android:id="@+id/item_group_name"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:textColor="@color/text_normal_black"
+						android:textSize="@dimen/text_normal"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="10dp"
+						android:layout_toLeftOf="@id/item_goup_num"
+						android:layout_centerVertical="true"
+						android:text="还未加入群组" />
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- 展开、收起按钮 -->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp">
+				<ImageButton
+					android:id="@+id/profile_group_toggle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_more"
+					android:paddingRight="11dp"
+					android:paddingBottom="15dp"
+					android:paddingLeft="20dp"
+					android:background="@null"
+					android:layout_alignParentRight="true"
+					android:visibility="gone" />
+			</RelativeLayout>
+		</LinearLayout>
+		<!-- 系统设置 -->
+		<Button
+			android:id="@+id/profile_main_setting_button"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:text="系统设置"
+			android:textColor="@color/text_normal_blue"
+			android:textSize="@dimen/text_normal"
+			android:background="@drawable/background_globalcolor_border_white_bg"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginBottom="10dp" />
+	</LinearLayout>
+</ScrollView>

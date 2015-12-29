@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:orientation="vertical">
+	<View
+		android:id="@+id/contact_divider"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/background_border"
+		android:layout_marginLeft="15dp"
+		android:visibility="gone" />
+	<TextView
+		android:id="@+id/contact_catalog"
+		android:layout_width="fill_parent"
+		android:layout_height="22dp"
+		android:background="@drawable/background_bottom_border2"
+		android:textColor="@color/text_normal_black"
+		android:textSize="14sp"
+		android:paddingLeft="15dp"
+		android:gravity="center_vertical|left" />
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp">
+		<ImageView
+			android:layout_height="14.5dp"
+			android:layout_width="20.5dp"
+			android:scaleType="centerInside"
+			android:src="@drawable/icon_ok"
+			android:id="@+id/contact_check"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="5dp" />
+		<TextView
+			android:layout_toLeftOf="@id/contact_check"
+			android:layout_centerVertical="true"
+			android:id="@+id/contact_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:includeFontPadding="false"
+			android:singleLine="true"
+			android:textSize="14sp"
+			android:textColor="@color/text_normal_black"
+			android:text="hhh"
+			android:layout_marginLeft="15dp" />
+	</RelativeLayout>
+</LinearLayout>

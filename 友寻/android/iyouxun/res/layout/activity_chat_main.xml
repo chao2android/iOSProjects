@@ -1,0 +1,107 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/chatMainBox"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<!-- 公共输入框 -->
+		<LinearLayout
+			android:id="@+id/setting_feedback_write_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true">
+			<include
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				layout="@layout/inputbox_face_relativelayout" />
+		</LinearLayout>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_above="@id/setting_feedback_write_box">
+			<!-- 聊天列表框 ptr:ptrListViewExtrasEnabled="false" //设置加载中的时候，是否可以继续拖动 android:transcriptMode="normal" -->
+			<com.handmark.pulltorefresh.library.PullToRefreshListView
+				xmlns:ptr="http://schemas.android.com/apk/res-auto"
+				android:id="@+id/chatMessageShowbox"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:cacheColorHint="@android:color/transparent"
+				ptr:ptrAnimationStyle="flip"
+				ptr:ptrMode="pullFromStart"
+				ptr:ptrListViewExtrasEnabled="false"
+				ptr:ptrShowIndicator="false"
+				android:divider="@color/transparent"
+				android:dividerHeight="0dp"
+				android:listSelector="@color/transparent"
+				android:transcriptMode="normal">
+			</com.handmark.pulltorefresh.library.PullToRefreshListView>
+		</FrameLayout>
+	</RelativeLayout>
+
+
+	<!-- 语音录制提示框 -->
+	<RelativeLayout
+		android:id="@+id/voiceLayer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clickable="true"
+		android:visibility="gone"
+		android:background="@color/transparent80">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="180dp"
+			android:layout_height="180dp"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true">
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="3">
+				<ImageView
+					android:id="@+id/ivVoiceShow"
+					android:layout_width="142dp"
+					android:layout_height="142dp"
+					android:background="@drawable/amp1"
+					android:layout_gravity="center_vertical|center_horizontal" />
+				<!-- 10秒倒计时提示框 -->
+				<TextView
+					android:id="@+id/chatMessageCountDown"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/WhiteColor"
+					android:textSize="14sp"
+					android:background="@color/transparent"
+					android:text="10''"
+					android:visibility="gone"
+					android:layout_gravity="center_horizontal|bottom"
+					android:layout_marginBottom="20dp" />
+			</FrameLayout>
+			<!-- 取消发送的提示信息 -->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/touchEventShowBox"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="手指上滑，取消发送"
+					android:textColor="@color/text_normal_red"
+					android:textSize="14sp"
+					android:gravity="center"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingTop="3dp"
+					android:paddingBottom="3dp"
+					android:background="@drawable/bg_cancel_send_voice_msg"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentTop="true" />
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

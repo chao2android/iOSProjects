@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 按下时淡蓝，正常时蓝色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="false" />
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="true"
+		android:state_focused="true" />
+	<item
+		android:drawable="@color/blue_assist"
+		android:state_enabled="true"
+		android:state_pressed="true" />
+	<item
+		android:drawable="@color/blue_main"
+		android:state_enabled="true" />
+</selector>

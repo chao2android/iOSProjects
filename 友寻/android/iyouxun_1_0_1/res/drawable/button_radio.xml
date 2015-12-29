@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- checkbox选择框 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:state_checked="false"
+		android:drawable="@color/transparent" />
+	<item
+		android:state_checked="true"
+		android:drawable="@drawable/icon_ok" />
+</selector>

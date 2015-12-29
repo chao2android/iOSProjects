@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注册填写信息页面 -->
+<ScrollView
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:background="@color/background_global">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="@string/welcome_register"
+			android:layout_marginTop="22dp"
+			android:textSize="14sp"
+			android:textColor="@color/gray_main" />
+
+		<!-- 用户信息 -->
+		<include layout="@layout/user_info_view" />
+		<!-- 保存按钮 -->
+		<Button
+			android:id="@+id/register_user_info_btn_save"
+			android:layout_height="44dp"
+			android:layout_width="match_parent"
+			android:text="@string/str_save"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:background="@drawable/btn_get_security_code_bg"
+			android:textSize="14sp"
+			android:textColor="@color/WhiteColor"
+			android:layout_marginTop="20dp"
+			android:enabled="false" />
+	</LinearLayout>
+</ScrollView>

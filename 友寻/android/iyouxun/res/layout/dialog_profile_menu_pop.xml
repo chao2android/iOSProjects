@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/transparent">
+
+	<Button
+		android:id="@+id/button_select_share"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="分享给好友"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:background="@drawable/button_dialog_top_circular"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<!-- 分割线 -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/gray_assist"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<!-- 加入黑名单 -->
+	<Button
+		android:id="@+id/button_select_blacklist"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="加入黑名单"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal"
+		android:background="@drawable/button_dialog_no_circular"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<!-- 分割线 -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/gray_assist"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" />
+	<Button
+		android:id="@+id/button_select_report"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/button_dialog_bottom_circular"
+		android:text="举报"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal" />
+
+	<Button
+		android:id="@+id/button_selece_cancel"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/button_dialog_circular"
+		android:text="取 消"
+		android:textColor="@color/button_text_blue_white_color"
+		android:textSize="@dimen/text_normal" />
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="34dp"
+		android:background="@drawable/background_top_bottom_border">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp">
+			<TextView
+				android:id="@+id/changeMobileTitle1"
+				android:layout_width="105dp"
+				android:layout_height="match_parent"
+				android:text="当前手机号"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<EditText
+				android:id="@+id/changeMobileOld"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:inputType="phone"
+				android:maxLength="11"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/background_border"
+			android:layout_marginLeft="15dp" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp">
+			<TextView
+				android:id="@+id/changeMobileTitle2"
+				android:layout_width="105dp"
+				android:layout_height="match_parent"
+				android:inputType="phone"
+				android:text="输入新号码"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<com.iyouxun.ui.views.ClearEditText
+				android:id="@+id/changeMobileNew"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:inputType="phone"
+				android:maxLength="11"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingRight="15dp"
+				android:background="@color/transparent" />
+		</LinearLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/background_border"
+			android:layout_marginLeft="15dp" />
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp">
+			<TextView
+				android:id="@+id/changeMobileTitle3"
+				android:layout_width="105dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="手机验证码"
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:gravity="center_vertical"
+				android:paddingLeft="15dp" />
+			<Button
+				android:id="@+id/sendMobileCodeButton"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="发送验证码"
+				android:textColor="@color/text_normal_white"
+				android:textSize="@dimen/text_normal"
+				android:paddingLeft="20dp"
+				android:paddingRight="20dp"
+				android:background="@drawable/button_blue_gray_bg"
+				android:layout_alignParentRight="true" />
+			<EditText
+				android:id="@+id/changeMobileCode"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center_vertical"
+				android:textColor="@color/text_normal_black"
+				android:textSize="@dimen/text_normal"
+				android:layout_toRightOf="@id/changeMobileTitle3"
+				android:layout_toLeftOf="@id/sendMobileCodeButton"
+				android:layout_centerVertical="true"
+				android:background="@color/transparent"
+				android:maxLength="6" />
+		</RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

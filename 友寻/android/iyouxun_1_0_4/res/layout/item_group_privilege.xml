@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 群组权限元素 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_height="44dp"
+		android:layout_width="match_parent">
+		<ImageView
+			android:layout_height="14.5dp"
+			android:layout_width="20.5dp"
+			android:layout_alignParentRight="true"
+			android:id="@+id/edit_group_privilege_checked"
+			android:layout_marginRight="15dp"
+			android:scaleType="centerInside"
+			android:src="@drawable/icon_ok"
+			android:layout_centerVertical="true" />
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_toLeftOf="@id/edit_group_privilege_checked"
+			android:paddingLeft="15dp"
+			android:paddingRight="10dp"
+			android:textSize="14sp"
+			android:id="@+id/edit_group_privilege_text"
+			android:gravity="center_vertical|left" />
+		<View
+			android:layout_height="0.5dp"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="15dp"
+			android:layout_alignParentTop="true"
+			android:id="@+id/edit_group_privilege_divider"
+			android:background="@color/background_border" />
+	</RelativeLayout>
+</LinearLayout>

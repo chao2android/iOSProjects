@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Work_location code -->
+	<string-array name="work_location_code_array">
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>21</item>
+		<item>22</item>
+		<item>23</item>
+		<item>31</item>
+		<item>32</item>
+		<item>33</item>
+		<item>34</item>
+		<item>35</item>
+		<item>36</item>
+		<item>37</item>
+		<item>41</item>
+		<item>42</item>
+		<item>43</item>
+		<item>44</item>
+		<item>45</item>
+		<item>46</item>
+		<item>50</item>
+		<item>51</item>
+		<item>52</item>
+		<item>53</item>
+		<item>54</item>
+		<item>61</item>
+		<item>62</item>
+		<item>63</item>
+		<item>64</item>
+		<item>65</item>
+		<item>71</item>
+		<item>81</item>
+		<item>82</item>
+		<item>83</item>
+		<item>98</item>
+		<item>99</item>
+	</string-array>
+
+	<!-- 11XX -->
+	<string-array name="work_location_code_array_0">
+		<item>1101</item>
+		<item>1102</item>
+		<item>1103</item>
+		<item>1104</item>
+		<item>1105</item>
+		<item>1106</item>
+		<item>1107</item>
+		<item>1108</item>
+		<item>1109</item>
+		<item>1111</item>
+		<item>1112</item>
+		<item>1113</item>
+		<item>1121</item>
+		<item>1124</item>
+		<item>1126</item>
+		<item>1127</item>
+		<item>1128</item>
+		<item>1129</item>
+	</string-array>
+
+	<!-- 12XX -->
+	<string-array name="work_location_code_array_1">
+		<item>1201</item>
+		<item>1202</item>
+		<item>1203</item>
+		<item>1204</item>
+		<item>1205</item>
+		<item>1206</item>
+		<item>1207</item>
+		<item>1208</item>
+		<item>1209</item>
+		<item>1210</item>
+		<item>1211</item>
+		<item>1212</item>
+		<item>1213</item>
+		<item>1221</item>
+		<item>1222</item>
+		<item>1223</item>
+		<item>1224</item>
+		<item>1225</item>
+	</string-array>
+
+	<!-- 13XX -->
+	<string-array name="work_location_code_array_2">
+		<item>1301</item>
+		<item>1302</item>
+		<item>1303</item>
+		<item>1304</item>
+		<item>1305</item>
+		<item>1306</item>
+		<item>1307</item>
+		<item>1308</item>
+		<item>1309</item>
+		<item>1310</item>
+		<item>1311</item>
+	</string-array>
+
+	<!-- 14XX -->
+	<string-array name="work_location_code_array_3">
+		<item>1401</item>
+		<item>1402</item>
+		<item>1403</item>
+		<item>1404</item>
+		<item>1405</item>
+		<item>1406</item>
+		<item>1407</item>
+		<item>1408</item>
+		<item>1409</item>
+		<item>1410</item>
+		<item>1411</item>
+	</string-array>
+
+	<!-- 15XX -->
+	<string-array name="work_location_code_array_4">
+		<item>1501</item>
+		<item>1502</item>
+		<item>1503</item>
+		<item>1504</item>
+		<item>1505</item>
+		<item>1506</item>
+		<item>1507</item>
+		<item>1508</item>
+		<item>1509</item>
+		<item>1510</item>
+		<item>1511</item>
+		<item>1512</item>
+		<item>1513</item>
+		<item>1514</item>
+		<item>1515</item>
+		<item>1516</item>
+		<item>1517</item>
+		<item>1518</item>
+		<item>1519</item>
+		<item>1520</item>
+		<item>1522"</item>
+		<item>1525</item>
+		<item>1529</item>
+	</string-array>
+
+	<!-- 21XX -->
+	<string-array name="work_location_code_array_5">
+		<item>2101</item>
+		<item>2102</item>
+		<item>2103</item>
+		<item>2104</item>
+		<item>2105</item>
+		<item>2106</item>
+		<item>2107</item>
+		<item>2108</item>
+		<item>2109</item>
+		<item>2110</item>
+		<item>2111</item>
+		<item>2112</item>
+		<item>2113</item>
+		<item>2114</item>
+	</string-array>
+
+	<!-- 22XX -->
+	<string-array name="work_location_code_array_6">
+		<item>2201</item>
+		<item>2202</item>
+		<item>2203</item>
+		<item>2204</item>
+		<item>2205</item>
+		<item>2206</item>
+		<item>2207</item>
+		<item>2208</item>
+		<item>2209</item>
+		<item>2210</item>
+		<item>2211</item>
+		<item>2224</item>
+	</string-array>
+
+	<!-- 23XX -->
+	<string-array name="work_location_code_array_7">
+		<item>2301</item>
+		<item>2302</item>
+		<item>2303</item>
+		<item>2304</item>
+		<item>2305</item>
+		<item>2306</item>
+		<item>2307</item>
+		<item>2308</item>
+		<item>2309</item>
+		<item>2310</item>
+		<item>2311</item>
+		<item>2312</item>
+		<item>2313</item>
+		<item>2327</item>
+	</string-array>
+
+	<!-- 31XX -->
+	<string-array name="work_location_code_array_8">
+		<item>3101</item>
+		<item>3102</item>
+		<item>3103</item>
+		<item>3104</item>
+		<item>3105</item>
+		<item>3106</item>
+		<item>3107</item>
+		<item>3108</item>
+		<item>3109</item>
+		<item>3110</item>
+		<item>3112</item>
+		<item>3113</item>
+		<item>3114</item>
+		<item>3115</item>
+		<item>3116</item>
+		<item>3117</item>
+		<item>3125</item>
+		<item>3126</item>
+		<item>3129</item>
+		<item>3130</item>
+	</string-array>
+
+	<!-- 32XX -->
+	<string-array name="work_location_code_array_9">
+		<item>3201</item>
+		<item>3202</item>
+		<item>3203</item>
+		<item>3204</item>
+		<item>3205</item>
+		<item>3206</item>
+		<item>3207</item>
+		<item>3208</item>
+		<item>3209</item>
+		<item>3210</item>
+		<item>3211</item>
+		<item>3212</item>
+		<item>3213</item>
+	</string-array>
+
+	<!-- 33XX -->
+	<string-array name="work_location_code_array_10">
+		<item>3301</item>
+		<item>3302</item>
+		<item>3303</item>
+		<item>3304</item>
+		<item>3305</item>
+		<item>3306</item>
+		<item>3307</item>
+		<item>3308</item>
+		<item>3309</item>
+		<item>3310</item>
+		<item>3311</item>
+	</string-array>
+
+	<!-- 34XX -->
+	<string-array name="work_location_code_array_11">
+		<item>3401</item>
+		<item>3402</item>
+		<item>3403</item>
+		<item>3404</item>
+		<item>3405</item>
+		<item>3406</item>
+		<item>3407</item>
+		<item>3408</item>
+		<item>3410</item>
+		<item>3411</item>
+		<item>3412</item>
+		<item>3413</item>
+		<item>3414</item>
+		<item>3415</item>
+		<item>3416</item>
+		<item>3417</item>
+		<item>3418</item>
+	</string-array>
+
+	<!-- 35XX -->
+	<string-array name="work_location_code_array_12">
+		<item>3501</item>
+		<item>3502</item>
+		<item>3503</item>
+		<item>3504</item>
+		<item>3505</item>
+		<item>3506</item>
+		<item>3507</item>
+		<item>3508</item>
+		<item>3509</item>
+	</string-array>
+
+	<!-- 36XX -->
+	<string-array name="work_location_code_array_13">
+		<item>3601</item>
+		<item>3602</item>
+		<item>3603</item>
+		<item>3604</item>
+		<item>3605</item>
+		<item>3606</item>
+		<item>3607</item>
+		<item>3608</item>
+		<item>3609</item>
+		<item>3610</item>
+		<item>3611</item>
+	</string-array>
+
+	<!-- 37XX -->
+	<string-array name="work_location_code_array_14">
+		<item>3701</item>
+		<item>3702</item>
+		<item>3703</item>
+		<item>3704</item>
+		<item>3705</item>
+		<item>3706</item>
+		<item>3707</item>
+		<item>3708</item>
+		<item>3709</item>
+		<item>3710</item>
+		<item>3711</item>
+		<item>3712</item>
+		<item>3713</item>
+		<item>3714</item>
+		<item>3715</item>
+		<item>3716</item>
+		<item>3717</item>
+	</string-array>
+
+	<!-- 41XX -->
+	<string-array name="work_location_code_array_15">
+		<item>4101</item>
+		<item>4102</item>
+		<item>4103</item>
+		<item>4104</item>
+		<item>4105</item>
+		<item>4106</item>
+		<item>4107</item>
+		<item>4108</item>
+		<item>4109</item>
+		<item>4110</item>
+		<item>4111</item>
+		<item>4112</item>
+		<item>4113</item>
+		<item>4114</item>
+		<item>4115</item>
+		<item>4116</item>
+		<item>4117</item>
+		<item>4118</item>
+		<item>4119</item>
+	</string-array>
+
+	<!-- 42XX -->
+	<string-array name="work_location_code_array_16">
+		<item>4201</item>
+		<item>4202</item>
+		<item>4203</item>
+		<item>4204</item>
+		<item>4205</item>
+		<item>4206</item>
+		<item>4207</item>
+		<item>4208</item>
+		<item>4209</item>
+		<item>4210</item>
+		<item>4211</item>
+		<item>4212</item>
+		<item>4213</item>
+		<item>4214</item>
+		<item>4215</item>
+		<item>4216</item>
+		<item>4217</item>
+		<item>4228</item>
+	</string-array>
+
+	<!-- 43XX -->
+	<string-array name="work_location_code_array_17">
+		<item>4301</item>
+		<item>4302</item>
+		<item>4303</item>
+		<item>4304</item>
+		<item>4305</item>
+		<item>4306</item>
+		<item>4307</item>
+		<item>4308</item>
+		<item>4309</item>
+		<item>4310</item>
+		<item>4311</item>
+		<item>4312</item>
+		<item>4313</item>
+		<item>4314</item>
+		<item>4315</item>
+		<item>4331</item>
+	</string-array>
+
+	<!-- 44XX -->
+	<string-array name="work_location_code_array_18">
+		<item>4401</item>
+		<item>4402</item>
+		<item>4403</item>
+		<item>4404</item>
+		<item>4405</item>
+		<item>4406</item>
+		<item>4407</item>
+		<item>4408</item>
+		<item>4409</item>
+		<item>4410</item>
+		<item>4411</item>
+		<item>4412</item>
+		<item>4413</item>
+		<item>4414</item>
+		<item>4415</item>
+		<item>4416</item>
+		<item>4417</item>
+		<item>4418</item>
+		<item>4419</item>
+		<item>4420</item>
+		<item>4451</item>
+		<item>4452</item>
+		<item>4453</item>
+	</string-array>
+
+	<!-- 45XX -->
+	<string-array name="work_location_code_array_19">
+		<item>4501</item>
+		<item>4502</item>
+		<item>4503</item>
+		<item>4504</item>
+		<item>4505</item>
+		<item>4506</item>
+		<item>4507</item>
+		<item>4508</item>
+		<item>4509</item>
+		<item>4510</item>
+		<item>4511</item>
+		<item>4512</item>
+		<item>4513</item>
+		<item>4514</item>
+	</string-array>
+
+	<!-- 46XX -->
+	<string-array name="work_location_code_array_20">
+		<item>4601</item>
+		<item>4602</item>
+		<item>4603</item>
+		<item>4690</item>
+	</string-array>
+
+	<!-- 50XX -->
+	<string-array name="work_location_code_array_21">
+		<item>5001</item>
+		<item>5002</item>
+		<item>5003</item>
+		<item>5004</item>
+		<item>5005</item>
+		<item>5006</item>
+		<item>5007</item>
+		<item>5008</item>
+		<item>5009</item>
+		<item>5010</item>
+		<item>5011</item>
+		<item>5012</item>
+		<item>5013</item>
+		<item>5021</item>
+		<item>5022</item>
+		<item>5023</item>
+		<item>5024</item>
+		<item>5025</item>
+		<item>5026</item>
+		<item>5027</item>
+		<item>5028</item>
+		<item>5029</item>
+		<item>5030</item>
+		<item>5031</item>
+		<item>5032</item>
+		<item>5033</item>
+		<item>5034</item>
+		<item>5035</item>
+		<item>5036</item>
+		<item>5037</item>
+		<item>5038</item>
+		<item>5039</item>
+		<item>5040</item>
+		<item>5041</item>
+		<item>5042</item>
+		<item>5043</item>
+		<item>5081</item>
+		<item>5082</item>
+		<item>5083</item>
+		<item>5084</item>
+	</string-array>
+
+	<!-- 51XX -->
+	<string-array name="work_location_code_array_22">
+		<item>5101</item>
+		<item>5103</item>
+		<item>5104</item>
+		<item>5105</item>
+		<item>5106</item>
+		<item>5107</item>
+		<item>5108</item>
+		<item>5109</item>
+		<item>5110</item>
+		<item>5111</item>
+		<item>5113</item>
+		<item>5114</item>
+		<item>5115</item>
+		<item>5116</item>
+		<item>5117</item>
+		<item>5118</item>
+		<item>5119</item>
+		<item>5120</item>
+		<item>5132</item>
+		<item>5133</item>
+		<item>5134</item>
+	</string-array>
+
+	<!-- 52XX -->
+	<string-array name="work_location_code_array_23">
+		<item>5201</item>
+		<item>5202</item>
+		<item>5203</item>
+		<item>5204</item>
+		<item>5205</item>
+		<item>5206</item>
+		<item>5207</item>
+		<item>5222</item>
+		<item>5223</item>
+		<item>5224</item>
+		<item>5226</item>
+		<item>5227</item>
+	</string-array>
+
+	<!-- 53XX -->
+	<string-array name="work_location_code_array_24">
+		<item>5301</item>
+		<item>5302</item>
+		<item>5303</item>
+		<item>5304</item>
+		<item>5305</item>
+		<item>5306</item>
+		<item>5307</item>
+		<item>5308</item>
+		<item>5309</item>
+		<item>5310</item>
+		<item>5323</item>
+		<item>5325</item>
+		<item>5326</item>
+		<item>5328</item>
+		<item>5329</item>
+		<item>5331</item>
+		<item>5333</item>
+		<item>5334</item>
+	</string-array>
+
+	<!-- 54XX -->
+	<string-array name="work_location_code_array_25">
+		<item>5401</item>
+		<item>5421</item>
+		<item>5422</item>
+		<item>5423</item>
+		<item>5424</item>
+		<item>5425</item>
+		<item>5426</item>
+	</string-array>
+
+	<!-- 61XX -->
+	<string-array name="work_location_code_array_26">
+		<item>6101</item>
+		<item>6102</item>
+		<item>6103</item>
+		<item>6104</item>
+		<item>6105</item>
+		<item>6106</item>
+		<item>6107</item>
+		<item>6108</item>
+		<item>6109</item>
+		<item>6110</item>
+	</string-array>
+
+	<!-- 62XX -->
+	<string-array name="work_location_code_array_27">
+		<item>6201</item>
+		<item>6202</item>
+		<item>6203</item>
+		<item>6204</item>
+		<item>6205</item>
+		<item>6206</item>
+		<item>6207</item>
+		<item>6208</item>
+		<item>6209</item>
+		<item>6210</item>
+		<item>6211</item>
+		<item>6212</item>
+		<item>6229</item>
+		<item>6230</item>
+	</string-array>
+
+	<!-- 63XX -->
+	<string-array name="work_location_code_array_28">
+		<item>6301</item>
+		<item>6302</item>
+		<item>6321</item>
+		<item>6322</item>
+		<item>6323</item>
+		<item>6325</item>
+		<item>6326</item>
+		<item>6327</item>
+		<item>6328</item>
+	</string-array>
+
+	<!-- 64XX -->
+	<string-array name="work_location_code_array_29">
+		<item>6401</item>
+		<item>6402</item>
+		<item>6403</item>
+		<item>6404</item>
+		<item>6405</item>
+	</string-array>
+
+	<!-- 65XX -->
+	<string-array name="work_location_code_array_30">
+		<item>6501</item>
+		<item>6502</item>
+		<item>6503</item>
+		<item>6521</item>
+		<item>6522</item>
+		<item>6523</item>
+		<item>6527</item>
+		<item>6528</item>
+		<item>6529</item>
+		<item>6530</item>
+		<item>6531</item>
+		<item>6532</item>
+		<item>6540</item>
+		<item>6542</item>
+		<item>6543</item>
+		<item>6544</item>
+	</string-array>
+
+	<!-- 71XX -->
+	<string-array name="work_location_code_array_31">
+		<item>7101</item>
+	</string-array>
+
+	<!-- 81XX -->
+	<string-array name="work_location_code_array_32">
+		<item>8101</item>
+	</string-array>
+
+	<!-- 82XX -->
+	<string-array name="work_location_code_array_33">
+		<item>8201</item>
+	</string-array>
+	<!-- 83XX -->
+	<string-array name="work_location_code_array_34">
+		<item>8301</item>
+	</string-array>
+	<!-- 98XX -->
+	<string-array name="work_location_code_array_35">
+		<item>9801</item>
+		<item>9851</item>
+		<item>9802</item>
+		<item>9803</item>
+		<item>9804</item>
+		<item>9805</item>
+		<item>9806</item>
+		<item>9807</item>
+		<item>9808</item>
+		<item>9809</item>
+		<item>9810</item>
+		<item>9811</item>
+		<item>9812</item>
+		<item>9813</item>
+		<item>9814</item>
+		<item>9815</item>
+		<item>9816</item>
+		<item>9817</item>
+		<item>9818</item>
+		<item>9819</item>
+		<item>9820</item>
+		<item>9821</item>
+		<item>9822</item>
+		<item>9823</item>
+		<item>9824</item>
+		<item>9825</item>
+		<item>9826</item>
+		<item>9827</item>
+		<item>9828</item>
+		<item>9829</item>
+		<item>9830</item>
+		<item>9831</item>
+		<item>9832</item>
+		<item>9833</item>
+		<item>9834</item>
+		<item>9835</item>
+		<item>9836</item>
+		<item>9837</item>
+		<item>9838</item>
+		<item>9839</item>
+		<item>9840</item>
+		<item>9841</item>
+		<item>9842</item>
+		<item>9843</item>
+		<item>9844</item>
+		<item>9845</item>
+		<item>9846</item>
+		<item>9847</item>
+		<item>9848</item>
+		<item>9849</item>
+		<item>9850</item>
+	</string-array>
+	<!-- 99XX -->
+	<string-array name="work_location_code_array_36">
+		<item>9901</item>
+		<item>9902</item>
+		<item>9903</item>
+		<item>9904</item>
+		<item>9905</item>
+		<item>9906</item>
+		<item>9907</item>
+		<item>9908</item>
+		<item>9909</item>
+		<item>9910</item>
+		<item>9911</item>
+		<item>9912</item>
+		<item>9913</item>
+		<item>9914</item>
+		<item>9915</item>
+		<item>9916</item>
+		<item>9917</item>
+		<item>9918</item>
+		<item>9919</item>
+		<item>9921</item>
+		<item>9922</item>
+		<item>9924</item>
+		<item>9925</item>
+		<item>9926</item>
+		<item>9927</item>
+		<item>9928</item>
+		<item>9929</item>
+		<item>9930</item>
+		<item>9931</item>
+		<item>9932</item>
+		<item>9933</item>
+		<item>9934</item>
+		<item>9935</item>
+		<item>9936</item>
+		<item>9937</item>
+		<item>9938</item>
+	</string-array>
+	<!-- End Work_location code -->
+
+</resources>

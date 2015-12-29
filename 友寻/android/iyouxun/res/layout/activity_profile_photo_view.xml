@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_global">
+	<!-- 照片区域 -->
+	<android.support.v4.view.ViewPager
+		android:id="@+id/show_photo_viewPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+	<!-- 顶部标题 -->
+	<RelativeLayout
+		android:id="@+id/show_photo_titleBox"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:background="@color/background_content"
+		android:orientation="horizontal"
+		android:layout_gravity="top">
+		<!-- 左侧 -->
+		<Button
+			android:id="@+id/show_photo_titleLeftButton"
+			android:layout_width="wrap_content"
+			android:layout_height="44dp"
+			android:layout_alignParentLeft="true"
+			android:background="@drawable/button_white_gray_bg"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:text="关闭"
+			android:textColor="@color/text_topNav_left_right"
+			android:textSize="@dimen/text_topNav_left_right" />
+		<!-- 右侧 -->
+		<ImageButton
+			android:id="@+id/show_photo_titleRightButton"
+			android:layout_width="wrap_content"
+			android:layout_height="44dp"
+			android:src="@drawable/icon_more"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/button_white_gray_bg"
+			android:paddingRight="15dp"
+			android:paddingLeft="15dp"
+			android:textColor="@color/text_topNav_left_right"
+			android:textSize="@dimen/text_topNav_left_right" />
+		<!-- 中间 -->
+		<TextView
+			android:id="@+id/show_photo_titleCenter"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_centerHorizontal="true"
+			android:textColor="@color/text_topNav_center"
+			android:textSize="@dimen/text_topNav_center"
+			android:gravity="center"
+			android:singleLine="true"
+			android:ellipsize="end" />
+	</RelativeLayout>
+	<!-- 底部按钮 -->
+	<LinearLayout
+		android:id="@+id/show_photo_bottomBox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_gravity="bottom"
+		android:background="@color/background_content"
+		android:clickable="true"
+		android:visibility="gone">
+		<!-- 赞的人列表 -->
+		<RelativeLayout
+			android:id="@+id/show_photo_user_box"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:visibility="gone">
+			<TextView
+				android:id="@+id/show_photo_likenum"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="0人已赞"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:layout_alignParentRight="true"
+				android:gravity="center_vertical"
+				android:paddingLeft="20dp"
+				android:paddingRight="20dp"
+				android:background="@drawable/background_lefttopright_border_gray_white_bg" />
+			<HorizontalScrollView
+				android:id="@+id/show_photo_likeusersbox"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:background="@drawable/background_bottom_globalcolor_border_white_bg"
+				android:layout_toLeftOf="@id/show_photo_likenum">
+				<LinearLayout
+					android:id="@+id/show_photo_userbox"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical"
+					android:paddingLeft="10dp">
+				</LinearLayout>
+			</HorizontalScrollView>
+		</RelativeLayout>
+		<ImageButton
+			android:id="@+id/show_photo_likebtn"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:src="@drawable/icon_like"
+			android:background="@color/blue_main" />
+	</LinearLayout>
+</FrameLayout>

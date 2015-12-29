@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:jy="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="15dp"
+	android:paddingTop="7.5dp"
+	android:paddingRight="15dp"
+	android:paddingBottom="7.5dp">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<!-- 头像 -->
+		<com.iyouxun.ui.views.CircularImage
+			android:id="@+id/itemCommentAvatar"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			jy:border_width="2dp"
+			jy:border_color="@color/background_border"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true" />
+		<!-- 时间 -->
+		<TextView
+			android:id="@+id/itemCommentTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:textColor="@color/text_normal_gray"
+			android:textSize="@dimen/text_normal" />
+		<!-- 标题 -->
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_toRightOf="@id/itemCommentAvatar"
+			android:layout_toLeftOf="@id/itemCommentTime"
+			android:layout_centerVertical="true">
+			<!-- 回复动态人的昵称 -->
+			<TextView
+				android:id="@+id/itemCommentNick"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:layout_marginLeft="15dp" />
+			<TextView
+				android:id="@+id/iemCommentBack"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 回复 "
+				android:textColor="@color/text_normal_gray"
+				android:textSize="@dimen/text_normal"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:visibility="gone" />
+			<TextView
+				android:id="@+id/itemCommentToNick"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_normal_blue"
+				android:textSize="@dimen/text_normal"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:visibility="gone" />
+		</LinearLayout>
+
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/itemCommentContent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="40dp"
+		android:textColor="@color/text_normal_black"
+		android:textSize="@dimen/text_normal"
+		android:paddingTop="10dp" />
+</LinearLayout>
