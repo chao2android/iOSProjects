@@ -1,0 +1,20 @@
+//
+//  MapLineViewController.h
+//  TestVideoJoiner
+//
+//  Created by MC on 14-12-3.
+//  Copyright (c) 2014年 Hepburn Alex. All rights reserved.
+//
+
+#import "BaseADViewController.h"
+#import "BMapKit.h"
+
+@interface MapLineViewController : BaseADViewController<BMKMapViewDelegate> {
+    BMKMapView *mMapView;
+}
+
+@property (nonatomic, assign) float mLatitude;
+@property (nonatomic, assign) float mLongitude;
+@property (nonatomic, strong) NSString *mName;
+
+@end

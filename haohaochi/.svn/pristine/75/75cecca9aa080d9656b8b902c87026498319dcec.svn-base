@@ -1,0 +1,254 @@
+//
+//  ThirdLoginViewController.m
+//  TestVideoJoiner
+//
+//  Created by MC on 14-12-8.
+//  Copyright (c) 2014年 Hepburn Alex. All rights reserved.
+//
+
+#import "ThirdLoginViewController.h"
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "JSON.h"
+#import "VideoPlayView.h"
+
+@interface ThirdLoginViewController () {
+    VideoPlayView *mPlayView;
+}
+
+@end
+
+@implementation ThirdLoginViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    int iHeight = KscreenWidth/2;
+    
+    float fScale = KscreenWidth/320;
+    
+    mPlayView = [[VideoPlayView alloc] initWithFrame:self.view.bounds];
+    mPlayView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleWidth;
+    mPlayView.mbRepeatPlay = YES;
+    mPlayView.userInteractionEnabled = NO;
+    [self.view addSubview:mPlayView];
+    
+    UIImageView *logoView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 160*fScale, 50*fScale)];
+    logoView1.center = CGPointMake(self.view.frame.size.width/2, fScale*150);
+    logoView1.image = [UIImage imageNamed:@"好好吃@3x.png"];
+    [self.view addSubview:logoView1];
+    
+    UIImageView *logoView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 83*fScale, 15*fScale)];
+    logoView2.center = CGPointMake(self.view.frame.size.width/2, fScale*190);
+    logoView2.image = [UIImage imageNamed:@"YUYUMMY@3x.png"];
+    [self.view addSubview:logoView2];
+
+
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, KscreenHeigh-iHeight, KscreenWidth, iHeight)];
+    backView.userInteractionEnabled = YES;
+    backView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:backView];
+    
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 123*fScale, 113*fScale)];
+    logoView.center = CGPointMake(backView.frame.size.width/2, fScale*5);
+    logoView.image = [UIImage imageNamed:@"欢迎界面LOGO@3x.png"];
+    [backView addSubview:logoView];
+    
+    float fBtnWidth = 132*fScale;
+    float fBtnHeight = 42*fScale;
+    float fLeft = (backView.frame.size.width-fBtnWidth*2)/3;
+    
+    // Do any additional setup after loading the view.
+    NSArray *imageArray = @[@"微博@3x",@"微信@3x"];
+    for (int i = 0; i<2; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(fLeft+i*(fBtnWidth+fLeft), backView.frame.size.height-fBtnHeight-fScale*20, fBtnWidth, fBtnHeight);
+        [btn setBackgroundImage:[UIImage imageNamed:[imageArray objectAtIndex:i]] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(LoginType:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = 100+i;
+        [backView addSubview:btn];
+    }
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(self.view.frame.size.width-90, 20, 90, 35);
+    [btn setTitle:@"随便逛逛" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    [btn addTarget:self action:@selector(LoginType:) forControlEvents:UIControlEventTouchUpInside];
+    btn.tag = 102;
+    [self.view addSubview:btn];
+    //[NSTimer timerWithTimeInterval:5 target:self selector:@selector(Text) userInfo:nil repeats:YES];
+    
+    NSString *videopath = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"mov"];
+    [mPlayView PlayVideo:videopath];
+}
+
+- (void)dealloc {
+    [mPlayView StopVideo];
+}
+
+- (void)LoginType:(UIButton *)sender{
+    int tag = sender.tag - 100;
+    if (tag == 0) {
+        [self OnThirdClick:0];
+    }
+    else if (tag == 1){
+        [self OnThirdClick:1];
+    }
+    else if (tag == 2){
+        [self GoBack];
+    }
+}
+- (void)OnThirdClick:(int)index {
+    NSArray *platforms = [NSArray arrayWithObjects:UMShareToSina, UMShareToWechatSession, nil];
+    NSString *platform = [platforms objectAtIndex:index];
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:platform];
+    NSLog(@"%@, %@, %@", snsPlatform, platform, [UMSocialSnsPlatformManager sharedInstance].allSnsValuesArray);
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response) {
+        NSLog(@"response is %@",response);
+        if (response.responseCode == 200) {
+            [[UMSocialDataService defaultDataService] requestSnsInformation:platform completion:^(UMSocialResponseEntity *accountResponse){
+                NSLog(@"response--- is %@",response);
+                NSDictionary *userinfo = [response.data objectForKey:platform];
+                NSMutableDictionary *newdict = [NSMutableDictionary dictionary];
+                if (userinfo) {
+                    [newdict setDictionary:userinfo];
+                }
+                if (accountResponse.data) {
+                    [newdict addEntriesFromDictionary:accountResponse.data];
+                }
+                newdict = [self GetFormatDict:newdict];
+                NSLog(@"userinfo is %@",newdict);
+                [self OnThirdLogin:index :newdict];
+            }];
+        }
+    });
+    
+}
+- (NSMutableDictionary *)GetFormatDict:(NSMutableDictionary *)dict1 {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:dict1];
+    for (NSString *key in dict.allKeys) {
+        id target = [dict objectForKey:key];
+        if ([target isKindOfClass:[NSNull class]]) {
+            [dict removeObjectForKey:key];
+        }
+    }
+    return dict;
+}
+#pragma mark - ImageDownManager
+
+- (void)OnThirdLogin:(int)type :(NSDictionary *)info {
+    if (_mDownManager) {
+        return;
+    }
+    
+    [self StartLoading];
+    self.mDownManager = [[ImageDownManager alloc] init];
+    _mDownManager.delegate = self;
+    _mDownManager.OnImageDown = @selector(OnLoadFinish:);
+    _mDownManager.OnImageFail = @selector(OnLoadFail:);
+    NSString *urlstr = [NSString stringWithFormat:@"%@/mobileapi/user/login_third", SERVER_URL];
+    
+    
+    NSString *token = [info objectForKey:@"openid"];
+    NSString *name = [info objectForKey:@"username"];
+    NSString *gender = [info objectForKey:@"gender"];
+    NSString *icon = [info objectForKey:@"profile_image_url"];
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:[NSString stringWithFormat:@"%d", type+1] forKey:@"third_login"];
+    [dict setObject:@"ios" forKey:@"type"];
+    
+    if (token) {
+        [dict setObject:token forKey:@"third_token"];
+    }
+    if (name) {
+        [dict setObject:name forKey:@"nickname"];
+    }
+    if (gender) {
+        [dict setObject:([gender intValue] == 1)?@"男":@"女" forKey:@"sex"];
+    }
+    if (icon && icon.length>0) {
+        [dict setObject:icon forKey:@"avatar"];
+    }
+    
+    //[_mDownManager PostHttpRequest:urlstr :dict :nil :nil];
+    [_mDownManager PostHttpRequest:urlstr :dict];
+}
+
+- (void)Cancel {
+    [self StopLoading];
+    SAFE_CANCEL_ARC(self.mDownManager);
+}
+- (void)OnLoadFinish:(ImageDownManager *)sender {
+    NSDictionary *dic = [sender.mWebStr JSONValue];
+    [self Cancel];
+    if (dic && [dic isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"登录成功%@", dic);
+        int iStatus = [[dic objectForKey:@"status"] intValue];
+        if (iStatus == 1001) {
+            //返回值正确，登陆成功
+            kkUserDict = dic[@"userinfo"];
+//            NSLog(@"%@",kkUserDict);
+//            NSLog(@"%@",kkUserID);
+//            NSLog(@"%@",kkAvatar);
+            [self GoBack];
+        }
+        else if (iStatus == 1002) {
+            
+        }
+        else {
+            
+        }
+    }
+}
+
+- (void)OnLoadFail:(ImageDownManager *)sender {
+    [self Cancel];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    NSLog(@"shouldAutorotateToInterfaceOrientation");
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    NSLog(@"supportedInterfaceOrientations");
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotate {
+    NSLog(@"shouldAutorotate");
+    return YES;
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

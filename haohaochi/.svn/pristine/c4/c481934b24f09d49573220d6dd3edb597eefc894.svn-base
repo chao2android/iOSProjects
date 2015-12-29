@@ -1,0 +1,243 @@
+//
+//  HomeViewController.m
+//  TestVideoJoiner
+//
+//  Created by Hepburn Alex on 14-11-3.
+//  Copyright (c) 2014年 Hepburn Alex. All rights reserved.
+//
+
+#import "HomeViewController.h"
+#import "MergeMediaViewController.h"
+#import "UIDevice+Orientation.h"
+#import "VideoListViewController.h"
+#import "SelectTabBar.h"
+#import "CitySelectView.h"
+#import "FriendsCircleViewController.h"
+#import "GrassLandViewController.h"
+#import "PersonViewController.h"
+#import "PopAlertView.h"
+#import "ThirdLoginViewController.h"
+
+@interface HomeViewController ()<SelectTabBarDelegate> {
+    UIImageView *mBackView;
+    SelectTabBar *mTabView;
+    CitySelectView *mCityView;
+    PopAlertView *mAlertView;
+}
+
+@end
+
+@implementation HomeViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self ClearTempImage];
+    }
+    return self;
+}
+
+- (void)ClearTempImage {
+    NSArray *filelist = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] error:nil]
+                          pathsMatchingExtensions:[NSArray arrayWithObjects:@"png", @"mov", @"mp4", @"m4a", nil]];
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    for (NSString *imagename in filelist) {
+        NSString *imagepath = [docDir stringByAppendingPathComponent:imagename];
+        [[NSFileManager defaultManager] removeItemAtPath:imagepath error:nil];
+    }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnShowLeftClick) name:kMsg_ShowLeft object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnShowCenterClick) name:kMsg_ShowCenter object:nil];
+
+    VideoListViewController *ctrl1 = [[VideoListViewController alloc] init];
+    UINavigationController *navCtrl1 = [[UINavigationController alloc] initWithRootViewController:ctrl1];
+    
+    FriendsCircleViewController *ctrl2 = [[FriendsCircleViewController alloc] init];
+    UINavigationController *navCtrl2 = [[ UINavigationController alloc] initWithRootViewController:ctrl2];
+    
+    GrassLandViewController *ctrl3 = [[GrassLandViewController alloc] init];
+    UINavigationController *navCtrl3 = [[ UINavigationController alloc] initWithRootViewController:ctrl3];
+    
+    PersonViewController *ctrl4 = [[PersonViewController alloc] init];
+    UINavigationController *navCtrl4 = [[ UINavigationController alloc] initWithRootViewController:ctrl4];
+    
+    NSArray *array = @[navCtrl1, navCtrl2, navCtrl3, navCtrl4];
+    self.viewControllers = array;
+    self.selectedIndex = 0;
+    
+    mTabView = [[SelectTabBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    mTabView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
+    mTabView.delegate = self;
+    [self.tabBar addSubview:mTabView];
+    
+    mAlertView = [[PopAlertView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-80)/2, self.view.frame.size.height-75-50, 80, 75)];
+    mAlertView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    //[self.view addSubview:mAlertView];
+    
+    [mAlertView ShowAlert:@"首页提示"];
+    
+    NSLog(@"tabbar %@", self.tabBar);
+    
+    [self OnTabSelect:mTabView];
+}
+
+- (BOOL)CanSelectTab:(SelectTabBar *)sender :(int)index {
+    return YES;
+}
+
+- (void)OnTabSelect:(SelectTabBar *)sender {
+    int index = sender.miIndex;
+    NSLog(@"OnTabSelect:%d", index);
+    if (sender.miIndex == 0) {
+        self.selectedIndex = 0;
+    }
+    else if (sender.miIndex == 1) {
+        
+        if (!kkIsLogin) {
+            ThirdLoginViewController *ctrl = [[ThirdLoginViewController alloc] init];
+            [self presentViewController:ctrl animated:YES completion:nil];
+        }
+        else{
+            self.selectedIndex = 1;
+        }
+    }
+    else if (sender.miIndex == 2) {
+        if (mAlertView) {
+            [mAlertView removeFromSuperview];
+            mAlertView = nil;
+        }
+        NSLog(@"%@", kkUserID);
+        if (kkUserID) {
+            MergeMediaViewController *ctrl = [[MergeMediaViewController alloc] init];
+            [self presentViewController:ctrl animated:YES completion:nil];
+        }
+        else {
+            ThirdLoginViewController *ctrl = [[ThirdLoginViewController alloc] init];
+            [self presentViewController:ctrl animated:YES completion:nil];
+        }
+    }
+    else if (sender.miIndex == 3) {
+        if (!kkIsLogin) {
+            ThirdLoginViewController *ctrl = [[ThirdLoginViewController alloc] init];
+            [self presentViewController:ctrl animated:YES completion:nil];
+        }
+        else{
+            self.selectedIndex = 2;
+        }
+    }
+    else if (sender.miIndex == 4) {
+        if (!kkIsLogin) {
+            ThirdLoginViewController *ctrl = [[ThirdLoginViewController alloc] init];
+            [self presentViewController:ctrl animated:YES completion:nil];
+        }
+        else{
+            self.selectedIndex = 3;
+        }
+    }
+    [[SelectTabBar Share] BringToFront];
+}
+
+- (void)OnShowLeftClick {
+    UIView *coverView = [[UIView alloc] initWithFrame:self.view.bounds];
+    coverView.backgroundColor = [UIColor clearColor];
+    coverView.tag = 3000;
+    coverView.alpha = 0.0;
+    [self.view addSubview:coverView];
+    
+    float fTop = IOS_7?64:44;
+    UIImageView *coverView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, fTop, self.view.bounds.size.width, self.view.bounds.size.height-fTop)];
+    coverView2.backgroundColor = [UIColor blackColor];
+    [coverView addSubview:coverView2];
+    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = coverView.bounds;
+    [backBtn addTarget:self action:@selector(OnShowCenterClick) forControlEvents:UIControlEventTouchUpInside];
+    [coverView addSubview:backBtn];
+
+    if (!mCityView) {
+        mCityView = [[CitySelectView alloc] initWithFrame:CGRectMake(0, 0, 140, self.view.frame.size.height)];
+        [self.view.superview addSubview:mCityView];
+        [self.view.superview sendSubviewToBack:mCityView];
+    }
+    mCityView.hidden = NO;
+    CGRect rect = self.view.frame;
+    rect.origin.x = 140;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.frame = rect;
+        coverView.alpha = 0.7;
+    }];
+    
+    NSLog(@"%@", self.view.superview);
+}
+
+- (void)OnShowCenterClick {
+    UIView *coverView = [self.view viewWithTag:3000];
+    CGRect rect = self.view.frame;
+    rect.origin.x = 0;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.frame = rect;
+        coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        @autoreleasepool {
+            if (coverView) {
+                [coverView removeFromSuperview];
+            }
+        }
+        mCityView.hidden = YES;
+    }];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    NSLog(@"shouldAutorotateToInterfaceOrientation");
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    NSLog(@"supportedInterfaceOrientations");
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotate {
+    NSLog(@"shouldAutorotate");
+    return YES;
+}
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
